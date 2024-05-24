@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Course - Lesson 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <h1><span class="highlight" data-lang="java-course">Java Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    <main>
+        <!-- Introduction Block for Lesson 3 -->
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up">
+                <span class="intro-heading" data-lang="lesson3-title">Lesson 3:</span> 
+                <span class="intro-text" data-lang="control-structures-intro">Control Structures in Java</span>
+            </h2>
+            <p data-aos="fade-up" data-lang="welcome-to-control-structures">Master the flow of your Java programs with control structures.</p>
+        </div>
+        
+       <!-- Lesson Details -->
+<section class="lesson-details" data-aos="fade-up">
+    <h3 data-lang="control-structures">Control Structures in Java</h3>
+    <p data-lang="control-structures-description">
+        Control structures are fundamental building blocks in Java that allow you to control the flow of execution based on conditions and loops. In this lesson, we'll explore the different types of control structures that Java provides and understand how and when to use them.
+    </p>
+
+    <h4 data-lang="if-else-statement">The if-else Statement</h4>
+    <p data-lang="if-else-description">
+        The if-else statement is the most basic control structure, which executes a block of code based on a boolean condition. If the condition is true, the 'if' block runs; otherwise, the 'else' block runs (if it exists).
+    </p>
+    <pre><code>if (condition) {
+    // code to be executed if condition is true
+} else {
+    // code to be executed if condition is false
+}</code></pre>
+
+    <h4 data-lang="switch-statement">The switch Statement</h4>
+    <p data-lang="switch-description">
+        A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable is checked for each case.
+    </p>
+    <pre><code>switch(expression) {
+    case x:
+        // code block
+        break;
+    case y:
+        // code block
+        break;
+    default:
+        // code block
+}</code></pre>
+
+    <h4 data-lang="loops-in-java">Loops in Java</h4>
+    <p data-lang="loops-description">
+        Loops are used to execute a block of code several times, as long as a specified condition is met. Java provides several loop constructs: while, do-while, and for.
+    </p>
+    <pre><code>// while loop
+while(condition) {
+    // code block to be executed
+}
+
+// do-while loop
+do {
+    // code block to be executed
+} while (condition);
+
+// for loop
+for(initialization; condition; update) {
+    // code block to be executed
+}</code></pre>
+</section>
+
+
+        <!-- Quiz Section -->
+<!-- Quiz Section -->
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="java3-question1">Question 1: Which statement is used to execute a block of code multiple times based on a boolean condition?</h3>
+    <input type="radio" name="q1" value="if_else" id="q1_if_else"><label for="q1_if_else" data-lang="if_else">if-else statement</label><br>
+    <input type="radio" name="q1" value="switch" id="q1_switch"><label for="q1_switch" data-lang="switch">switch statement</label><br>
+    <input type="radio" name="q1" value="for_loop" id="q1_for_loop"><label for="q1_for_loop" data-lang="for_loop">for loop</label><br>
+    <input type="radio" name="q1" value="while_loop" id="q1_while_loop"><label for="q1_while_loop" data-lang="while_loop">while loop</label><br>
+
+    <h3 data-lang="java3-question2">Question 2: What does a 'switch' statement typically test?</h3>
+    <input type="radio" name="q2" value="equality" id="q2_equality"><label for="q2_equality" data-lang="equality">Equality against multiple cases</label><br>
+    <input type="radio" name="q2" value="range" id="q2_range"><label for="q2_range" data-lang="range">Range of values</label><br>
+    <input type="radio" name="q2" value="true_only" id="q2_true_only"><label for="q2_true_only" data-lang="true_only">Truthiness</label><br>
+    <input type="radio" name="q2" value="existence" id="q2_existence"><label for="q2_existence" data-lang="existence">Existence of variables</label><br>
+
+    <h3 data-lang="java3-question3">Question 3: Which loop checks its condition at the end of the loop body?</h3>
+    <input type="radio" name="q3" value="for" id="q3_for"><label for="q3_for" data-lang="for_loop">for loop</label><br>
+    <input type="radio" name="q3" value="while" id="q3_while"><label for="q3_while" data-lang="while_loop">while loop</label><br>
+    <input type="radio" name="q3" value="do_while" id="q3_do_while"><label for="q3_do_while" data-lang="do_while">do-while loop</label><br>
+    <input type="radio" name="q3" value="none" id="q3_none"><label for="q3_none" data-lang="none">None of the above</label><br>
+
+    <h3 data-lang="java3-question4">Question 4: What is the main difference between 'while' and 'do-while' loops?</h3>
+    <input type="radio" name="q4" value="condition_check" id="q4_condition_check"><label for="q4_condition_check" data-lang="condition_check">Condition check timing</label><br>
+    <input type="radio" name="q4" value="syntax" id="q4_syntax"><label for="q4_syntax" data-lang="syntax">Syntax</label><br>
+    <input type="radio" name="q4" value="execution" id="q4_execution"><label for="q4_execution" data-lang="execution">Execution guarantee</label><br>
+    <input type="radio" name="q4" value="variable_scope" id="q4_variable_scope"><label for="q4_variable_scope" data-lang="variable_scope">Variable scope</label><br>
+
+    <h3 data-lang="java3-question5">Question 5: Which control structure allows for multiple outcomes based on a single variable's value?</h3>
+    <input type="radio" name="q5" value="if_else" id="q5_if_else"><label for="q5_if_else" data-lang="if_else">if-else</label><br>
+    <input type="radio" name="q5" value="switch" id="q5_switch"><label for="q5_switch" data-lang="switch">switch</label><br>
+    <input type="radio" name="q5" value="for" id="q5_for"><label for="q5_for" data-lang="for_loop">for loop</label><br>
+    <input type="radio" name="q5" value="while" id="q5_while"><label for="q5_while" data-lang="while_loop">while loop</label><br>
+    
+    <h3 data-lang="java3-question6">Question 6: In which scenario would you use a 'for' loop?</h3>
+    <input type="radio" name="q6" value="known_iterations" id="q6_known_iterations"><label for="q6_known_iterations" data-lang="known_iterations">When you know the number of iterations in advance</label><br>
+    <input type="radio" name="q6" value="unknown_iterations" id="q6_unknown_iterations"><label for="q6_unknown_iterations" data-lang="unknown_iterations">When the number of iterations is not known</label><br>
+    <input type="radio" name="q6" value="single_execution" id="q6_single_execution"><label for="q6_single_execution" data-lang="single_execution">When you need to execute something once</label><br>
+    <input type="radio" name="q6" value="conditional_execution" id="q6_conditional_execution"><label for="q6_conditional_execution" data-lang="conditional_execution">When execution depends on an external condition</label><br>
+    
+    <h3 data-lang="java3-question7">Question 7: Which loop ensures the code block is executed at least once, even if the condition is false from the start?</h3>
+    <input type="radio" name="q7" value="for" id="q7_for"><label for="q7_for" data-lang="for_loop">for loop</label><br>
+    <input type="radio" name="q7" value="while" id="q7_while"><label for="q7_while" data-lang="while_loop">while loop</label><br>
+    <input type="radio" name="q7" value="do_while" id="q7_do_while"><label for="q7_do_while" data-lang="do_while">do-while loop</label><br>
+    <input type="radio" name="q7" value="none" id="q7_none"><label for="q7_none" data-lang="none">None of the above</label><br>
+    </div>
+    
+
+        
+    <!-- Кнопка завершения урока -->
+    <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+    <!-- Кнопка перехода к следующему уроку -->
+    <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+    
+        </main>
+        
+        <footer>
+            <div id="xp-bar-container1">
+                <div id="xp-bar1">
+                    <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>  <!-- Ensure styles for visibility -->
+                </div>
+                <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span> <!-- Multilingual support added here -->
+            </div>    
+        </footer>
+    
+        <!-- JavaScript and Library Integration -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="modal.js"></script>
+        <script src="python.js"></script>
+        <script src="xpBar.js"></script>
+        <script src="langswitch.js"></script>
+        <script>
+            // Translations for alert messages
+            const alertTranslations = {
+                en: {
+                    halfwayHero: "Achievement unlocked: Halfway Hero",
+                    xpConqueror: "Achievement unlocked: XP Conqueror",
+                    javaJedi: "Achievement unlocked: Java Jedi",
+                    xpUpdated: "XP updated to ",
+                    forUser: "for user ",
+                    xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                    lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                    answerCorrectly: "Please answer all questions correctly to proceed."
+                },
+                ru: {
+                    halfwayHero: "Достижение разблокировано: Полуторный герой",
+                    xpConqueror: "Достижение разблокировано: Завоеватель XP",
+                    javaJedi: "Достижение разблокировано: Джедай Java",
+                    xpUpdated: "Опыт обновлен до ",
+                    forUser: "для пользователя ",
+                    xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                    lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                    answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить."
+                },
+                kk: {
+                    halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                    xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                    javaJedi: "Жетістік ашылды: Java Джедай",
+                    xpUpdated: "Тәжірибе жаңартылды ",
+                    forUser: "пайдаланушы үшін ",
+                    xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                    lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                    answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз."
+                }
+            };
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                const languageSelector = document.getElementById('language-selector'); // Ensure this element exists
+        
+                function getTranslation(key) {
+                    const selectedLanguage = languageSelector.value;
+                    return alertTranslations[selectedLanguage][key];
+                }
+        
+                function getUserID() {
+                    var currentUserString = localStorage.getItem('currentUser');
+                    return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+                }
+        
+                var userID = getUserID();
+                var currentLessonKey = 'currentJavaLesson_' + userID;
+                var xpKey = 'currentXP_' + userID;
+                var achievementsKey = 'achievements_' + userID;
+                var completedLessonsKey = 'completedJavaLessons_' + userID;
+        
+                var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+                    earnedHalfXP: false,
+                    fullXP: false,
+                    completedJavaThreeLessons: false
+                };
+        
+                var completedJavaLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+                var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '1');
+        
+                function saveUserProgress() {
+                    localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                    localStorage.setItem(completedLessonsKey, JSON.stringify(completedJavaLessons));
+                }
+        
+                function updateAchievements(achievementKey, achievementName) {
+                    if (!userAchievements[achievementKey]) {
+                        userAchievements[achievementKey] = true;
+                        alert(getTranslation(achievementName));
+                        saveUserProgress();
+                    }
+                }
+        
+                function incrementXP(amount) {
+                    if (!completedJavaLessons.includes(currentLesson)) {
+                        var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                        currentXP += amount;
+                        currentXP = Math.min(currentXP, 100); // Ensures XP doesn't exceed 100%
+                        localStorage.setItem(xpKey, currentXP.toString());
+        
+                        // Award achievements based on new XP value
+                        if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                            updateAchievements('earnedHalfXP', 'halfwayHero');
+                        }
+                        if (currentXP >= 100 && !userAchievements.fullXP) {
+                            updateAchievements('fullXP', 'xpConqueror');
+                        }
+                        if (!userAchievements.completedJavaThreeLessons) {
+                            updateAchievements('completedJavaThreeLessons', 'javaJedi');
+                        }
+        
+                        completedJavaLessons.push(currentLesson); // Mark the lesson as completed
+                        saveUserProgress();
+                        alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+                    } else {
+                        alert(getTranslation('xpAlreadyAwarded'));
+                    }
+                }
+        
+                var correctAnswers = {
+                    q1: 'for_loop',
+                    q2: 'equality',
+                    q3: 'do_while',
+                    q4: 'execution',
+                    q5: 'switch',
+                    q6: 'known_iterations',
+                    q7: 'do_while'
+                };
+        
+                function checkAnswers() {
+                    var correctCount = 0;
+                    Object.keys(correctAnswers).forEach(function(question) {
+                        var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                        if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                            correctCount++;
+                        }
+                    });
+                    return correctCount === 7; // All answers must be correct to show the finish button
+                }
+        
+                function updateProgressBar() {
+                    var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                        document.querySelector(`input[name="${question}"]:checked`) !== null
+                    ).length;
+                    var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+                    document.getElementById('xp-progress').style.width = percentComplete + '%';
+                    document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+                    if (answeredQuestions === Object.keys(correctAnswers).length) {
+                        document.getElementById('finish-lesson').style.display = 'block';
+                    }
+                }
+        
+                document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                    input.addEventListener('change', function() {
+                        updateProgressBar();
+                    });
+                });
+        
+                document.getElementById('finish-lesson').addEventListener('click', function() {
+                    if (checkAnswers()) {
+                        incrementXP(6.67);
+                        document.getElementById('next-lesson').style.display = 'block';
+                        alert(getTranslation('lessonCompleted'));
+                    } else {
+                        alert(getTranslation('answerCorrectly'));
+                        document.getElementById('next-lesson').style.display = 'none';
+                    }
+                });
+        
+                document.getElementById('next-lesson').addEventListener('click', function() {
+                    saveLessonProgress(currentLesson + 1);
+                });
+        
+                function saveLessonProgress(nextLessonNumber) {
+                    localStorage.setItem(currentLessonKey, String(nextLessonNumber)); // Save the next lesson number
+                    currentLesson = nextLessonNumber; // Update current lesson
+                    saveUserProgress();
+                    window.location.href = 'java' + nextLessonNumber + '.html';
+                }
+            });
+        </script>
+        
+        
+        
+        
+        
+            
+            
+        
+        
+</body>
+</html>

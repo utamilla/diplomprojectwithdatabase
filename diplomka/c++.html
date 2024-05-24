@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <h1><span class="highlight" data-lang="cpp-course">C++ Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up">
+                <span class="intro-heading" data-lang="lessoncpp-number">Lesson 1:</span> 
+                <span class="intro-text" data-lang="intro-to-cpp">Introduction to C++</span>
+            </h2>
+            <p data-aos="fade-up" data-lang="welcomecpp-lesson">Welcome to the first lesson on C++!</p>
+        </div>
+    
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="cpp-intro">Introduction to C++</h3>
+            <p data-lang="cpp-overview">
+                C++ is a powerful general-purpose programming language. It can be used to develop operating systems, browsers, games, and so on. C++ supports different ways of programming like procedural, object-oriented, and functional. This flexibility makes C++ versatile and valuable in a wide variety of applications.
+            </p>
+            
+            <h3 data-lang="cpp-history">Brief History of C++</h3>
+            <p data-lang="cpp-history-detail">
+                C++ was developed by Bjarne Stroustrup, starting in 1979 at Bell Labs in Murray Hill, New Jersey. Originally named 'C with Classes', it was renamed C++ in 1983. It was designed with a bias toward system programming and embedded, resource-constrained software, with performance, efficiency, and flexibility of use as its design highlights.
+            </p>
+        
+            <h3 data-lang="cpp-features">Key Features of C++</h3>
+            <p data-lang="cpp-features-intro">
+                C++ stands out with its combination of powerful features which include low-level memory manipulation, a rich set of built-in functions and libraries, object-oriented features like classes and inheritance, and the ability for low-level hardware access.
+            </p>
+            
+            <h3 data-lang="why-learn-cpp">Why Learn C++?</h3>
+            <ul>
+                <li><strong data-lang="cpp-performance">Performance:</strong> <span data-lang="performance-desc">Known for its exceptional performance, C++ allows extensive control over system resources and can be found in applications where real-time performance is needed.</span></li>
+                <li><strong data-lang="cpp-system-level">System Programming:</strong> <span data-lang="system-programming-desc">It is widely used in developing different operating systems and embedded system programs due to its performance and efficiency.</span></li>
+                <li><strong data-lang="cpp-gaming">Gaming:</strong> <span data-lang="gaming-desc">The speed and responsiveness of C++ make it a popular choice among game developers.</span></li>
+            </ul>
+            
+            <h3 data-lang="cpp-example">Example: Basic C++ Program</h3>
+            <p data-lang="cpp-code-explanation">Here's a simple example to demonstrate the syntax of C++:</p>
+            <pre><code>#include &lt;iostream&gt;
+        int main() {
+            std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+            return 0;
+        }</code></pre>
+            <p data-lang="cpp-std-explanation">In this program, `#include &lt;iostream&gt;` includes the Input/Output stream library and `std::cout` is used to print text to the console.</p>
+        
+            <h3 data-lang="cpp-first-steps">First Steps in C++</h3>
+            <p data-lang="cpp-getting-started">
+                Getting started with C++ involves understanding the basic syntax, the data types, and the flow control structures. Mastering these fundamentals is crucial for building more complex applications in C++.
+            </p>
+            
+            <h3 data-lang="cpp-resources">Learning Resources</h3>
+            <p data-lang="cpp-resources-detail">
+                There are numerous online platforms and resources available to learn C++. Some popular ones include Codecademy, Coursera, and freeCodeCamp which offer interactive lessons and challenges.
+            </p>
+        </section>
+        
+
+        <div class="quiz" data-aos="fade-up">
+            <h3 data-lang="cpp-question1">Question 1: What is C++ known for?</h3>
+            <input type="radio" name="q1" value="performance" id="q1_performance"><label for="q1_performance" data-lang="cpp-performance">Performance</label><br>
+            <input type="radio" name="q1" value="syntax" id="q1_syntax"><label for="q1_syntax" data-lang="cpp-syntax">Syntax</label><br>
+            <input type="radio" name="q1" value="simplicity" id="q1_simplicity"><label for="q1_simplicity" data-lang="cpp-simplicity">Simplicity</label><br>
+            <input type="radio" name="q1" value="portability" id="q1_portability"><label for="q1_portability" data-lang="cpp-portability">Portability</label><br>
+        
+            <h3 data-lang="cpp-question2">Question 2: Which feature allows C++ programs to run efficiently on different platforms?</h3>
+            <input type="radio" name="q2" value="compiler" id="q2_compiler"><label for="q2_compiler" data-lang="cpp-compiler">Compiler Optimization</label><br>
+            <input type="radio" name="q2" value="stdlib" id="q2_stdlib"><label for="q2_stdlib" data-lang="cpp-stdlib">Standard Library</label><br>
+            <input type="radio" name="q2" value="pointers" id="q2_pointers"><label for="q2_pointers" data-lang="cpp-pointers">Pointers</label><br>
+            <input type="radio" name="q2" value="templates" id="q2_templates"><label for="q2_templates" data-lang="cpp-templates">Templates</label><br>
+        
+            <h3 data-lang="cpp-question3">Question 3: Which object is used for standard output in C++?</h3>
+            <input type="radio" name="q3" value="cout" id="q3_cout"><label for="q3_cout" data-lang="cpp-cout">std::cout</label><br>
+            <input type="radio" name="q3" value="cin" id="q3_cin"><label for="q3_cin" data-lang="cpp-cin">std::cin</label><br>
+            <input type="radio" name="q3" value="cerr" id="q3_cerr"><label for="q3_cerr" data-lang="cpp-cerr">std::cerr</label><br>
+            <input type="radio" name="q3" value="clog" id="q3_clog"><label for="q3_clog" data-lang="cpp-clog">std::clog</label><br>
+        
+            <h3 data-lang="cpp-question4">Question 4: What does the inclusion of multiple programming paradigms allow in C++?</h3>
+            <input type="radio" name="q4" value="flexibility" id="q4_flexibility"><label for="q4_flexibility" data-lang="cpp-flexibility">Flexibility in design</label><br>
+            <input type="radio" name="q4" value="speed" id="q4_speed"><label for="q4_speed" data-lang="cpp-speed">Increased execution speed</label><br>
+            <input type="radio" name="q4" value="memory" id="q4_memory"><label for="q4_memory" data-lang="cpp-memory">Reduced memory use</label><br>
+            <input type="radio" name="q4" value="error-handling" id="q4_error_handling"><label for="q4_error_handling" data-lang="cpp-error-handling">Improved error handling</label><br>
+        
+            <h3 data-lang="cpp-question5">Question 5: Which feature of C++ provides control over system resources?</h3>
+            <input type="radio" name="q5" value="pointers" id="q5_pointers"><label for="q5_pointers" data-lang="cpp-pointers">Pointers</label><br>
+            <input type="radio" name="q5" value="classes" id="q5_classes"><label for="q5_classes" data-lang="cpp-classes">Classes</label><br>
+            <input type="radio" name="q5" value="functions" id="q5_functions"><label for="q5_functions" data-lang="cpp-functions">Functions</label><br>
+            <input type="radio" name="q5" value="templates" id="q5_templates"><label for="q5_templates" data-lang="cpp-templates">Templates</label><br>
+        
+            <h3 data-lang="cpp-question6">Question 6: Who developed C++ and when did the development start?</h3>
+            <input type="radio" name="q6" value="bjarne_1983" id="q6_bjarne_1983">
+            <label for="q6_bjarne_1983" data-lang="bjarne-1983">Bjarne Stroustrup in 1983</label><br>
+            <input type="radio" name="q6" value="bjarne_1979" id="q6_bjarne_1979">
+            <label for="q6_bjarne_1979" data-lang="bjarne-1979">Bjarne Stroustrup starting in 1979</label><br>
+            <input type="radio" name="q6" value="linus_1991" id="q6_linus_1991">
+            <label for="q6_linus_1991" data-lang="linus-1991">Linus Torvalds in 1991</label><br>
+            <input type="radio" name="q6" value="dennis_1969" id="q6_dennis_1969">
+            <label for="q6_dennis_1969" data-lang="dennis-1969">Dennis Ritchie in 1969</label><br>
+            
+        </div>
+        
+    <!-- Кнопка завершения урока -->
+    <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+    <!-- Кнопка перехода к следующему уроку -->
+    <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+    
+    </main>
+    
+    <footer>
+        <div id="xp-bar-container1">
+            <div id="xp-bar1">
+                <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>  <!-- Ensure styles for visibility -->
+            </div>
+            <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span> <!-- Multilingual support added here -->
+        </div>    
+    </footer>
+    
+    <!-- JavaScript and Library Integration -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="modal.js"></script>
+    <script src="cpp.js"></script>
+    <script src="xpBar.js"></script>
+    <script src="langswitch.js"></script>
+    <script>
+          // Translations for alert messages
+          const alertTranslations = {
+                en: {
+                    halfwayHero: "Achievement unlocked: Halfway Hero",
+                    xpConqueror: "Achievement unlocked: XP Conqueror",
+                    xpUpdated: "XP updated to ",
+                    lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                    answerCorrectly: "Please answer all questions correctly to proceed.",
+                    forUser: "for user ",
+                    xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                    startedCppCourse: "Achievement unlocked: C++ Conscript",
+                    completedCppFirstLesson: "Achievement unlocked: C++ Cadet"
+                },
+
+                ru: {
+                    halfwayHero: "Достижение разблокировано: Полуторный герой",
+                    xpConqueror: "Достижение разблокировано: Покоритель опыта",
+                    xpUpdated: "Опыт обновлен до ",
+                    lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                    answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить.",
+                    forUser: "для пользователя ",
+                    xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                    startedCppCourse: "Достижение разблокировано: C++ Новобранец",
+                    completedCppFirstLesson: "Достижение разблокировано: C++ Курсант"
+                },
+
+                kk: {
+                    halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                    xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                    xpUpdated: "Тәжірибе жаңартылды ",
+                    lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                    answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз.",
+                    forUser: "пайдаланушы үшін ",
+                    xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                    startedCppCourse: "Жетістік ашылды: С++ Жаңадан келген",
+                    completedCppFirstLesson: "Жетістік ашылды: C++ Курсант"
+                }
+            };
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const languageSelector = document.getElementById('language-selector'); // Ensure this element exists
+        
+                function getTranslation(key) {
+                    const selectedLanguage = languageSelector.value;
+                    return alertTranslations[selectedLanguage][key];
+                }
+        
+                function getUserID() {
+                    var currentUserString = localStorage.getItem('currentUser');
+                    return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+                }
+ 
+     var userID = getUserID();
+     var currentLessonKey = 'currentC++Lesson_' + userID;
+     var xpKey = 'currentXP_' + userID;
+     var achievementsKey = 'achievements_' + userID;
+     var completedLessonsKey = 'completedC++Lessons_' + userID;
+ 
+     var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+         earnedHalfXP: false,
+         fullXP: false,
+         startedCppCourse: false,
+         completedCppFirstLesson: false,
+     };
+ 
+     var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '1');
+                var completedLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+        
+                if (currentLesson > 1 && !window.location.href.includes('c++' + currentLesson)) {
+                    window.location.href = 'c++' + currentLesson + '.html';
+                }
+        
+                if (!userAchievements.startedCppCourse) {
+                    updateAchievements('startedCppCourse', getTranslation('startedCppCourse'));
+                }
+        
+                function saveUserProgress() {
+                    localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                    localStorage.setItem(completedLessonsKey, JSON.stringify(completedLessons));
+                }
+        
+                function updateAchievements(achievementKey, unlockMessage) {
+                    if (!userAchievements[achievementKey]) {
+                        userAchievements[achievementKey] = true;
+                        alert(getTranslation(achievementKey));
+                        saveUserProgress();
+                    }
+                }
+ 
+                function incrementXP(amount) {
+                    if (!completedLessons.includes(currentLesson)) {
+                        var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                        currentXP += amount;
+                        currentXP = Math.min(currentXP, 100);
+        
+                        localStorage.setItem(xpKey, currentXP.toString());
+        
+                        if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                            updateAchievements('earnedHalfXP', getTranslation('halfwayHero'));
+                        }
+                        if (currentXP >= 100 && !userAchievements.fullXP) {
+                            updateAchievements('fullXP', getTranslation('xpConqueror'));
+                        }
+        
+                        completedLessons.push(currentLesson);
+                        saveUserProgress();
+        
+                        alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+                    } else {
+                        alert(getTranslation('xpAlreadyAwarded'));
+                    }
+                }
+ 
+     var correctAnswers = {
+         q1: 'performance',
+         q2: 'stdlib',
+         q3: 'cout',
+         q4: 'flexibility',
+         q5: 'pointers',
+         q6: 'bjarne_1979'
+     };
+ 
+     function checkAnswers() {
+         var correctCount = 0;
+         Object.keys(correctAnswers).forEach(function(question) {
+             var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+             if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                 correctCount++;
+             }
+         });
+         return correctCount === 6; // All answers must be correct to show the finish button
+     }
+ 
+     function updateProgressBar() {
+                    var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                        document.querySelector(`input[name="${question}"]:checked`) !== null
+                    ).length;
+                    var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+                    document.getElementById('xp-progress').style.width = percentComplete + '%';
+                    document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+                    if (answeredQuestions === Object.keys(correctAnswers).length) {
+                        document.getElementById('finish-lesson').style.display = 'block';
+                    }
+                }
+        
+                document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                    input.addEventListener('change', function() {
+                        updateProgressBar();
+                    });
+                });
+        
+                document.getElementById('finish-lesson').addEventListener('click', function() {
+                    if (checkAnswers()) {
+                        incrementXP(6.67); // Increment XP by 6.67 for completing the lesson
+                        if (!userAchievements.completedCppFirstLesson) {
+                            updateAchievements('completedCppFirstLesson', getTranslation('completedCppFirstLesson'));
+                        }
+                        document.getElementById('next-lesson').style.display = 'block';
+                        alert(getTranslation('lessonCompleted'));
+                    } else {
+                        alert(getTranslation('answerCorrectly'));
+                        document.getElementById('next-lesson').style.display = 'none';
+                    }
+                });
+        
+                document.getElementById('next-lesson').addEventListener('click', function() {
+                    saveLessonProgress(currentLesson + 1);
+                });
+        
+                function saveLessonProgress(nextLessonNumber) {
+                    localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+                    currentLesson = nextLessonNumber;
+                    saveUserProgress();
+                    window.location.href = 'c++' + nextLessonNumber + '.html';
+                }
+            });
+ </script>
+ 
+
+        
+        
+        
+    
+    
+    
+    
+        
+        
+    
+</body>
+</html>

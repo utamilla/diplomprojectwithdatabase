@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+     <!-- Language Switcher -->
+     <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    <header>
+        <h1><span class="highlight" data-lang="python-course">Python Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up"><span class="intro-heading" data-lang="lesson-number">Lesson 1:</span> <span class="intro-text" data-lang="intro-to-python">Introduction to Python</span></h2>
+            <p data-aos="fade-up" data-lang="welcome-lesson">Welcome to the first lesson on Python!</p>
+        </div>
+        
+      <!-- Блок с остальным текстом -->
+<section class="lesson-details" data-aos="fade-up">
+    <h3 data-lang="what-is-python">What is Python?</h3>
+    <p data-lang="python-description">Python is a high-level programming language with dynamic semantics. It is known for its readability and simplicity, making it an ideal language for beginners.</p>
+    
+    <h3 data-lang="why-python">Why Python?</h3>
+    <ul>
+        <li><strong data-lang="easy-to-learn">Easy to learn:</strong> <span data-lang="easy-to-learn-desc">Python has a simple and straightforward syntax, making it easy for beginners to get started.</span></li>
+        <li><strong data-lang="powerful">Powerful:</strong> <span data-lang="powerful-desc">It can handle complex projects, including data analysis and machine learning.</span></li>
+        <li><strong data-lang="flexible">Flexible:</strong> <span data-lang="flexible-desc">Python can be used for prototyping, web development, and scientific research.</span></li>
+    </ul>
+    
+    <h3 data-lang="first-python-program">Your First Python Program</h3>
+    <p data-lang="hello-world-intro">Let's start with writing the classic "Hello, World!" program. Open your code editor and type the following lines:</p>
+    <pre><code>print("Hello, World!")</code></pre>
+    <p data-lang="print-function-desc">The <code>print()</code> function in Python outputs the specified text to the console. Run this code, and you'll see the greeting on the screen.</p>
+    
+    <h3 data-lang="python-syntax-basics">Python Syntax Basics</h3>
+    <p data-lang="indentation-description">Python uses indentation to organize code. Here's an example of a simple loop:</p>
+    <pre><code>for i in range(5):
+    print("Number ", i)</code></pre>
+    <p data-lang="loop-example-desc">This code prints numbers from 0 to 4, each on a new line.</p>
+</section>
+
+        
+       <!-- Блок с вопросами -->
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question1">Question 1: What is Python known for?</h3>
+    <input type="radio" name="q1" value="readability" id="q1_readability">
+    <label for="q1_readability" data-lang="readability">Readability</label><br>
+    <input type="radio" name="q1" value="complexity" id="q1_complexity">
+    <label for="q1_complexity" data-lang="complexity">Complexity</label><br>
+    <input type="radio" name="q1" value="speed" id="q1_speed">
+    <label for="q1_speed" data-lang="speed">Speed</label><br>
+    <input type="radio" name="q1" value="versatility" id="q1_versatility">
+    <label for="q1_versatility" data-lang="versatility">Versatility</label><br>
+</div>
+
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question2">Question 2: What makes Python powerful?</h3>
+    <input type="radio" name="q2" value="simplicity" id="q2_simplicity">
+    <label for="q2_simplicity" data-lang="simplicity">Simplicity</label><br>
+    <input type="radio" name="q2" value="capability" id="q2_capability">
+    <label for="q2_capability" data-lang="capability">Capability</label><br>
+    <input type="radio" name="q2" value="extensive_libraries" id="q2_extensive_libraries">
+    <label for="q2_extensive_libraries" data-lang="extensive_libraries">Extensive Libraries</label><br>
+    <input type="radio" name="q2" value="community_support" id="q2_community_support">
+    <label for="q2_community_support" data-lang="community_support">Community Support</label><br>
+</div>
+
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question3">Question 3: What is the output of the "Hello, World!" program?</h3>
+    <input type="radio" name="q3" value="Hello, Python" id="q3_hello_python">
+    <label for="q3_hello_python" data-lang="hello-python">Hello, Python</label><br>
+    <input type="radio" name="q3" value="Hello, World!" id="q3_hello_world">
+    <label for="q3_hello_world" data-lang="hello-world">Hello, World!</label><br>
+    <input type="radio" name="q3" value="hello_everyone" id="q3_hello_everyone">
+    <label for="q3_hello_everyone" data-lang="hello_everyone">Hello, Everyone!</label><br>
+    <input type="radio" name="q3" value="hi_world" id="q3_hi_world">
+    <label for="q3_hi_world" data-lang="hi_world">Hi, World!</label><br>
+</div>
+
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question4">Question 4: How does Python organize code?</h3>
+    <input type="radio" name="q4" value="indentation" id="q4_indentation">
+    <label for="q4_indentation" data-lang="indentation">Indentation</label><br>
+    <input type="radio" name="q4" value="parentheses" id="q4_parentheses">
+    <label for="q4_parentheses" data-lang="parentheses">Parentheses</label><br>
+    <input type="radio" name="q4" value="braces" id="q4_braces">
+    <label for="q4_braces" data-lang="braces">Braces</label><br>
+    <input type="radio" name="q4" value="semicolons" id="q4_semicolons">
+    <label for="q4_semicolons" data-lang="semicolons">Semicolons</label><br>
+</div>
+
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question5">Question 5: What does the print() function do in Python?</h3>
+    <input type="radio" name="q5" value="output" id="q5_output">
+    <label for="q5_output" data-lang="output-text">Outputs text to the console</label><br>
+    <input type="radio" name="q5" value="calculates" id="q5_calculates">
+    <label for="q5_calculates" data-lang="calculate-numbers">Calculates numbers</label><br>
+    <input type="radio" name="q5" value="store_data" id="q5_store_data">
+    <label for="q5_store_data" data-lang="store_data">Stores data</label><br>
+    <input type="radio" name="q5" value="manipulate_strings" id="q5_manipulate_strings">
+    <label for="q5_manipulate_strings" data-lang="manipulate_strings">Manipulates strings</label><br>
+</div>
+
+
+        
+<button id="finish-lesson" class="submit-button" data-lang="finish-lesson" style="display:none;">Finish Lesson</button>
+        <button id="next-lesson" class="submit-button" style="display:none;" data-lang="next-lesson">Next Lesson</button>
+    </main>
+
+
+    <footer>
+        <div id="xp-bar-container1">
+            <div id="xp-bar1">
+                <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>  <!-- Ensure styles for visibility -->
+            </div>
+            <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span> <!-- Multilingual support added here -->
+        </div>    
+    </footer>
+
+    <!-- JavaScript and Library Integration -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="modal.js"></script>
+    <script src="python.js"></script>
+    <script src="xpBar.js"></script>
+    <script src="langswitch.js"></script>
+    <script src="achievements.js"></script>
+    <script>
+        // Translations for alert messages
+        const alertTranslations = {
+            en: {
+                halfwayHero: "Achievement unlocked: Halfway Hero",
+                xpConqueror: "Achievement unlocked: XP Conqueror",
+                xpUpdated: "XP updated to ",
+                forUser: "for user ",
+                xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                answerCorrectly: "Please answer all questions correctly to proceed.",
+                startedPythonCourse: "Achievement unlocked: Python Pioneer",
+                completedPythonFirstLesson: "Achievement unlocked: Python Pathfinder"
+            },
+            ru: {
+                halfwayHero: "Достижение разблокировано: Полуторный герой",
+                xpConqueror: "Достижение разблокировано: Покоритель опыта",
+                xpUpdated: "Опыт обновлен до ",
+                forUser: "для пользователя ",
+                xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить.",
+                startedPythonCourse: "Достижение разблокировано: Python Пионер",
+                completedPythonFirstLesson: "Достижение разблокировано: Python Следопыт"
+            },
+            kk: {
+                halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                xpUpdated: "Тәжірибе жаңартылды ",
+                forUser: "пайдаланушы үшін ",
+                xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз.",
+                startedPythonCourse: "Жетістік ашылды: Python Пионер",
+                completedPythonFirstLesson: "Жетістік ашылды: Python Жол іздеуші"
+            }
+        };
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelector = document.getElementById('language-selector'); // Ensure this element exists
+    
+            function getTranslation(key) {
+                const selectedLanguage = languageSelector.value;
+                return alertTranslations[selectedLanguage][key];
+            }
+    
+            function getUserID() {
+                var currentUserString = localStorage.getItem('currentUser');
+                return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+            }
+    
+            var userID = getUserID();
+            var currentLessonKey = 'currentPythonLesson_' + userID;
+            var xpKey = 'currentXP_' + userID;
+            var achievementsKey = 'achievements_' + userID;
+            var completedLessonsKey = 'completedPythonLessons_' + userID;
+    
+            var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+                earnedHalfXP: false,
+                fullXP: false,
+                startedPythonCourse: false,
+                completedPythonFirstLesson: false
+            };
+    
+            var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '1');
+            var completedLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+    
+            if (currentLesson > 1 && !window.location.href.includes('python' + currentLesson)) {
+                    window.location.href = 'python' + currentLesson + '.html';
+                }
+        
+                if (!userAchievements.startedPythonCourse) {
+                    updateAchievements('startedPythonCourse', getTranslation('startedPythonCourse'));
+                }
+        
+                function saveUserProgress() {
+                    localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                    localStorage.setItem(completedLessonsKey, JSON.stringify(completedLessons));
+                }
+        
+                function updateAchievements(achievementKey, unlockMessage) {
+                    if (!userAchievements[achievementKey]) {
+                        userAchievements[achievementKey] = true;
+                        alert(getTranslation(achievementKey));
+                        saveUserProgress();
+                    }
+                }
+    
+            function incrementXP(amount) {
+                if (!completedLessons.includes(currentLesson)) {
+                    var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                    currentXP += amount;
+                    currentXP = Math.min(currentXP, 100);
+    
+                    localStorage.setItem(xpKey, currentXP.toString());
+    
+                    if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                        userAchievements.earnedHalfXP = true;
+                        alert(getTranslation('halfwayHero'));
+                    }
+                    if (currentXP >= 100 && !userAchievements.fullXP) {
+                        userAchievements.fullXP = true;
+                        alert(getTranslation('xpConqueror'));
+                    }
+    
+                    completedLessons.push(currentLesson);
+                    saveUserProgress();
+    
+                    alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+                } else {
+                    alert(getTranslation('xpAlreadyAwarded'));
+                }
+            }
+    
+            var correctAnswers = {
+                q1: 'readability',
+                q2: 'capability',
+                q3: 'Hello, World!',
+                q4: 'indentation',
+                q5: 'output'
+            };
+    
+            function checkAnswers() {
+                var correctCount = 0;
+                Object.keys(correctAnswers).forEach(function(question) {
+                    var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                    if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                        correctCount++;
+                    }
+                });
+                return correctCount === 5;
+            }
+    
+            function updateProgressBar() {
+                var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                    document.querySelector(`input[name="${question}"]:checked`) !== null
+                ).length;
+                var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+                document.getElementById('xp-progress').style.width = percentComplete + '%';
+                document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+                if (answeredQuestions === Object.keys(correctAnswers).length) {
+                    document.getElementById('finish-lesson').style.display = 'block';
+                }
+            }
+    
+            document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                input.addEventListener('change', function() {
+                    updateProgressBar();
+                });
+            });
+    
+            document.getElementById('finish-lesson').addEventListener('click', function() {
+                if (checkAnswers()) {
+                    incrementXP(6.67);
+                    if (!userAchievements.completedPythonFirstLesson) {
+                        userAchievements.completedPythonFirstLesson = true;
+                        alert(getTranslation('completedPythonFirstLesson'));
+                    }
+                    document.getElementById('next-lesson').style.display = 'block';
+                    alert(getTranslation('lessonCompleted'));
+                } else {
+                    alert(getTranslation('answerCorrectly'));
+                    document.getElementById('next-lesson').style.display = 'none';
+                }
+            });
+    
+            document.getElementById('next-lesson').addEventListener('click', function() {
+                saveLessonProgress(currentLesson + 1);
+            });
+    
+            function saveLessonProgress(nextLessonNumber) {
+                localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+                currentLesson = nextLessonNumber; // Update current lesson
+                saveUserProgress();
+                window.location.href = 'python' + nextLessonNumber + '.html';
+            }
+        });
+    </script>
+    
+    
+    
+    
+    
+        
+        
+        
+        
+        
+        
+    
+    
+
+</body>
+</html>
+
+
+

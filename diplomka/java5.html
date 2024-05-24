@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <h1><span class="highlight" data-lang="java-course">Java Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up"><span class="intro-heading" data-lang="lesson5java-title">Lesson 5:</span> <span class="intro-text" data-lang="java-project">Java Project</span></h2>
+            <p data-aos="fade-up" data-lang="welcome-lesson5java">Welcome to the final lesson on Java!</p>
+        </div>
+        
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="advanced-java-concepts">Java Enterprise Edition Deep Dive</h3>
+            <p data-lang="welcome-final-lesson">This final lesson of our Java course explores the intricate and robust features of Java Enterprise Edition (Java EE) that are essential for developing high-performance applications in corporate environments.</p>
+            
+            <p data-lang="java-advanced-topics">
+                We begin with a deep dive into Multithreading and Concurrency, explaining how Java handles multiple threads to execute tasks in parallel, thus enhancing performance. We also explore the pivotal role of Design Patterns in software development, discussing patterns like Singleton, Factory, and MVC to address common problems with unique solutions. Further, we elaborate on the Java Streams API and Lambda expressions to demonstrate functional programming techniques that streamline coding and improve readability.
+            </p>
+            
+            <p data-lang="java-spring-framework">
+                Another cornerstone of Java EE is the Spring Framework, which revolutionizes configuration and dependency management through its comprehensive programming and configuration model. Spring's core features are used to build anything from small standalone applications to large, complex enterprise systems uniquely positioned to support the cloud.
+            </p>
+        
+            <h3 data-lang="java-spring-example">Example: Spring Boot REST Controller</h3>
+            <p data-lang="java-code-intro">The following example of a Spring Boot REST controller shows how to simplify web services development with Spring:</p>
+            <pre><code>
+            @RestController
+            public class BookController {
+                @Autowired
+                private BookRepository repository;
+        
+                @GetMapping("/books")
+                public ResponseEntity<List<Book>> getAllBooks() {
+                    List<Book> books = repository.findAll();
+                    return ResponseEntity.ok().body(books);
+                }
+        
+                @PostMapping("/books")
+                public ResponseEntity<Book> createBook(@RequestBody Book book) {
+                    Book savedBook = repository.save(book);
+                    return ResponseEntity.ok().body(savedBook);
+                }
+            }
+            </code></pre>
+            
+            <p data-lang="java-error-handling">
+                Effective error handling and debugging are critical for enterprise application development. We cover advanced techniques for managing exceptions, including Java’s try-catch system, logging frameworks like Log4J, and Java’s built-in assertions to prevent software failures.
+            </p>
+        
+            <p data-lang="java-real-world-applications">
+                Finally, the real-world applicability of these concepts is demonstrated through case studies of Java EE in action: from constructing resilient web applications using servlets and JSPs to seamless database integration using JDBC. We discuss how Java EE is employed in different industries such as banking, retail, and telecommunications to create scalable and secure enterprise applications.
+            </p>
+            
+            <p data-lang="java-conclusion">
+                By the end of this lesson, you will have mastered the advanced features of Java EE that are vital for developing and maintaining robust, scalable, and efficient software within the enterprise ecosystem.
+            </p>
+        </section>
+        
+        
+        
+        
+        <!-- Questions Block -->
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="java5-question1">Question 1: What is the primary purpose of using multithreading in Java applications?</h3>
+    <input type="radio" name="q1" value="data_security" id="q1_data_security">
+    <label for="q1_data_security" data-lang="java5-answer1-option1">To enhance data security</label><br>
+    <input type="radio" name="q1" value="performance_improvement" id="q1_performance_improvement">
+    <label for="q1_performance_improvement" data-lang="java5-answer1-option2">To improve application performance</label><br>
+    <input type="radio" name="q1" value="ui_design" id="q1_ui_design">
+    <label for="q1_ui_design" data-lang="java5-answer1-option3">To design user interfaces</label><br>
+    <input type="radio" name="q1" value="data_analysis" id="q1_data_analysis">
+    <label for="q1_data_analysis" data-lang="java5-answer1-option4">To perform data analysis</label><br>
+
+    <h3 data-lang="java5-question2">Question 2: Which design pattern ensures that a class has only one instance?</h3>
+    <input type="radio" name="q2" value="singleton" id="q2_singleton">
+    <label for="q2_singleton" data-lang="java5-answer2-option1">Singleton</label><br>
+    <input type="radio" name="q2" value="factory" id="q2_factory">
+    <label for="q2_factory" data-lang="java5-answer2-option2">Factory</label><br>
+    <input type="radio" name="q2" value="mvc" id="q2_mvc">
+    <label for="q2_mvc" data-lang="java5-answer2-option3">MVC</label><br>
+    <input type="radio" name="q2" value="prototype" id="q2_prototype">
+    <label for="q2_prototype" data-lang="java5-answer2-option4">Prototype</label><br>
+
+    <h3 data-lang="java5-question3">Question 3: What is the Java Streams API primarily used for?</h3>
+    <input type="radio" name="q3" value="networking" id="q3_networking">
+    <label for="q3_networking" data-lang="java5-answer3-option1">Networking</label><br>
+    <input type="radio" name="q3" value="memory_management" id="q3_memory_management">
+    <label for="q3_memory_management" data-lang="java5-answer3-option2">Memory management</label><br>
+    <input type="radio" name="q3" value="data_processing" id="q3_data_processing">
+    <label for="q3_data_processing" data-lang="java5-answer3-option3">Data processing</label><br>
+    <input type="radio" name="q3" value="ui_design" id="q3_ui_design">
+    <label for="q3_ui_design" data-lang="java5-answer3-option4">User interface design</label><br>
+
+    <h3 data-lang="java5-question4">Question 4: Which feature allows Java to handle functions as methods of one argument automatically?</h3>
+    <input type="radio" name="q4" value="generics" id="q4_generics">
+    <label for="q4_generics" data-lang="java5-answer4-option1">Generics</label><br>
+    <input type="radio" name="q4" value="lambda_expressions" id="q4_lambda_expressions">
+    <label for="q4_lambda_expressions" data-lang="java5-answer4-option2">Lambda expressions</label><br>
+    <input type="radio" name="q4" value="enums" id="q4_enums">
+    <label for="q4_enums" data-lang="java5-answer4-option3">Enums</label><br>
+    <input type="radio" name="q4" value="annotations" id="q4_annotations">
+    <label for="q4_annotations" data-lang="java5-answer4-option4">Annotations</label><br>
+
+    <h3 data-lang="java5-question5">Question 5: What is a primary advantage of using Spring Framework in Java applications?</h3>
+    <input type="radio" name="q5" value="enhanced_security" id="q5_enhanced_security">
+    <label for="q5_enhanced_security" data-lang="java5-answer5-option1">Enhanced security features</label><br>
+    <input type="radio" name="q5" value="simplified_data_access" id="q5_simplified_data_access">
+    <label for="q5_simplified_data_access" data-lang="java5-answer5-option2">Simplified data access</label><br>
+    <input type="radio" name="q5" value="dependency_management" id="q5_dependency_management">
+    <label for="q5_dependency_management" data-lang="java5-answer5-option3">Dependency management</label><br>
+    <input type="radio" name="q5" value="automatic_code_generation" id="q5_automatic_code_generation">
+    <label for="q5_automatic_code_generation" data-lang="java5-answer5-option4">Automatic code generation</label><br>
+        
+    <h3 data-lang="java3-question6">Question 6: Which Java framework is used primarily for creating RESTful web services?</h3>
+    <input type="radio" name="q6" value="spring_boot" id="q6_spring_boot">
+    <label for="q6_spring_boot" data-lang="java5-answer6-option1">Spring Boot</label><br>
+    <input type="radio" name="q6" value="java_ee" id="q6_java_ee">
+    <label for="q6_java_ee" data-lang="java5-answer6-option2">Java EE</label><br>
+    <input type="radio" name="q6" value="hibernate" id="q6_hibernate">
+    <label for="q6_hibernate" data-lang="java5-answer6-option3">Hibernate</label><br>
+    <input type="radio" name="q6" value="struts" id="q6_struts">
+    <label for="q6_struts" data-lang="java5-answer6-option4">Struts</label><br>
+    
+    <h3 data-lang="java5-question7">Question 7: What does 'encapsulation' refer to in Java programming?</h3>
+    <input type="radio" name="q7" value="storing_data" id="q7_storing_data">
+    <label for="q7_storing_data" data-lang="java5-answer7-option1">Storing data in a database</label><br>
+    <input type="radio" name="q7" value="data_hiding" id="q7_data_hiding">
+    <label for="q7_data_hiding" data-lang="java5-answer7-option2">Hiding the internal data of an object from outside interference</label><br>
+    <input type="radio" name="q7" value="code_reusability" id="q7_code_reusability">
+    <label for="q7_code_reusability" data-lang="java5-answer7-option3">Allowing code to be reused across multiple projects</label><br>
+    <input type="radio" name="q7" value="method_overloading" id="q7_method_overloading">
+    <label for="q7_method_overloading" data-lang="java5-answer7-option4">Overloading methods based on input parameters</label><br>
+    
+    <h3 data-lang="java5-question8">Question 8: What are 'Lambda Expressions' primarily used for in Java?</h3>
+    <input type="radio" name="q8" value="creating_threads" id="q8_creating_threads">
+    <label for="q8_creating_threads" data-lang="java5-answer8-option1">Creating new threads for multitasking</label><br>
+    <input type="radio" name="q8" value="data_manipulation" id="q8_data_manipulation">
+    <label for="q8_data_manipulation" data-lang="java5-answer8-option2">Manipulating data within collections</label><br>
+    <input type="radio" name="q8" value="implementing_interfaces" id="q8_implementing_interfaces">
+    <label for="q8_implementing_interfaces" data-lang="java5-answer8-option3">Implementing interfaces with a single method</label><br>
+    <input type="radio" name="q8" value="error_handling" id="q8_error_handling">
+    <label for="q8_error_handling" data-lang="java5-answer8-option4">Handling programming errors and exceptions</label><br>
+    
+    <h3 data-lang="java5-question9">Question 9: Which concept is essential for debugging and error handling in Java?</h3>
+    <input type="radio" name="q9" value="polymorphism" id="q9_polymorphism">
+    <label for="q9_polymorphism" data-lang="java5-answer9-option1">Polymorphism</label><br>
+    <input type="radio" name="q9" value="inheritance" id="q9_inheritance">
+    <label for="q9_inheritance" data-lang="java5-answer9-option2">Inheritance</label><br>
+    <input type="radio" name="q9" value="encapsulation" id="q9_encapsulation">
+    <label for="q9_encapsulation" data-lang="java5-answer9-option3">Encapsulation</label><br>
+    <input type="radio" name="q9" value="exception_handling" id="q9_exception_handling">
+    <label for="q9_exception_handling" data-lang="java5-answer9-option4">Exception Handling</label><br>
+    
+    <h3 data-lang="java5-question10">Question 10: Which Java API is used for database integration?</h3>
+    <input type="radio" name="q10" value="java_db" id="q10_java_db">
+    <label for="q10_java_db" data-lang="java5-answer10-option1">Java DB</label><br>
+    <input type="radio" name="q10" value="jdbc" id="q10_jdbc">
+    <label for="q10_jdbc" data-lang="java5-answer10-option2">JDBC</label><br>
+    <input type="radio" name="q10" value="rmi" id="q10_rmi">
+    <label for="q10_rmi" data-lang="java5-answer10-option3">RMI</label><br>
+    <input type="radio" name="q10" value="jndi" id="q10_jndi">
+    <label for="q10_jndi" data-lang="java5-answer10-option4">JNDI</label><br>
+</div>    
+        
+
+<!-- Guide Section -->
+<div class="guide" data-aos="fade-up">
+    <h3 data-lang="guide-title">Guide to Finding Answers</h3>
+    <p data-lang="guide-description">Most of the answers to these questions can be found in the text above. For a more in-depth study, refer to the official Python documentation available online.</p>
+</div>
+
+        <!-- Finish Lesson Button -->
+        <button id="finish-lesson" class="submit-button" style="display:none;" data-lang="finish-lesson">Finish Lesson</button>
+
+        <!-- Get Certificate Button (hidden by default) -->
+        <button id="get-certificate" class="submit-button" data-lang="get-certificate" style="display:none;">Get Certificate</button>
+    </main>
+    <footer>
+        <div id="xp-bar-container" style="position: relative;">
+            <div id="xp-bar">
+                <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>
+            </div>
+            <span id="xp-bar-label" data-lang="percent-complete" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%);">0% Complete</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="modal.js"></script>
+    <script src="python.js"></script>
+    <script src="xpBar.js"></script>
+    <script src="langswitch.js"></script>
+    <script>
+        const alertTranslations = {
+            en: {
+                halfwayHero: "Achievement unlocked: Halfway Hero",
+                xpConqueror: "Achievement unlocked: XP Conqueror",
+                xpUpdated: "XP updated to ",
+                forUser: "for user ",
+                xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                answerCorrectly: "Please answer all questions correctly to proceed.",
+                getCertificate: "Get Certificate",
+                certificateGenerated: "Certificate successfully generated!",
+                javaGuru: "Achievement unlocked: Java Guru",
+                masterOfCodes: "Achievement unlocked: Master of Codes",
+                completedJavaCourse: "Achievement unlocked: Java Guru"
+            },
+            ru: {
+                halfwayHero: "Достижение разблокировано: Полуторный герой",
+                xpConqueror: "Достижение разблокировано: Завоеватель XP",
+                xpUpdated: "Опыт обновлен до ",
+                forUser: "для пользователя ",
+                xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить.",
+                getCertificate: "Получить сертификат",
+                certificateGenerated: "Сертификат успешно сгенерирован!",
+                javaGuru: "Достижение разблокировано: Java Гуру",
+                masterOfCodes: "Достижение разблокировано: Мастер кодов",
+                completedJavaCourse: "Достижение разблокировано: Java Гуру"
+            },
+            kk: {
+                halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                xpUpdated: "Тәжірибе жаңартылды ",
+                forUser: "пайдаланушы үшін ",
+                xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз.",
+                getCertificate: "Сертификатты алу",
+                certificateGenerated: "Сертификат сәтті өңделді!",
+                javaGuru: "Жетістік ашылды: Java Гуру",
+                masterOfCodes: "Жетістік ашылды: Кодтар шебері",
+                completedJavaCourse: "Жетістік ашылды: Java Тәлімгер"
+            }
+        };
+    
+        document.addEventListener('DOMContentLoaded', function() {
+    const languageSelector = document.getElementById('language-selector');
+
+    function getTranslation(key) {
+        const selectedLanguage = languageSelector.value;
+        return alertTranslations[selectedLanguage][key];
+    }
+
+    function getUserID() {
+        var currentUserString = localStorage.getItem('currentUser');
+        if (currentUserString) {
+            return JSON.parse(currentUserString).email;
+        }
+        return 'defaultUser';
+    }
+
+    var userID = getUserID();
+    var lessonNumber = 5; // Set the lesson number
+    var currentLessonKey = 'currentJavaLesson_' + userID;
+    var xpKey = 'currentXP_' + userID;
+    var achievementsKey = 'achievements_' + userID;
+    var completedLessonsKey = 'completedJavaLessons_' + userID;
+
+    var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+        earnedHalfXP: false,
+        fullXP: false,
+        completedJavaCourse: false,
+        allCoursesCompleted: false
+    };
+
+    var completedJavaLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+    var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || lessonNumber);
+
+    // Redirect to the appropriate lesson page if not on the current one
+    if (currentLesson > lessonNumber && !window.location.href.includes('java' + currentLesson)) {
+        window.location.href = 'java' + currentLesson + '.html';
+    }
+
+    function saveUserProgress() {
+        localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+        localStorage.setItem(completedLessonsKey, JSON.stringify(completedJavaLessons)); // Ensure this is saved back to localStorage
+    }
+
+    function incrementXP(amount) {
+        var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+        if (currentXP < 100 && !completedJavaLessons.includes(5)) { // Check if lesson 5 is already completed
+            currentXP += amount;
+            currentXP = Math.min(currentXP, 100);
+            localStorage.setItem(xpKey, currentXP.toString());
+
+            if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                userAchievements.earnedHalfXP = true;
+                alert(getTranslation('halfwayHero'));
+                saveUserProgress();
+            }
+            if (currentXP >= 100) {
+                if (!userAchievements.fullXP) {
+                    userAchievements.fullXP = true;
+                    alert(getTranslation('xpConqueror'));
+                    saveUserProgress();
+                }
+                if (!userAchievements.allCoursesCompleted) {
+                    userAchievements.allCoursesCompleted = true;
+                    alert(getTranslation('masterOfCodes'));
+                    saveUserProgress();
+                }
+            }
+
+            if (!completedJavaLessons.includes(5)) {
+                completedJavaLessons.push(5); // Mark lesson 5 as completed
+                if (!userAchievements.completedJavaCourse) {
+                    userAchievements.completedJavaCourse = true;
+                    alert(getTranslation('completedJavaCourse'));
+                    saveUserProgress();
+                }
+            }
+
+            alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+        } else if (completedJavaLessons.includes(5)) {
+            alert(getTranslation('xpAlreadyAwarded'));
+        }
+    }
+
+    var correctAnswers = {
+        q1: 'performance_improvement',
+        q2: 'singleton',
+        q3: 'data_processing',
+        q4: 'lambda_expressions',
+        q5: 'dependency_management',
+        q6: 'spring_boot',
+        q7: 'data_hiding',
+        q8: 'implementing_interfaces',
+        q9: 'exception_handling',
+        q10: 'jdbc'
+    };
+
+    function checkCorrectAnswers() {
+        var correctCount = 0;
+        Object.keys(correctAnswers).forEach(function(question) {
+            var selectedOption = document.querySelector('input[name="' + question + '"]:checked');
+            if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                correctCount++;
+            }
+        });
+        return correctCount === Object.keys(correctAnswers).length;
+    }
+
+    function updateProgressBar() {
+        var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+            document.querySelector(`input[name="${question}"]:checked`) !== null
+        ).length;
+        var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+        document.getElementById('xp-progress').style.width = percentComplete + '%';
+        document.getElementById('xp-bar-label').textContent = percentComplete.toFixed(0) + '% Complete';
+        if (answeredQuestions === Object.keys(correctAnswers).length) {
+            document.getElementById('finish-lesson').style.display = 'block';
+        }
+    }
+
+    document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+        input.addEventListener('change', function() {
+            updateProgressBar();
+        });
+    });
+
+    document.getElementById('finish-lesson').addEventListener('click', function() {
+        if (checkCorrectAnswers()) {
+            incrementXP(6.67); // Increment XP
+            alert(getTranslation('lessonCompleted'));
+            document.getElementById('get-certificate').style.display = 'block'; // Show the "Get Certificate" button
+        } else {
+            alert(getTranslation('answerCorrectly'));
+        }
+    });
+
+    const getCertificateBtn = document.getElementById('get-certificate');
+    if (getCertificateBtn) {
+        getCertificateBtn.addEventListener('click', function() {
+            generatePDF(); // Call to generate the certificate
+        });
+    }
+});
+
+        function generatePDF() {
+    const { jsPDF } = window.jspdf; // Ensure jsPDF is correctly referenced
+    const doc = new jsPDF();
+
+    // Fetch user details and language choice
+    const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    const userName = currentUser.name || 'Unknown User';
+    const courseName = 'Advanced Java';
+    const currentLang = document.getElementById('language-selector').value;
+
+    // Define certificate text for each language in Latin script
+    const texts = {
+        en: {
+            title: "Certificate of Completion",
+            congrats: "Congratulations!",
+            body: `This is to certify that ${userName} has successfully completed the course "${courseName}".`,
+            footer: "Well done for this significant achievement!"
+        },
+        ru: {
+            title: "Sertifikat o Zavershenii",
+            congrats: "Pozdravlyaem!",
+            body: `Eto podtverzhdaet, chto ${userName} uspeshno zavershil kurs "${courseName}".`,
+            footer: "Otlichnaya rabota i vazhnoe dostizhenie!"
+        },
+        kk: {
+            title: "Ayaqtalgandygy turaly kuälik",
+            congrats: "Quttyqtaymiz!",
+            body: `Bul ${userName} "${courseName}" kursyn sätti aiaqtaganyn rastaý úshin qajet.`,
+            footer: "Osy manyzdy jetistik úshin jaraysyn!"
+        }
+    };
+
+    let selectedText = texts[currentLang] || texts.en; // Default to English if no match
+
+    // Set the background color and add decorative elements
+    doc.setFillColor(245, 245, 220); // Light beige background
+    doc.rect(0, 0, 210, 297, 'F'); // Fill the entire page
+
+    // Custom decorative corners
+    doc.setDrawColor(160, 82, 45); // Sienna color
+    doc.setLineWidth(2);
+    const offset = 20;
+    const cornerLength = 15;
+    const pageWidth = 210, pageHeight = 297;
+    // Top-left corner
+    doc.line(offset, offset, offset + cornerLength, offset);
+    doc.line(offset, offset, offset, offset + cornerLength);
+    // Top-right corner
+    doc.line(pageWidth - offset, offset, pageWidth - offset - cornerLength, offset);
+    doc.line(pageWidth - offset, offset, pageWidth - offset, offset + cornerLength);
+    // Bottom-left corner
+    doc.line(offset, pageHeight - offset, offset + cornerLength, pageHeight - offset);
+    doc.line(offset, pageHeight - offset, offset, pageHeight - offset - cornerLength);
+    // Bottom-right corner
+    doc.line(pageWidth - offset, pageHeight - offset, pageWidth - offset - cornerLength, pageHeight - offset);
+    doc.line(pageWidth - offset, pageHeight - offset, pageWidth - offset, pageHeight - offset - cornerLength);
+
+    // Add a central decorative watermark or icon (replace the circle with a subtle icon)
+    doc.setDrawColor(100, 100, 100); // Grey color for a subtle look
+    doc.setFont('ZapfDingbats'); // Using a built-in symbol font
+    doc.setFontSize(30);
+    doc.text('a', 105, 150, { align: "center" }); // This adds a decorative symbol at the center
+
+    // Setup font and print text
+    doc.setFont('Belleza', 'normal'); // Set the font to Belleza
+
+     // Title with custom color
+     doc.setTextColor(139, 0, 0); // Dark red
+    doc.setFontSize(30);
+    doc.text(selectedText.title, 105, 85, { align: "center" }); // Centered title
+
+    // Congratulations with custom color
+    doc.setTextColor(204, 0, 0); // Rich deep red
+    doc.setFontSize(24);
+    doc.text(selectedText.congrats, 105, 130, { align: "center" }); // Centered congratulations
+
+    // Reset color for body and footer
+    doc.setTextColor(60, 42, 42); // Dark brown
+    doc.setFontSize(16);
+    doc.text(selectedText.body, 105, 165, { align: "center" }); // Centered body
+    doc.text(selectedText.footer, 105, 180, { align: "center" }); // Centered footer
+
+    // Save the PDF
+    doc.save(`CertificateJava_${currentLang}.pdf`);
+};
+
+
+
+
+
+
+    </script>
+    
+
+        
+</body>
+</html>

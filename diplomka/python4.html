@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+ <!-- Language Switcher -->
+ <div class="language-switcher">
+    <select id="language-selector">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="kk">Қазақ</option>
+    </select>
+    <header>
+        <h1><span class="highlight" data-lang="python-course">Python Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up"><span class="intro-heading" data-lang="lesson4-title">Lesson 4:</span> <span class="intro-text" data-lang="python-libraries">Python Libraries</span></h2>
+            <p data-aos="fade-up" data-lang="welcome-lesson4">Welcome to the fourth lesson on Python!</p>
+        </div>
+        
+        
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="exploring-python-libraries">Exploring Python Libraries</h3>
+            <p data-lang="lesson4-details">In this lesson, we will explore some of the most popular Python libraries that extend the functionality of the language and make development easier.</p>
+            <p data-lang="libraries-covered">We will cover libraries such as NumPy, pandas, Matplotlib, and TensorFlow. These libraries are essential for data manipulation, visualization, and machine learning tasks.</p>
+            
+            <h3 data-lang="numpy">NumPy</h3>
+            <p data-lang="numpy-desc">NumPy is a powerful library for numerical computing in Python. It provides support for arrays, matrices, and mathematical functions, making it ideal for scientific computing tasks.</p>
+            
+            <h3 data-lang="pandas">pandas</h3>
+            <p data-lang="pandas-desc">pandas is a versatile library for data manipulation and analysis in Python. It offers data structures like DataFrame and Series, along with functions for data cleaning, merging, and filtering.</p>
+            
+            <h3 data-lang="matplotlib">Matplotlib</h3>
+            <p data-lang="matplotlib-desc">Matplotlib is a plotting library for creating static, interactive, and animated visualizations in Python. It provides a wide range of plotting functions to visualize data in various formats.</p>
+            
+            <h3 data-lang="tensorflow">TensorFlow</h3>
+            <p data-lang="tensorflow-desc">TensorFlow is an open-source machine learning framework developed by Google. It enables building and training deep learning models for tasks such as image recognition, natural language processing, and more.</p>
+            
+            <h3 data-lang="scikit-learn">Scikit-Learn</h3>
+            <p data-lang="scikit-learn-desc">Scikit-Learn is another essential library for machine learning in Python. Known for its simplicity and efficiency, this library provides tools for data mining and data analysis. It is built on NumPy, SciPy, and matplotlib.</p>
+        
+            <h3 data-lang="data-visualization-seaborn">Data Visualization with Seaborn</h3>
+            <p data-lang="seaborn-desc">Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. This library makes it easier to generate complex visualizations like heat maps, time series, and violin plots.</p>
+            
+            <h3 data-lang="using-ipython">Using IPython</h3>
+            <p data-lang="ipython-desc">IPython is an interactive command-line interface to Python that offers enhanced introspection, additional shell syntax, syntax highlighting, and more. It is particularly useful in data science workflows.</p>
+        </section>
+        
+        
+<!-- Блок с вопросами -->
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question1-numpy">Question 1: What is NumPy used for?</h3>
+    <input type="radio" name="q1" value="numerical" id="numerical"><label for="numerical" data-lang="numerical-computing">Numerical computing</label><br>
+    <input type="radio" name="q1" value="data" id="data"><label for="data" data-lang="data-analysis">Data analysis</label><br>
+    <input type="radio" name="q1" value="visualization" id="visualization"><label for="visualization" data-lang="data-visualization">Data visualization</label><br>
+    <input type="radio" name="q1" value="machine-learning" id="machine-learning"><label for="machine-learning" data-lang="machine-learning">Machine learning</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question2-library-use">Question 2: Which library is versatile for data manipulation and analysis?</h3>
+    <input type="radio" name="q2" value="numpy" id="numpy"><label for="numpy" data-lang="numpy">NumPy</label><br>
+    <input type="radio" name="q2" value="pandas" id="pandas"><label for="pandas" data-lang="pandas">pandas</label><br>
+    <input type="radio" name="q2" value="matplotlib" id="matplotlib"><label for="matplotlib" data-lang="matplotlib">Matplotlib</label><br>
+    <input type="radio" name="q2" value="scipy" id="scipy"><label for="scipy" data-lang="scipy">SciPy</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question3-matplotlib">Question 3: What type of visualizations can be created using Matplotlib?</h3>
+    <input type="radio" name="q3" value="static" id="static"><label for="static" data-lang="static-only">Static only</label><br>
+    <input type="radio" name="q3" value="interactive" id="interactive"><label for="interactive" data-lang="interactive-only">Interactive only</label><br>
+    <input type="radio" name="q3" value="both" id="both"><label for="both" data-lang="both-static-interactive">Both static and interactive</label><br>
+    <input type="radio" name="q3" value="none" id="none"><label for="none" data-lang="none">None of the above</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question4-google-library">Question 4: Which library is developed by Google for building deep learning models?</h3>
+    <input type="radio" name="q4" value="tensorflow" id="tensorflow"><label for="tensorflow" data-lang="tensorflow">TensorFlow</label><br>
+    <input type="radio" name="q4" value="keras" id="keras"><label for="keras" data-lang="keras">Keras</label><br>
+    <input type="radio" name="q4" value="pytorch" id="pytorch"><label for="pytorch" data-lang="pytorch">PyTorch (developed by Facebook)</label><br>
+    <input type="radio" name="q4" value="matplotlib" id="matplotlib"><label for="matplotlib" data-lang="matplotlib">Matplotlib</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question5-pandas-data-structure">Question 5: What data structure does pandas provide for data manipulation?</h3>
+    <input type="radio" name="q5" value="array" id="array"><label for="array" data-lang="array">Array</label><br>
+    <input type="radio" name="q5" value="dataframe" id="dataframe"><label for="dataframe" data-lang="dataframe">DataFrame</label><br>
+    <input type="radio" name="q5" value="series" id="series"><label for="series" data-lang="series">Series</label><br>
+    <input type="radio" name="q5" value="list" id="list"><label for="list" data-lang="list">List</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question6-ml-library">Question 6: Which Python library provides tools for machine learning and data processing?</h3>
+    <input type="radio" name="q6" value="scikit-learn" id="scikit-learn"><label for="scikit-learn" data-lang="scikit-learn">Scikit-Learn</label><br>
+    <input type="radio" name="q6" value="seaborn" id="seaborn"><label for="seaborn" data-lang="seaborn">Seaborn</label><br>
+    <input type="radio" name="q6" value="numpy" id="numpy"><label for="numpy" data-lang="numpy">NumPy</label><br>
+    <input type="radio" name="q6" value="pandas" id="pandas"><label for="pandas" data-lang="pandas">pandas</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question7-seaborn-plots">Question 7: What type of plots are NOT typically created using Seaborn?</h3>
+    <input type="radio" name="q7" value="pie" id="pie"><label for="pie" data-lang="pie-charts">Pie Charts</label><br>
+    <input type="radio" name="q7" value="heat" id="heat"><label for="heat" data-lang="heat-maps">Heat Maps</label><br>
+    <input type="radio" name="q7" value="scatter" id="scatter"><label for="scatter" data-lang="scatter-plots">Scatter Plots</label><br>
+    <input type="radio" name="q7" value="bar" id="bar"><label for="bar" data-lang="bar-charts">Bar Charts</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question8-ipython">Question 8: Which interactive shell is known for its enhanced introspection capabilities?</h3>
+    <input type="radio" name="q8" value="ipython" id="ipython"><label for="ipython" data-lang="ipython">IPython</label><br>
+    <input type="radio" name="q8" value="jupyter" id="jupyter"><label for="jupyter" data-lang="jupyter">Jupyter</label><br>
+    <input type="radio" name="q8" value="bash" id="bash"><label for="bash" data-lang="bash">Bash</label><br>
+    <input type="radio" name="q8" value="shell" id="shell"><label for="shell" data-lang="shell">Shell</label><br>
+</div>
+
+
+     <!-- Guide Section -->
+     <div class="guide" data-aos="fade-up">
+        <h3 data-lang="guide-title">Guide to Finding Answers</h3>
+        <p data-lang="guide-description">Most of the answers to these questions can be found in the text above. For a more in-depth study, refer to the official Python documentation available online.</p>
+    </div>
+
+        <!-- Кнопка завершения урока -->
+        <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+        <!-- Кнопка перехода к следующему уроку -->
+        <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+
+    </main>
+    
+    <footer>
+        <div id="xp-bar-container1">
+            <div id="xp-bar1">
+                <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>  <!-- Ensure styles for visibility -->
+            </div>
+            <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span> <!-- Multilingual support added here -->
+        </div>    
+    </footer>
+
+     <!-- JavaScript and Library Integration -->
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+     <script src="modal.js"></script>
+     <script src="python.js"></script>
+     <script src="xpBar.js"></script>
+     <script src="langswitch.js"></script>
+     <script>
+        // Translations for alert messages
+        const alertTranslations = {
+            en: {
+                halfwayHero: "Achievement unlocked: Halfway Hero",
+                xpConqueror: "Achievement unlocked: XP Conqueror",
+                xpUpdated: "XP updated to ",
+                forUser: "for user ",
+                xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                answerCorrectly: "Please answer all questions correctly to proceed."
+            },
+            ru: {
+                halfwayHero: "Достижение разблокировано: Полуторный герой",
+                xpConqueror: "Достижение разблокировано: Покоритель опыта",
+                xpUpdated: "Опыт обновлен до ",
+                forUser: "для пользователя ",
+                xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить."
+            },
+            kk: {
+                halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                xpUpdated: "Тәжірибе жаңартылды ",
+                forUser: "пайдаланушы үшін ",
+                xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз."
+            }
+        };
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelector = document.getElementById('language-selector');
+    
+            function getTranslation(key) {
+                const selectedLanguage = languageSelector.value;
+                return alertTranslations[selectedLanguage][key];
+            }
+    
+            function getUserID() {
+                var currentUserString = localStorage.getItem('currentUser');
+                return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+            }
+    
+            var userID = getUserID();
+            var lessonNumber = 4; // Установите номер урока
+            var currentLessonKey = 'currentPythonLesson_' + userID;
+            var xpKey = 'currentXP_' + userID;
+            var achievementsKey = 'achievements_' + userID;
+            var completedLessonsKey = 'completedPythonLessons_' + userID;
+    
+            var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+                earnedHalfXP: false,
+                fullXP: false
+            };
+    
+            var completedPythonLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+            var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || lessonNumber);
+    
+            // Перенаправить на соответствующую страницу урока, если не на текущем
+            if (currentLesson > lessonNumber && !window.location.href.includes('python' + currentLesson)) {
+                window.location.href = 'python' + currentLesson + '.html';
+            }
+    
+            function saveUserProgress() {
+                localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                localStorage.setItem(completedLessonsKey, JSON.stringify(completedPythonLessons));
+            }
+    
+            function incrementXP(amount) {
+                if (!completedPythonLessons.includes(currentLesson)) {
+                    var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                    currentXP += amount;
+                    currentXP = Math.min(currentXP, 100); // Ensures XP doesn't exceed 100%
+                    localStorage.setItem(xpKey, currentXP.toString());
+    
+                    if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                        userAchievements.earnedHalfXP = true;
+                        alert(getTranslation('halfwayHero'));
+                    }
+                    if (currentXP >= 100 && !userAchievements.fullXP) {
+                        userAchievements.fullXP = true;
+                        alert(getTranslation('xpConqueror'));
+                    }
+    
+                    completedPythonLessons.push(currentLesson); // Mark the lesson as completed
+                    saveUserProgress();
+                    alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+                } else {
+                    alert(getTranslation('xpAlreadyAwarded'));
+                }
+            }
+    
+            var correctAnswers = {
+                q1: 'numerical',
+                q2: 'pandas',
+                q3: 'static',
+                q4: 'tensorflow',
+                q5: 'dataframe',
+                q6: 'scikit-learn',
+                q7: 'pie',
+                q8: 'ipython'
+            };
+    
+            function checkAnswers() {
+                var correctCount = 0;
+                Object.keys(correctAnswers).forEach(function(question) {
+                    var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                    if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                        correctCount++;
+                    }
+                });
+                return correctCount === 8; // All answers must be correct to show the finish button
+            }
+    
+            function updateProgressBar() {
+                var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                    document.querySelector(`input[name="${question}"]:checked`) !== null
+                ).length;
+                var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+                document.getElementById('xp-progress').style.width = percentComplete + '%';
+                document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% завершено';
+                if (answeredQuestions === Object.keys(correctAnswers).length) {
+                    document.getElementById('finish-lesson').style.display = 'block';
+                }
+            }
+    
+            document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                input.addEventListener('change', function() {
+                    updateProgressBar();
+                });
+            });
+    
+            document.getElementById('finish-lesson').addEventListener('click', function() {
+                if (checkAnswers()) {
+                    incrementXP(6.67);
+                    document.getElementById('next-lesson').style.display = 'block';
+                    alert(getTranslation('lessonCompleted'));
+                } else {
+                    alert(getTranslation('answerCorrectly'));
+                    document.getElementById('next-lesson').style.display = 'none';
+                }
+            });
+    
+            document.getElementById('next-lesson').addEventListener('click', function() {
+                saveLessonProgress(currentLesson + 1);
+            });
+    
+            function saveLessonProgress(nextLessonNumber) {
+                localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+                currentLesson = nextLessonNumber; // Update current lesson
+                saveUserProgress();
+                window.location.href = 'python' + nextLessonNumber + '.html';
+            }
+        });
+    </script>
+    
+
+    
+</body>
+</html>

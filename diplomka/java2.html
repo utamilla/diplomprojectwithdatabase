@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Course: Lesson 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <h1><span class="highlight" data-lang="java-course">Java Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up">
+                <span class="intro-heading" data-lang="java-lesson2-number">Lesson 2:</span> 
+                <span class="intro-text" data-lang="java-lesson2-data-types">Data Types in Java</span>
+            </h2>
+            <p data-aos="fade-up" data-lang="java-lesson2-welcome">Explore the different data types and their uses in Java.</p>
+        </div>
+        
+
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="java-lesson2-understanding-data-types">Understanding Data Types</h3>
+            <p data-lang="java-lesson2-data-types-desc">Java is a strongly typed language, which means every variable and expression type is known at compile time. This strict type checking helps prevent errors and improves code reliability.</p>
+            <p data-lang="java-lesson2-data-types-examples">Data types in Java are divided into primitive types and non-primitive types. Primitive types are predefined by the language and named by a keyword, while non-primitive types are created by the programmer and can be used to call methods to perform certain operations.</p>
+        
+            <h3 data-lang="java-lesson2-primitive-types">Primitive Data Types</h3>
+            <ul>
+                <li><strong data-lang="java-lesson2-int-type">Integer: Represents whole numbers from -2,147,483,648 to 2,147,483,647 and used for integral values. Example:</strong> <code>int age = 25;</code></li>
+                <li><strong data-lang="java-lesson2-float-type">Floating Point:Represents numbers with fractions, precisely up to 6 to 7 decimal digits. Example:</strong> <code>float salary = 4832.15f;</code></li>
+                <li><strong data-lang="java-lesson2-char-type">Character: Represents symbols in a character set, like letters and punctuation marks. Example: </strong> <code>char letter = 'A';</code></li>
+                <li><strong data-lang="java-lesson2-boolean-type">Boolean: Represents one bit of information either true or false. Example: </strong> <code>boolean isJavaFun = true;</code></li>
+            </ul>
+        
+            <h3 data-lang="java-lesson2-non-primitive-types">Non-Primitive Data Types</h3>
+            <ul>
+                <li><strong data-lang="java-lesson2-string-type">String: A sequence of characters used for storing text. Example:</strong> <code>String name = "John";</code></li>
+                <li><strong data-lang="java-lesson2-array-type">Array: Stores multiple values of the same type in a single variable. Example:</strong> <code>int[] array = {10, 20, 30, 40, 50};</code></li>
+                <li><strong data-lang="java-lesson2-class-type">Class: A blueprint for creating objects (a particular data structure), providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods). Example:</strong> <code>public class Dog { String breed; int age; String color; }</code></li>
+            </ul>
+        
+            <h3 data-lang="java-lesson2-memory-management">Memory Management for Data Types</h3>
+            <p data-lang="java-lesson2-memory-management-desc">In Java, memory management is handled through automatic garbage collection, which helps in freeing up memory that is no longer needed. Primitive types are stored in the stack while non-primitive types are stored in the heap.</p>
+        </section>
+        
+
+        <div class="quiz" data-aos="fade-up">
+            <h3 data-lang="java2-question1">Question 1: What is Java known for?</h3>
+            <label for="q1_option1" data-lang="java2-strict-type">Strict Type System</label>
+            <input type="radio" id="q1_option1" name="q1" value="strict-type"><br>
+            <label for="q1_option2" data-lang="java2-memory-management">Efficient Memory Management</label>
+            <input type="radio" id="q1_option2" name="q1" value="memory-management"><br>
+            <label for="q1_option3" data-lang="java2-platform-independence">Platform Independence</label>
+            <input type="radio" id="q1_option3" name="q1" value="platform-independence"><br>
+            <label for="q1_option4" data-lang="java2-syntax-simplicity">Syntax Simplicity</label>
+            <input type="radio" id="q1_option4" name="q1" value="syntax-simplicity"><br>
+        
+            <h3 data-lang="java2-question2">Question 2: Which data type is used to store decimal numbers?</h3>
+            <label for="q2_option1" data-lang="java2-int">Integer</label>
+            <input type="radio" id="q2_option1" name="q2" value="int"><br>
+            <label for="q2_option2" data-lang="java2-float">Floating Point</label>
+            <input type="radio" id="q2_option2" name="q2" value="float"><br>
+            <label for="q2_option3" data-lang="java2-char">Character</label>
+            <input type="radio" id="q2_option3" name="q2" value="char"><br>
+            <label for="q2_option4" data-lang="java2-boolean">Boolean</label>
+            <input type="radio" id="q2_option4" name="q2" value="boolean"><br>
+        
+            <h3 data-lang="java2-question3">Question 3: What is not a non-primitive data type in Java?</h3>
+            <label for="q3_option1" data-lang="java2-string">String</label>
+            <input type="radio" id="q3_option1" name="q3" value="string"><br>
+            <label for="q3_option2" data-lang="java2-array">Array</label>
+            <input type="radio" id="q3_option2" name="q3" value="array"><br>
+            <label for="q3_option3" data-lang="java2-class">Class</label>
+            <input type="radio" id="q3_option3" name="q3" value="class"><br>
+            <label for="q3_option4" data-lang="java2-float">Floating Point</label>
+            <input type="radio" id="q3_option4" name="q3" value="float"><br>
+        
+            <h3 data-lang="java2-question4">Question 4: How are primitive types stored in Java?</h3>
+            <label for="q4_option1" data-lang="java2-stack">In the Stack</label>
+            <input type="radio" id="q4_option1" name="q4" value="stack"><br>
+            <label for="q4_option2" data-lang="java2-heap">In the Heap</label>
+            <input type="radio" id="q4_option2" name="q4" value="heap"><br>
+            <label for="q4_option3" data-lang="java2-registers">In the Registers</label>
+            <input type="radio" id="q4_option3" name="q4" value="registers"><br>
+            <label for="q4_option4" data-lang="java2-none">Not Stored</label>
+            <input type="radio" id="q4_option4" name="q4" value="none"><br>
+        
+            <h3 data-lang="java2-question5">Question 5: Which option is a correct example of an Array declaration?</h3>
+            <label for="q5_option1" data-lang="java2-array-int">int[] array = {1, 2, 3};</label>
+            <input type="radio" id="q5_option1" name="q5" value="array-int"><br>
+            <label for="q5_option2" data-lang="java2-array-string">String array = "Hello";</label>
+            <input type="radio" id="q5_option2" name="q5" value="array-string"><br>
+            <label for="q5_option3" data-lang="java2-array-float">float array = 3.14;</label>
+            <input type="radio" id="q5_option3" name="q5" value="array-float"><br>
+            <label for="q5_option4" data-lang="java2-array-bool">boolean array = {true, false};</label>
+            <input type="radio" id="q5_option4" name="q5" value="array-bool"><br>
+        
+            <h3 data-lang="java2-question6">Question 6: Which of the following is not a primitive data type?</h3>
+            <label for="q6_option1" data-lang="java2-string-type">String</label>
+            <input type="radio" id="q6_option1" name="q6" value="string-type"><br>
+            <label for="q6_option2" data-lang="java2-int-type">Integer</label>
+            <input type="radio" id="q6_option2" name="q6" value="int-type"><br>
+            <label for="q6_option3" data-lang="java2-char-type">Character</label>
+            <input type="radio" id="q6_option3" name="q6" value="char-type"><br>
+            <label for="q6_option4" data-lang="java2-float-type">Floating Point</label>
+            <input type="radio" id="q6_option4" name="q6" value="float-type"><br>
+        </div>
+        
+        
+
+    <!-- Кнопка завершения урока -->
+    <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+    <!-- Кнопка перехода к следующему уроку -->
+    <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+    
+        </main>
+        
+        <footer>
+            <div id="xp-bar-container1">
+                <div id="xp-bar1">
+                    <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>  <!-- Ensure styles for visibility -->
+                </div>
+                <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span> <!-- Multilingual support added here -->
+            </div>    
+        </footer>
+    
+        <!-- JavaScript and Library Integration -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="modal.js"></script>
+        <script src="python.js"></script>
+        <script src="xpBar.js"></script>
+        <script src="langswitch.js"></script>
+        <script>
+            // Translations for alert messages
+            const alertTranslations = {
+                en: {
+                    halfwayHero: "Achievement unlocked: Halfway Hero",
+                    xpConqueror: "Achievement unlocked: XP Conqueror",
+                    xpUpdated: "XP updated to ",
+                    forUser: "for user ",
+                    xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                    lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                    answerCorrectly: "Please answer all questions correctly to proceed."
+                },
+                ru: {
+                    halfwayHero: "Достижение разблокировано: Полуторный герой",
+                    xpConqueror: "Достижение разблокировано: Покоритель опыта",
+                    xpUpdated: "Опыт обновлен до ",
+                    forUser: "для пользователя ",
+                    xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                    lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                    answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить."
+                },
+                kk: {
+                    halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                    xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                    xpUpdated: "Тәжірибе жаңартылды ",
+                    forUser: "пайдаланушы үшін ",
+                    xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                    lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                    answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз."
+                }
+            };
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                const languageSelector = document.getElementById('language-selector'); // Ensure this element exists
+        
+                function getTranslation(key) {
+                    const selectedLanguage = languageSelector.value;
+                    return alertTranslations[selectedLanguage][key];
+                }
+        
+                function getUserID() {
+                    var currentUserString = localStorage.getItem('currentUser');
+                    return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+                }
+        
+                var userID = getUserID();
+                var lessonNumber = 2;
+                var currentLessonKey = 'currentJavaLesson_' + userID;
+                var xpKey = 'currentXP_' + userID;
+                var achievementsKey = 'achievements_' + userID;
+                var completedLessonsKey = 'completedJavaLessons_' + userID;
+        
+                var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+                    earnedHalfXP: false,
+                    fullXP: false
+                };
+        
+                var completedJavaLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+                var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || lessonNumber);
+        
+                if (currentLesson > lessonNumber && !window.location.href.includes('java' + currentLesson)) {
+                    window.location.href = 'java' + currentLesson + '.html';
+                }
+        
+                function saveUserProgress() {
+                    localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                    localStorage.setItem(completedLessonsKey, JSON.stringify(completedJavaLessons));
+                }
+        
+                function incrementXP(amount) {
+                    if (!completedJavaLessons.includes(currentLesson)) {
+                        var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                        currentXP += amount;
+                        currentXP = Math.min(currentXP, 100);
+        
+                        localStorage.setItem(xpKey, currentXP.toString());
+        
+                        if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                            userAchievements.earnedHalfXP = true;
+                            alert(getTranslation('halfwayHero'));
+                        }
+                        if (currentXP >= 100 && !userAchievements.fullXP) {
+                            userAchievements.fullXP = true;
+                            alert(getTranslation('xpConqueror'));
+                        }
+        
+                        completedJavaLessons.push(currentLesson);
+                        saveUserProgress();
+                        alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+                    } else {
+                        alert(getTranslation('xpAlreadyAwarded'));
+                    }
+                }
+        
+                var correctAnswers = {
+                    q1: 'strict-type',
+                    q2: 'float',
+                    q3: 'float',
+                    q4: 'stack',
+                    q5: 'array-int',
+                    q6: 'string-type'
+                };
+        
+                function checkAnswers() {
+                    var correctCount = 0;
+                    Object.keys(correctAnswers).forEach(function(question) {
+                        var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                        if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                            correctCount++;
+                        }
+                    });
+                    return correctCount === 6;
+                }
+        
+                function updateProgressBar() {
+                    var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                        document.querySelector(`input[name="${question}"]:checked`) !== null
+                    ).length;
+                    var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+                    document.getElementById('xp-progress').style.width = percentComplete + '%';
+                    document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+                    if (answeredQuestions === Object.keys(correctAnswers).length) {
+                        document.getElementById('finish-lesson').style.display = 'block';
+                    }
+                }
+        
+                document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                    input.addEventListener('change', function() {
+                        updateProgressBar();
+                    });
+                });
+        
+                document.getElementById('finish-lesson').addEventListener('click', function() {
+                    if (checkAnswers()) {
+                        incrementXP(6.67);
+                        document.getElementById('next-lesson').style.display = 'block';
+                        alert(getTranslation('lessonCompleted'));
+                    } else {
+                        alert(getTranslation('answerCorrectly'));
+                        document.getElementById('next-lesson').style.display = 'none';
+                    }
+                });
+        
+                document.getElementById('next-lesson').addEventListener('click', function() {
+                    saveLessonProgress(currentLesson + 1);
+                });
+        
+                function saveLessonProgress(nextLessonNumber) {
+                    localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+                    currentLesson = nextLessonNumber;
+                    saveUserProgress();
+                    window.location.href = 'java' + nextLessonNumber + '.html';
+                }
+            });
+        </script>
+        
+        
+        
+              
+        
+        
+        
+        
+        
+        
+            
+            
+
+            
+            
+        
+        
+</body>
+</html>

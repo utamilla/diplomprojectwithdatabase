@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Course: Advanced Concepts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <h1><span class="highlight" data-lang="cpp-course">C++ Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up">
+                <span class="intro-heading" data-lang="lesson2-cpp2-title">Lesson 2:</span> 
+                <span class="intro-text" data-lang="advanced-concepts">Advanced C++ Concepts</span>
+            </h2>
+            <p data-aos="fade-up" data-lang="welcome-lesson2-cpp2">Welcome to the second lesson on advanced C++ programming!</p>
+        </div>
+        
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="cpp2-templates">C++ Templates</h3>
+            <p data-lang="templates-intro-cpp2">Templates are a foundational feature of C++ that enable generic programming. This section explores function templates and class templates, allowing you to write code that operates on any data type, enhancing reusability and efficiency.</p>
+            
+            <h3 data-lang="cpp2-std-lib">Standard Library</h3>
+            <p data-lang="std-lib-intro-cpp2">The C++ Standard Library provides a rich set of built-in functionalities designed to increase programming efficiency. This includes comprehensive support for data structures, algorithms, and system operations through various components such as the STL (Standard Template Library), which we will explore in detail.</p>
+            
+            <h3 data-lang="cpp2-stl">STL - Standard Template Library</h3>
+            <p data-lang="stl-intro-cpp2">The Standard Template Library (STL) offers a suite of C++ templates to provide well-structured and efficient implementations of common algorithms and data structures. It is divided into three main components: Containers, Iterators, and Algorithms, each of which plays a vital role in resource management and data manipulation.</p>
+            
+            <h3 data-lang="cpp2-memory-management">Memory Management</h3>
+            <p data-lang="memory-man-intro-cpp2">Proper memory management is critical in C++ for ensuring resource efficiency and program stability. We cover topics from dynamic memory allocation with new and delete to advanced techniques involving smart pointers such as std::unique_ptr and std::shared_ptr, which automate memory management and mitigate common problems like memory leaks.</p>
+            
+            <h3 data-lang="cpp2-concurrency">Concurrency</h3>
+            <p data-lang="concurrency-intro-cpp2">Concurrency allows C++ applications to manage multiple threads of execution concurrently. This segment introduces threading basics, synchronization mechanisms like mutexes, and the newer task-based programming model which simplifies thread management and enhances scalability and responsiveness.</p>
+            
+            <h3 data-lang="cpp2-advanced-examples">Example: Using STL</h3>
+            <p data-lang="using-stl-cpp2">Below is a detailed example to demonstrate the effective use of STL containers and algorithms:</p>
+            <pre><code>
+            #include <iostream>
+            #include <vector>
+            #include <algorithm>
+            // Function to demonstrate usage of STL in C++
+            void printVector(const std::vector<int>& v) {
+                std::for_each(v.begin(), v.end(), [](int i) {
+                    std::cout << i << ' ';
+                });
+                std::cout << std::endl;
+            }
+            </code></pre>
+            
+            <p data-lang="cpp2-error-handling">
+                Advanced error handling techniques are essential for professional C++ development. We discuss structured exception handling that C++ supports, including try, catch, and throw blocks, along with RAII (Resource Acquisition Is Initialization) principles that help manage resource allocation and cleanup in the face of exceptions.
+            </p>
+            
+            <p data-lang="cpp2-real-world-applications">
+                To illustrate the practical applications of these advanced concepts, we analyze case studies where C++ has been effectively used in high-performance computing environments, focusing on how different features like multithreading and smart pointers can lead to more efficient and robust applications.
+            </p>
+            
+            <p data-lang="cpp2-conclusion">
+                By the end of this lesson, you will have a thorough understanding of the high-level functionalities of C++ and be better equipped to utilize these features in creating sophisticated and efficient applications.
+            </p>
+        </section>
+        
+        
+
+<!-- Quiz Section -->
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="cpp2-question1">Question 1: What are templates primarily used for in C++?</h3>
+    <input type="radio" name="q1" value="generic_programming" id="q1_generic"><label for="q1_generic" data-lang="cpp2-generic">Generic Programming</label><br>
+    <input type="radio" name="q1" value="memory_management" id="q1_memory"><label for="q1_memory" data-lang="cpp2-memory">Memory Management</label><br>
+    <input type="radio" name="q1" value="data_structures" id="q1_data"><label for="q1_data" data-lang="cpp2-data">Data Structures</label><br>
+    <input type="radio" name="q1" value="concurrency" id="q1_concurrency"><label for="q1_concurrency" data-lang="cpp2-concurrency">Concurrency</label><br>
+
+    <h3 data-lang="cpp2-question2">Question 2: What is the STL?</h3>
+    <input type="radio" name="q2" value="stdio" id="q2_stdio"><label for="q2_stdio" data-lang="cpp2-stdio">A library for standard I/O</label><br>
+    <input type="radio" name="q2" value="stl" id="q2_stl"><label for="q2_stl" data-lang="cpp2-stl">Standard Template Library</label><br>
+    <input type="radio" name="q2" value="boost" id="q2_boost"><label for="q2_boost" data-lang="cpp2-boost">A collection of C++ libraries that extend the functionality of the STL</label><br>
+    <input type="radio" name="q2" value="posix" id="q2_posix"><label for="q2_posix" data-lang="cpp2-posix">A family of standards specified by the IEEE for maintaining compatibility between operating systems</label><br>
+
+    <h3 data-lang="cpp2-question3">Question 3: Which method is commonly used for memory management in C++?</h3>
+    <input type="radio" name="q3" value="manual" id="q3_manual"><label for="q3_manual" data-lang="cpp2-manual">Manual Allocation</label><br>
+    <input type="radio" name="q3" value="automatic" id="q3_automatic"><label for="q3_automatic" data-lang="cpp2-automatic">Automatic Garbage Collection</label><br>
+    <input type="radio" name="q3" value="smart_pointers" id="q3_smart"><label for="q3_smart" data-lang="cpp2-smart">Smart Pointers</label><br>
+    <input type="radio" name="q3" value="stack_allocation" id="q3_stack"><label for="q3_stack" data-lang="cpp2-stack">Stack Allocation</label><br>
+
+    <h3 data-lang="cpp2-question4">Question 4: What are the components of the STL?</h3>
+    <input type="radio" name="q4" value="data_processing" id="q4_data"><label for="q4_data" data-lang="cpp2-data_processing">Data Processing</label><br>
+    <input type="radio" name="q4" value="memory_management" id="q4_memory"><label for="q4_memory" data-lang="cpp2-memory_management">Memory Management</label><br>
+    <input type="radio" name="q4" value="providing_algorithms" id="q4_algorithms"><label for="q4_algorithms" data-lang="cpp2-providing_algorithms">Providing Algorithms</label><br>
+    <input type="radio" name="q4" value="network_operations" id="q4_network"><label for="q4_network" data-lang="cpp2-network_operations">Network Operations</label><br>
+
+    <h3 data-lang="cpp2-question5">Question 5: What is not a feature of smart pointers?</h3>
+    <input type="radio" name="q5" value="containers" id="q5_containers"><label for="q5_containers" data-lang="cpp2-containers">Containers</label><br>
+    <input type="radio" name="q5" value="iterators" id="q5_iterators"><label for="q5_iterators" data-lang="cpp2-iterators">Iterators</label><br>
+    <input type="radio" name="q5" value="templates" id="q5_templates"><label for="q5_templates" data-lang="cpp2-templates">Templates</label><br>
+    <input type="radio" name="q5" value="sockets" id="q5_sockets"><label for="q5_sockets" data-lang="cpp2-sockets">Sockets</label><br>
+
+    <h3 data-lang="cpp2-question6">Question 6: How does the C++ Standard Library enhance programming efficiency?</h3>
+    <input type="radio" name="q6" value="data_loss" id="q6_loss"><label for="q6_loss" data-lang="cpp2-data_loss">It prevents data loss</label><br>
+    <input type="radio" name="q6" value="memory_leaks" id="q6_leaks"><label for="q6_leaks" data-lang="cpp2-memory_leaks">It minimizes memory leaks</label><br>
+    <input type="radio" name="q6" value="syntax_errors" id="q6_syntax"><label for="q6_syntax" data-lang="cpp2-syntax_errors">It simplifies handling of syntax errors</label><br>
+    <input type="radio" name="q6" value="compilation_errors" id="q6_compilation"><label for="q6_compilation" data-lang="cpp2-compilation_errors">It reduces compilation errors</label><br>
+
+    <h3 data-lang="cpp2-question7">Question 7: What role do mutexes play in C++?</h3>
+    <input type="radio" name="q7" value="resource_allocation" id="q7_allocation"><label for="q7_allocation" data-lang="cpp2-resource_allocation">Managing resource allocation</label><br>
+    <input type="radio" name="q7" value="automatic_garbage_collection" id="q7_garbage"><label for="q7_garbage" data-lang="cpp2-automatic_garbage_collection">Handling automatic garbage collection</label><br>
+    <input type="radio" name="q7" value="mutexes" id="q7_mutexes"><label for="q7_mutexes" data-lang="cpp2-mutexes">Ensuring data consistency in multithreaded environments</label><br>
+    <input type="radio" name="q7" value="condition_variables" id="q7_conditions"><label for="q7_conditions" data-lang="cpp2-condition_variables">Managing threading conditions</label><br>
+</div>
+
+
+ <!-- Кнопка завершения урока -->
+ <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+ <!-- Кнопка перехода к следующему уроку -->
+ <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+ 
+ </main>
+ 
+ <footer>
+     <div id="xp-bar-container1">
+         <div id="xp-bar1">
+             <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>
+         </div>
+         <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span>
+     </div>
+     <p data-lang="footer">Copyright © 2024 All rights Reserved.</p>
+ </footer>
+ 
+ <!-- JavaScript and Library Integration -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ <script src="modal.js"></script>
+ <script src="cpp.js"></script>
+ <script src="xpBar.js"></script>
+ <script src="langswitch.js"></script>
+ <script>
+   // Translations for alert messages
+   const alertTranslations = {
+                en: {
+                    halfwayHero: "Achievement unlocked: Halfway Hero",
+                    xpConqueror: "Achievement unlocked: XP Conqueror",
+                    xpUpdated: "XP updated to ",
+                    lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                    answerCorrectly: "Please answer all questions correctly to proceed.",
+                    forUser: "for user ",
+                    xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                },
+
+                ru: {
+                    halfwayHero: "Достижение разблокировано: Полуторный герой",
+                    xpConqueror: "Достижение разблокировано: Покоритель опыта",
+                    xpUpdated: "Опыт обновлен до ",
+                    lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                    answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить.",
+                    forUser: "для пользователя ",
+                    xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                },
+
+                kk: {
+                    halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                    xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                    xpUpdated: "Тәжірибе жаңартылды ",
+                    lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                    answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз.",
+                    forUser: "пайдаланушы үшін ",
+                    xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                }
+            };
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const languageSelector = document.getElementById('language-selector'); // Ensure this element exists
+
+        function getTranslation(key) {
+            const selectedLanguage = languageSelector.value;
+            return alertTranslations[selectedLanguage][key];
+        }
+
+        function getUserID() {
+            var currentUserString = localStorage.getItem('currentUser');
+            return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+        }
+
+        var userID = getUserID();
+        var lessonNumber = 2;
+        var currentLessonKey = 'currentC++Lesson_' + userID;
+        var xpKey = 'currentXP_' + userID;
+        var achievementsKey = 'achievements_' + userID;
+        var completedLessonsKey = 'completedC++Lessons_' + userID;
+
+        var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+            earnedHalfXP: false,
+            fullXP: false
+        };
+
+        var completedLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+        var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '2');
+
+        if (currentLesson > lessonNumber && !window.location.href.includes('c++' + currentLesson)) {
+                    window.location.href = 'c++' + currentLesson + '.html';
+                }
+        
+                function saveUserProgress() {
+                    localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                    localStorage.setItem(completedLessonsKey, JSON.stringify(completedLessons));
+                }
+
+                function updateAchievements(achievementKey, unlockMessage) {
+                    if (!userAchievements[achievementKey]) {
+                        userAchievements[achievementKey] = true;
+                        alert(getTranslation(achievementKey));
+                        saveUserProgress();
+                    }
+                }
+
+        function incrementXP(amount) {
+            if (!completedLessons.includes(currentLesson)) {
+                var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                currentXP += amount;
+                currentXP = Math.min(currentXP, 100);
+                localStorage.setItem(xpKey, currentXP.toString());
+                
+                if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                            updateAchievements('earnedHalfXP', getTranslation('halfwayHero'));
+                        }
+                        if (currentXP >= 100 && !userAchievements.fullXP) {
+                            updateAchievements('fullXP', getTranslation('xpConqueror'));
+                        }
+        
+
+                completedLessons.push(currentLesson);
+                saveUserProgress();
+                alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+            } else {
+                alert(getTranslation('xpAlreadyAwarded'));
+            }
+        }
+
+        var correctAnswers = {
+            q1: 'generic_programming',
+            q2: 'stl',
+            q3: 'smart_pointers',
+            q4: 'providing_algorithms',
+            q5: 'sockets',
+            q6: 'memory_leaks',
+            q7: 'mutexes'
+        };
+
+        function checkAnswers() {
+            var correctCount = 0;
+            Object.keys(correctAnswers).forEach(function(question) {
+                var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                    correctCount++;
+                }
+            });
+            return correctCount === 7; // All answers must be correct to show the finish button
+        }
+
+        function updateProgressBar() {
+            var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                document.querySelector(`input[name="${question}"]:checked`) !== null
+            ).length;
+            var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+            document.getElementById('xp-progress').style.width = percentComplete + '%';
+            document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+            if (answeredQuestions === Object.keys(correctAnswers).length) {
+                document.getElementById('finish-lesson').style.display = 'block';
+            }
+        }
+
+        document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+            input.addEventListener('change', function() {
+                updateProgressBar();
+            });
+        });
+
+        document.getElementById('finish-lesson').addEventListener('click', function() {
+            if (checkAnswers()) {
+                incrementXP(6.67);
+                document.getElementById('next-lesson').style.display = 'block';
+                alert(getTranslation('lessonCompleted'));
+            } else {
+                alert(getTranslation('answerCorrectly'));
+                document.getElementById('next-lesson').style.display = 'none';
+            }
+        });
+
+        document.getElementById('next-lesson').addEventListener('click', function() {
+            saveLessonProgress(currentLesson + 1);
+        });
+
+        function saveLessonProgress(nextLessonNumber) {
+            localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+            currentLesson = nextLessonNumber; // Update current lesson
+            saveUserProgress();
+            window.location.href = 'c++' + nextLessonNumber + '.html';
+        }
+    });
+</script>
+
+
+    
+       
+    
+    
+</body>
+</html>

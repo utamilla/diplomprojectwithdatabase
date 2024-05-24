@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Course - Lesson 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <h1><span class="highlight" data-lang="cpp3-course">C++ Course: Advanced Concepts</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up"><span class="intro-heading" data-lang="lesson3-title">Lesson 3:</span> <span class="intro-text" data-lang="oopcpp-concepts">Object-Oriented Programming in C++</span></h2>
+            <p data-aos="fade-up" data-lang="welcome-lesson3">Explore the core concepts of object-oriented programming in C++ in this comprehensive third lesson.</p>
+        </div>
+        
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="cpp3-oop-intro">Introduction to Object-Oriented Programming (OOP)</h3>
+            <p data-lang="oop-overview-cpp3">
+                Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data in the form of fields (attributes), and code, in the form of procedures (methods). This section will compare C++ OOP features with those of Java and Python, highlighting the unique aspects of each language.
+            </p>
+            
+            <h3 data-lang="cpp3-classes">Understanding Classes in C++</h3>
+            <p data-lang="classes-intro-cpp3">
+                A class in C++ is a blueprint for creating objects. It encapsulates data for the object and methods to manipulate that data. Classes define the properties and behaviors shared by all instances of the class type, in the form of member variables and functions respectively.
+            </p>
+            <pre><code>
+            class Vehicle {
+                public:
+                    string type;
+                    void describe() {
+                        cout << "This is a " << type << "." << endl;
+                    }
+            };
+            </code></pre>
+            
+            <h3 data-lang="cpp3-inheritance">Inheritance in C++</h3>
+            <p data-lang="inheritance-intro-cpp3">
+                Inheritance allows one class to inherit the attributes and methods of another. Unlike Java, C++ supports multiple inheritance, allowing a class to inherit from more than one base class.
+            </p>
+            <pre><code>
+            class Car : public Vehicle {
+                public:
+                    Car() {
+                        type = "Car";
+                    }
+            };
+            </code></pre>
+        
+            <h3 data-lang="cpp3-polymorphism">Polymorphism Explained</h3>
+            <p data-lang="polymorphism-intro-cpp3">
+                C++ polymorphism is achieved through pointers and references, different from Java's interface-based approach, and Python's duck typing where type safety is less enforced.
+            </p>
+            
+            <h3 data-lang="cpp3-encapsulation">Encapsulation Detailed</h3>
+            <p data-lang="encapsulation-intro-cpp3">
+                C++ provides access specifiers (public, private, and protected), which is similar to Java but differs from Python that uses underscores to denote protected and private attributes.
+            </p>
+            
+            <h3 data-lang="cpp3-exception-handling">Mastering Exception Handling</h3>
+            <p data-lang="exception-intro-cpp3">
+                Exception handling in C++ is manual with explicit try and catch blocks, unlike Python’s more flexible error handling with the use of its "try-except" blocks.
+            </p>
+            <pre><code>
+            try {
+                if(someError) {
+                    throw "Error occurred";
+                }
+                // Code that might throw an exception
+            } catch (const char* msg) {
+                cerr << "Error message: " << msg << endl;
+            }
+            </code></pre>
+            
+            <p data-lang="cpp3-oop-comparison">
+                C++ allows more precise control over system resources and memory, which can lead to more efficient programs if used skillfully. Java automates memory management with its garbage collector, which can reduce efficiency but increases safety and ease of use. Python’s approach is even more high-level, making it easy to use but typically the slowest in terms of execution speed when compared to C++ and Java.
+            </p>
+            
+            <p data-lang="cpp3-conclusion">
+                By understanding these distinctions, you can better appreciate the capabilities and suitable use cases for C++ in comparison to Java and Python. This knowledge aids in selecting the right language for your specific software development needs.
+            </p>
+        </section>
+        
+        
+        <!-- Quiz Section -->
+        <div class="quiz" data-aos="fade-up">
+            <h3 data-lang="cpp3-question1">Question 1: What is the primary purpose of using classes in C++?</h3>
+            <input type="radio" name="q1" value="data_encapsulation" id="q1_data_encapsulation"><label for="q1_data_encapsulation" data-lang="cpp3-data_encapsulation">Data Encapsulation</label><br>
+            <input type="radio" name="q1" value="data_storage" id="q1_data_storage"><label for="q1_data_storage" data-lang="cpp3-data_storage">Data Storage</label><br>
+            <input type="radio" name="q1" value="procedure_execution" id="q1_procedure_execution"><label for="q1_procedure_execution" data-lang="cpp3-procedure_execution">Procedure Execution</label><br>
+            <input type="radio" name="q1" value="code_reusability" id="q1_code_reusability"><label for="q1_code_reusability" data-lang="cpp3-code_reusability">Code Reusability</label><br> 
+        
+            <h3 data-lang="cpp3-question2">Question 2: What feature allows C++ classes to be extended?</h3>
+            <input type="radio" name="q2" value="inheritance" id="q2_inheritance"><label for="q2_inheritance" data-lang="cpp3-inheritance">Inheritance</label><br>
+            <input type="radio" name="q2" value="polymorphism" id="q2_polymorphism"><label for="q2_polymorphism" data-lang="cpp3-polymorphism">Polymorphism</label><br>
+            <input type="radio" name="q2" value="encapsulation" id="q2_encapsulation"><label for="q2_encapsulation" data-lang="cpp3-encapsulation">Encapsulation</label><br>
+            <input type="radio" name="q2" value="templates" id="q2_templates"><label for="q2_templates" data-lang="cpp3-templates">Templates</label><br>
+        
+            <h3 data-lang="cpp3-question3">Question 3: What does polymorphism allow in C++?</h3>
+            <input type="radio" name="q3" value="method_overloading" id="q3_method_overloading"><label for="q3_method_overloading" data-lang="cpp3-method_overloading">Method Overloading</label><br>
+            <input type="radio" name="q3" value="method_execution" id="q3_method_execution"><label for="q3_method_execution" data-lang="cpp3-method_execution">Method Execution</label><br>
+            <input type="radio" name="q3" value="variable_access" id="q3_variable_access"><label for="q3_variable_access" data-lang="cpp3-variable_access">Variable Access</label><br>
+            <input type="radio" name="q3" value="class_creation" id="q3_class_creation"><label for="q3_class_creation" data-lang="cpp3-class_creation">Class Creation</label><br>
+        
+            <h3 data-lang="cpp3-question4">Question 4: What is encapsulation used for in C++?</h3>
+            <input type="radio" name="q4" value="data_protection" id="q4_data_protection"><label for="q4_data_protection" data-lang="cpp3-data_protection">Data Protection</label><br>
+            <input type="radio" name="q4" value="method_definition" id="q4_method_definition"><label for="q4_method_definition" data-lang="cpp3-method_definition">Method Definition</label><br>
+            <input type="radio" name="q4" value="performance_improvement" id="q4_performance_improvement"><label for="q4_performance_improvement" data-lang="cpp3-performance_improvement">Performance Improvement</label><br>
+            <input type="radio" name="q4" value="code_simplification" id="q4_code_simplification"><label for="q4_code_simplification" data-lang="cpp3-code_simplification">Code Simplification</label><br>
+        
+            <h3 data-lang="cpp3-question5">Question 5: How does exception handling in C++ differ from Python?</h3>
+            <input type="radio" name="q5" value="manual_handling" id="q5_manual_handling"><label for="q5_manual_handling" data-lang="cpp3-manual_handling">Manual Handling with try-catch</label><br>
+            <input type="radio" name="q5" value="automatic_handling" id="q5_automatic_handling"><label for="q5_automatic_handling" data-lang="cpp3-automatic_handling">Automatic Handling</label><br>
+            <input type="radio" name="q5" value="uses_error_codes" id="q5_uses_error_codes"><label for="q5_uses_error_codes" data-lang="cpp3-uses_error_codes">Uses Error Codes</label><br>
+            <input type="radio" name="q5" value="no_exceptions" id="q5_no_exceptions"><label for="q5_no_exceptions" data-lang="cpp3-no_exceptions">No Exceptions Used</label><br>
+        
+            <h3 data-lang="cpp3-question6">Question 6: What advantage does C++ offer over Java in terms of resource control?</h3>
+            <input type="radio" name="q6" value="more_control" id="q6_more_control"><label for="q6_more_control" data-lang="cpp3-more_control">More Precise Control Over System Resources</label><br>
+            <input type="radio" name="q6" value="less_control" id="q6_less_control"><label for="q6_less_control" data-lang="cpp3-less_control">Less Control Over System Resources</label><br>
+            <input type="radio" name="q6" value="automatic_control" id="q6_automatic_control"><label for="q6_automatic_control" data-lang="cpp3-automatic_control">Automatic Resource Management</label><br>
+            <input type="radio" name="q6" value="no_control" id="q6_no_control"><label for="q6_no_control" data-lang="cpp3-no_control">No Control Over Resources</label><br>
+        
+            <h3 data-lang="cpp3-question7">Question 7: Which C++ feature helps prevent memory leaks?</h3>
+            <input type="radio" name="q7" value="smart_pointers" id="q7_smart_pointers"><label for="q7_smart_pointers" data-lang="cpp3-smart_pointers">Smart Pointers</label><br>
+            <input type="radio" name="q7" value="manual_pointers" id="q7_manual_pointers"><label for="q7_manual_pointers" data-lang="cpp3-manual_pointers">Manual Pointers</label><br>
+            <input type="radio" name="q7" value="garbage_collection" id="q7_garbage_collection"><label for="q7_garbage_collection" data-lang="cpp3-garbage_collection">Garbage Collection</label><br>
+            <input type="radio" name="q7" value="reference_counting" id="q7_reference_counting"><label for="q7_reference_counting" data-lang="cpp3-reference_counting">Reference Counting</label><br>
+        
+            <h3 data-lang="cpp3-question8">Question 8: How is data protection achieved in C++?</h3>
+            <input type="radio" name="q8" value="private_specifiers" id="q8_private_specifiers"><label for="q8_private_specifiers" data-lang="cpp3-private_specifiers">Private and Protected Specifiers</label><br>
+            <input type="radio" name="q8" value="public_specifiers" id="q8_public_specifiers"><label for="q8_public_specifiers" data-lang="cpp3-public_specifiers">Public Specifiers</label><br>
+            <input type="radio" name="q8" value="encapsulation" id="q8_encapsulation"><label for="q8_encapsulation" data-lang="cpp3-encapsulation">Encapsulation</label><br>
+            <input type="radio" name="q8" value="inheritance" id="q8_inheritance"><label for="q8_inheritance" data-lang="cpp3-inheritance">Inheritance</label><br>
+        </div>
+        <!-- Кнопка завершения урока -->
+ <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+ <!-- Кнопка перехода к следующему уроку -->
+ <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+ 
+ </main>
+ 
+ <footer>
+     <div id="xp-bar-container1">
+         <div id="xp-bar1">
+             <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>
+         </div>
+         <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span>
+     </div>
+     <p data-lang="footer">Copyright © 2024 All rights Reserved.</p>
+ </footer>
+ 
+ <!-- JavaScript and Library Integration -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ <script src="modal.js"></script>
+ <script src="cpp.js"></script>
+ <script src="xpBar.js"></script>
+ <script src="langswitch.js"></script>
+ <script>
+// Translations for alert messages
+const alertTranslations = {
+        en: {
+            halfwayHero: "Achievement unlocked: Halfway Hero",
+            xpConqueror: "Achievement unlocked: XP Conqueror",
+            cppcommander: "Achievement unlocked: C++ Commander",
+            xpUpdated: "XP updated to ",
+            forUser: "for user ",
+            xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+            lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+            answerCorrectly: "Please answer all questions correctly to proceed."
+        },
+        ru: {
+            halfwayHero: "Достижение разблокировано: Полуторный герой",
+            xpConqueror: "Достижение разблокировано: Завоеватель XP",
+            cppcommander: "Достижение разблокировано: C++ Командир",
+            xpUpdated: "Опыт обновлен до ",
+            forUser: "для пользователя ",
+            xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+            lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+            answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить."
+        },
+        kk: {
+            halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+            xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+            cppcommander: "Жетістік ашылды: C++ Командир",
+            xpUpdated: "Тәжірибе жаңартылды ",
+            forUser: "пайдаланушы үшін ",
+            xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+            lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+            answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз."
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const languageSelector = document.getElementById('language-selector'); // Ensure this element exists
+
+        function getTranslation(key) {
+            const selectedLanguage = languageSelector.value;
+            return alertTranslations[selectedLanguage][key];
+        }
+
+        function getUserID() {
+            var currentUserString = localStorage.getItem('currentUser');
+            return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+        }
+
+        var userID = getUserID();
+        var currentLessonKey = 'currentC++Lesson_' + userID;
+        var xpKey = 'currentXP_' + userID;
+        var achievementsKey = 'achievements_' + userID;
+        var completedLessonsKey = 'completedC++Lessons_' + userID;
+
+        var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+            earnedHalfXP: false,
+            fullXP: false,
+            completedCppThreeLessons: false
+        };
+
+        var completedLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+        var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '1');
+
+        if (currentLesson > 1 && !window.location.href.includes('c++' + currentLesson)) {
+            window.location.href = 'c++' + currentLesson + '.html';
+        }
+
+        function saveUserProgress() {
+            localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+            localStorage.setItem(completedLessonsKey, JSON.stringify(completedLessons));
+        }
+
+        function updateAchievements(achievementKey, unlockMessage) {
+            if (!userAchievements[achievementKey]) {
+                userAchievements[achievementKey] = true;
+                alert(getTranslation(unlockMessage));
+                saveUserProgress();
+            }
+        }
+
+        function incrementXP(amount) {
+            if (!completedLessons.includes(currentLesson)) {
+                var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                currentXP += amount;
+                currentXP = Math.min(currentXP, 100);
+                localStorage.setItem(xpKey, currentXP.toString());
+
+                // Award achievements based on new XP value
+                if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                    updateAchievements('earnedHalfXP', 'halfwayHero');
+                }
+                if (currentXP >= 100 && !userAchievements.fullXP) {
+                    updateAchievements('fullXP', 'xpConqueror');
+                }
+                if (!userAchievements.completedCppThreeLessons) {
+                    updateAchievements('completedCppThreeLessons', 'cppcommander');
+                }
+
+                completedLessons.push(currentLesson);
+                saveUserProgress();
+                alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+            } else {
+                alert(getTranslation('xpAlreadyAwarded'));
+            }
+        }
+
+        var correctAnswers = {
+            q1: 'code_reusability',
+            q2: 'inheritance',
+            q3: 'method_overloading',
+            q4: 'data_protection',
+            q5: 'manual_handling',
+            q6: 'more_control',
+            q7: 'smart_pointers',
+            q8: 'private_specifiers'
+        };
+
+        function checkAnswers() {
+            var correctCount = 0;
+            Object.keys(correctAnswers).forEach(function(question) {
+                var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                    correctCount++;
+                }
+            });
+            return correctCount === 8; // All answers must be correct to show the finish button
+        }
+
+        function updateProgressBar() {
+            var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                document.querySelector(`input[name="${question}"]:checked`) !== null
+            ).length;
+            var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+            document.getElementById('xp-progress').style.width = percentComplete + '%';
+            document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+            if (answeredQuestions === Object.keys(correctAnswers).length) {
+                document.getElementById('finish-lesson').style.display = 'block';
+}
+}
+
+    document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+        input.addEventListener('change', function() {
+            updateProgressBar();
+        });
+    });
+
+    document.getElementById('finish-lesson').addEventListener('click', function() {
+        if (checkAnswers()) {
+            incrementXP(6.67);
+            document.getElementById('next-lesson').style.display = 'block';
+            alert(getTranslation('lessonCompleted'));
+        } else {
+            alert(getTranslation('answerCorrectly'));
+            document.getElementById('next-lesson').style.display = 'none';
+        }
+    });
+
+    document.getElementById('next-lesson').addEventListener('click', function() {
+        saveLessonProgress(currentLesson + 1);
+    });
+
+    function saveLessonProgress(nextLessonNumber) {
+        localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+        currentLesson = nextLessonNumber; // Update current lesson
+        saveUserProgress();
+        window.location.href = 'c++' + nextLessonNumber + '.html';
+    }
+});
+    </script>
+    
+
+
+</body>
+</html>

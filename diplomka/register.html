@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - GameCode</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+</head>
+<body>
+     <!-- Language Switcher -->
+     <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+<header>
+    <a href="index.html" class="back-button">
+        <img src="icons8-back-48.png" alt="Назад" />
+    </a>
+    <div class="header-content">
+        <h1 data-lang="register">Register For <span class="highlight">Gamecode</span></h1>
+        </div>
+
+</header>
+<main>
+    <form id="registrationForm">
+        <label for="name" data-lang="regname">Name:</label>
+        <input type="text" id="name">
+        <label for="email" data-lang="regemail">Email:</label>
+        <input type="email" id="email" required>
+        <label for="password" data-lang="regpassword">Password:</label>
+        <div class="password-container">
+            <input type="password" id="password" required>
+        </div>
+        <label for="confirm-password" data-lang="regconpass">Confirm Password:</label>
+        <div class="password-container">
+            <input type="password" id="confirm-password" required>
+            <button type="button" class="password-toggle-button" onclick="togglePasswordVisibility()">
+                <img src="eye-icon.png" alt="Show/Hide Password" />
+            </button>
+        </div>
+        <button type="submit" data-lang="regok">Register</button>
+    </form>
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const backButton = document.querySelector('.back-button');
+        backButton.onmouseover = () => {
+            backButton.style.transform = 'rotate(-90deg)'; // Поворот при наведении
+        };
+        backButton.onmouseout = () => {
+            backButton.style.transform = 'rotate(0deg)'; // Возвращаем в исходное положение
+        };
+    });
+
+    function togglePasswordVisibility() {
+            const passwordFields = document.querySelectorAll('#password, #confirm-password');
+            passwordFields.forEach(passwordField => {
+                const type = passwordField.type === 'password' ? 'text' : 'password';
+                passwordField.type = type;
+            });
+
+            // Меняем иконку в зависимости от типа
+            const button = document.querySelector('.password-toggle-button');
+            const img = button.querySelector('img');
+            const currentType = passwordFields[0].type;
+            img.src = currentType === 'password' ? 'eye-icon.png' : 'eye-slash-icon.png';
+        }
+    </script>
+    <script src="register.js"></script>
+    <script src="langswitch.js"></script>
+
+</body>
+</html>
+

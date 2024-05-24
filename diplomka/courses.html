@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameCode Courses</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+        <header>
+        <div class="header-content">
+            <!-- Header Title with tooltip for translations -->
+            <h1 data-lang="headerTitle">Our <span class="highlight">Courses<span class="tooltip" data-lang="headerTooltip">Explore our wide range of coding courses to find the perfect match for you.</span></span></h1>
+    
+      <!-- User Account Section -->
+<div class="user-account">
+    <a href="#" class="account-link"> <!-- Removed the href attribute here -->
+        <img src="icons8-account-100.png" alt="Account" class="user-icon"/>
+    </a>
+    <div class="account-options hidden">
+        <ul>
+            <li><a href="#" id="my-account" data-lang="myAccount">My account</a></li> <!-- Added ID for easier selection -->
+            <li><a href="#" id="logout" data-lang="logout">Log out</a></li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+        <a href="index.html" class="back-button">
+            <img src="icons8-back-48.png" alt="Back" />
+        </a>
+    </header>
+    
+<main>
+    <section class="why-choose-us">
+        <h2 data-lang="why">Why choose our courses?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="hand-drawing-hazard-warning-attention-sign-or-exclamation-symbol-in-a-yellow-speech-bubble-icon-vector.jpg" alt="Иконка 1">
+                <h3 data-lang="why1">Individual approach</h3>
+                <p data-lang="why11">Individual attention is paid to each user.</p>
+            </div>
+            <div class="feature">
+                <img src="a-schoolgirl-in-class-or-in-an-exam-thinking-about-how-to-do-her-homework-or-assignments-the-girl-is-thinking-about-it-flat-illustration-with-question-marks-vector.jpg" alt="Иконка 2">
+                <h3 data-lang="why2">Flexible learning</h3>
+                <p data-lang="why22">Learning at a convenient time, the ability to choose the pace of learning.</p>
+            </div>
+            <div class="feature">
+                <img src="female-teacher-lecturer-with-blank-chalk-board-in-wooden-frame-and-pointer-simple-flat-illustration-female-teacher-with-book-showing-on-board-cute-character-cartoon-character-illustration-vector.jpg" alt="Иконка 3">
+                <h3 data-lang="why3">Experienced teachers</h3>
+                <p data-lang="why33">Classes are conducted by certified specialists with extensive work experience.</p>
+            </div>
+        </div>
+    </section>
+
+  
+
+    
+    <div class="courses-container">
+        <div class="course" data-course="Python">
+            <img src="Python-Logo-Free-Download-PNG.png" alt="Python">
+            <div class="course-info">
+                <p data-lang="python">Python is one of the most popular languages.</p>
+                <button class="start-course" data-course="python" data-lang="startcourse">Start the course</button>
+            </div>
+        </div>
+        <div class="course" data-course="Java">
+            <img src="795ebb5f4a470cd7242136237f61fc53.png" alt="Java">
+            <div class="course-info">
+                <p data-lang="java">Java is widely used in enterprise solutions.</p>
+                <button class="start-course" data-course="java" data-lang="startcourse" onclick="window.location.href='java.html';">Start the course</button>
+
+            </div>
+        </div>
+        <div class="course" data-course="Cpp">
+            <img src="C++_logo.png" alt="C++">
+            <div class="course-info">
+                <p data-lang="cpp">C++ is ideal for system software development.</p>
+                <button class="start-course" data-course="c++" data-lang="startcourse">Start the course</button>
+            </div>
+        </div>
+    </div>
+    
+    <section class="how-to-start">
+        <h2 data-lang="hts">How to start?</h2>
+        <div class="steps">
+            <div class="step" id="register-step">
+                <img src="online-registration-illustration-design-concept-vector.jpg" alt="Регистрация">
+                <h3 data-lang="s1">Step 1. Registration</h3>
+                <p data-lang="s11">Register on our website by creating an account.</p>
+            </div>
+            <div class="step" id="choose-course-step">
+                <img src="online-courses-with-students-sitting-on-books-pile-with-laptops-notebooks-png.webp" alt="Выбор курса">
+                <h3 data-lang="s2">Step 2. Choosing a course</h3>
+                <p data-lang="s22">Study the courses offered and choose the one that is most interesting to you.</p>
+            </div>
+            <div class="step" id="start-learning-step">
+                <img src="modern-flat-design-isometric-concept-of-language-courses-banner-template-for-website-and-mobile-development-literal-translation-personal-assistant-e-learning-languages-online-illustration-free-vector.jpg" alt="Начало обучения">
+                <h3 data-lang="s3">Step 3. Start learning</h3>
+                <p data-lang="s33">Start learning by following the course program and completing the suggested tasks.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const backButton = document.querySelector('.back-button');
+    backButton.onmouseover = () => {
+        backButton.style.transform = 'rotate(-60deg)';
+    };
+    backButton.onmouseout = () => {
+        backButton.style.transform = 'rotate(0deg)';
+    };
+    backButton.onclick = () => {
+        window.history.back();
+    };
+});
+
+    </script>
+
+    
+    
+<script src="modal.js"></script>
+<script src="script.js"></script>
+<script src="updateUserIcon.js"></script>
+<script src="langswitch.js"></script>
+</body>
+</html>

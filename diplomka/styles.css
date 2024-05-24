@@ -1,0 +1,1149 @@
+/* Основной сброс стилей и базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Добавляем плавные переходы */
+}
+
+/* Анимированный фоновый градиент */
+@keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Подключение Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .header-logo {
+    animation: bounce 2s infinite;
+  }
+
+  
+/* Стилизация заголовка в шапке */
+h1 {
+    font-size: 2.5rem; /* Увеличиваем размер для большего внимания */
+    font-weight: 700; /* Делаем текст более жирным */
+    margin-bottom: 0.5rem;
+}
+
+/* Добавляем слоган */
+.header-slogan {
+    font-size: 1.2rem;
+    color: #fff;
+    opacity: 0.9; /* Немного уменьшаем яркость для контраста с заголовком */
+}
+
+/* Кнопка действия в шапке */
+.header-action {
+    display: inline-block;
+    background-color: #26114e; /* Акцентный цвет, сочетающийся с фоном */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-action:hover {
+    background-color: #6740aa; /* Светлее при наведении */
+    transform: translateY(-3px); /* Небольшой эффект при наведении */
+}
+
+:root {
+    --primary-color: #b5a5d0;
+    --secondary-color: #3c4a9a;
+    --accent-color: #2e797b; /* Новый акцентный цвет */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    background-image: linear-gradient(to right, var(--primary-color) 10%, var(--secondary-color) 90%);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-background {
+    /* Улучшаем фон с использованием SVG или другого изображения */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.5; /* Делаем фон немного прозрачным для добавления глубины */
+}
+
+.header-content, .header-interactive-element {
+    position: relative;
+    z-index: 2; /* Гарантируем, что контент находится над фоновым слоем */
+}
+
+/* Стили для интерактивного элемента в шапке */
+.header-interactive-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    animation: rotateElement 20s linear infinite;
+}
+
+@keyframes rotateElement {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Улучшаем кнопку действия для более заметного внешнего вида */
+.header-action {
+    background-color: var(--accent-color);
+    padding: 15px 30px;
+    border-radius: 30px; /* Более круглая форма */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header-action:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    color: white; /* Основной цвет текста */
+    /* Примените необходимые стили, например, относительно размера шрифта */
+}
+
+header h1 .highlight {
+    font-family: 'Special Elite', cursive;
+    color: #741981e2; /* Выделяем GameCode другим цветом */
+    font-weight: bold; /* Делаем текст жирным */
+    text-shadow: 0px 0px 8px rgba(65, 78, 196, 0.8); /* Добавляем светящийся эффект */
+    /* Дополнительные стили для украшения */
+}
+
+.header-interactive-element svg {
+    animation: rotateElement 20s linear infinite;
+}
+
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Для анимации псевдо-элементов */
+}
+
+nav ul li a {
+    color: white;
+    padding: 10px 20px; /* Увеличиваем паддинг для лучшего визуального вида */
+    border-radius: 20px; /* Закругляем углы */
+    background-color: transparent; /* Начальный фон - прозрачный */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Добавляем анимацию фона и цвета */
+}
+
+/* Изменение ::before на ::after для создания "плавающего" эффекта */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    width: 0; /* Начальная ширина */
+    background-color: white; /* Цвет линии */
+    visibility: visible; /* Сделать видимым */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%); /* Центрирование линии */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Полная ширина при наведении */
+}
+
+nav ul li a:hover {
+    color: #2e2b85; /* Светлее при наведении */
+    background-color: rgba(255, 255, 255, 0.2); /* Добавляем немного фона при наведении */
+}
+
+/* Активный пункт меню */
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Фон для активного пункта */
+    color: #513a76; /* Цвет текста для активного пункта */
+    font-weight: bold;
+}
+
+/* Содержимое */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.course {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+    transform: scale(1); /* Готовим элемент к анимации */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.course, .start-course {
+    transition: 0.3s ease;
+}
+
+.course:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.start-course:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Формы */
+form {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button[type="submit"] {
+    display: inline-block;
+    background-color: #7e89ff; /* Мягкий розовый цвет */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: #583493; /* Темнее при наведении */
+}
+
+/* Стилизация кнопки Назад */
+.back-button {
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 32px; /* Убедитесь, что размер соответствует вашему дизайну */
+    height: 48px;
+}
+
+.back-button img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Модальные окна */
+.modal {
+    display: none; /* Оставляем этот стиль без изменений */
+    /* Остальные стили для .modal оставляем без изменений */
+}
+
+/* Контейнер для секции задач */
+.task-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 2rem;
+    margin: auto;
+    max-width: 1200px;
+}
+
+
+/* Стилизация карточек задач */
+.task-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Первая и последняя карточка занимают две колонки */
+.task-card:first-child, 
+.task-card:last-child {
+    grid-column: span 2;
+}
+
+.task-card:hover {
+    transform: translateY(-5px); /* Придает эффект "подъема" карточке при наведении */
+}
+
+/* Заголовок для карточек */
+.task-card h3 {
+    margin: 0.5rem 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Описание для карточек */
+.task-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Иконки или изображения для карточек */
+.task-card img {
+    width: 50px; /* или другой размер, который подходит для дизайна */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Добавляем анимацию для прогресс-бара */
+@keyframes loadProgress {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.progress-bar {
+    /* ...ваши стили... */
+    animation: loadProgress 3s ease-out forwards; /* Анимация загрузки прогресс-бара */
+}
+
+/* Стилизация прогресс-бара */
+.progress-container {
+    background: #ddd;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 20px 0;
+}
+
+.progress-value {
+    background: linear-gradient(to right, #3d9653, #7eafff);
+    height: 20px;
+    border-radius: 3px;
+    /* ширина устанавливается динамически с помощью JavaScript */
+}
+
+/* Стилизация для интерактивных элементов */
+.interactive-container {
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.daily-tip {
+    background: #ffeb3b;
+    grid-column: span 1 / span 1;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.site-sticker {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 100px; /* Измените размер по вашему усмотрению */
+    animation: float 3s ease-in-out infinite;
+    z-index: 1000; /* Убедитесь, что стикер находится поверх остального контента */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.sticker-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#sticker {
+    width: 100px; /* Измените размер по вашему усмотрению */
+    animation: float 3s ease-in-out infinite;
+}
+
+.hidden {
+    display: none; /* Это скроет элемент по умолчанию */
+}
+
+/* Изменяем класс .hidden на использование прозрачности и видимости для плавного появления */
+#inspiring-words {
+    position: absolute;
+    bottom: 100%; /* Позиционируем слова над стикером */
+    right: 0;
+    background-color: #ffeb3b;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+/* Убираем .hidden и добавляем стили для показа текста */
+#sticker:hover + #inspiring-words,
+#inspiring-words:hover {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s; /* Убираем задержку при показе */
+}
+
+#sticker:hover + #inspiring-words,
+#inspiring-words:hover {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.swiper-container {
+    width: 30%; /* Или любой другой размер, который подходит под ваш дизайн */
+    height: 200px; /* Пример высоты, измените в соответствии с вашими требованиями */
+    margin: auto; /* Центрировать карусель */
+}
+
+.swiper-slide img {
+    width: 20%; /* Чтобы изображения растягивались на всю ширину слайда */
+    height: auto; /* Для сохранения пропорций изображений */
+}
+
+.courses-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.course {
+    position: relative;
+    width: 200px;
+    cursor: pointer;
+}
+
+.course img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Добавьте закругленные углы, если нужно */
+}
+
+.course-info {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 10px 10px; /* Закругленные нижние углы */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.course:hover .course-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+.start-course {
+    background-color: #5c4caf; /* Зеленый */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s;
+  }
+  
+  .modal-content {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+  }
+  
+  .course:hover .modal {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  
+  .course:hover .modal-content {
+    transform: translateY(0);
+  }
+  
+  .why-choose-us {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    width: 30%;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.feature img {
+    width: 60px; /* Размер иконки */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Простая адаптивность */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        width: 80%;
+    }
+}
+
+.how-to-start {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex-basis: 30%;
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+}
+
+.step img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .steps {
+        flex-direction: column;
+    }
+
+    .step {
+        flex-basis: auto;
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+.user-account {
+    position: absolute;
+    right: 10px; /* Расстояние от правого края */
+    top: 10px; /* Расстояние от верхнего края */
+    cursor: pointer;
+}
+
+.user-account:hover .account-options {
+    display: block; /* Показываем меню при наведении */
+}
+
+
+.account-link .user-icon {
+    width: 60px; /* Или другой подходящий размер */
+    height: auto;
+}
+
+.features, .how-to-start {
+    background-image: url('j');
+    background-size: cover;
+}
+
+.card {
+    background-image: url('IMG_1032.png'); /* Обновите путь к новому изображению */
+    color: #000; /* Измените цвет текста для лучшей читаемости, если требуется */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Мягкое увеличение размера */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Увеличенная тень для более выраженного эффекта */
+    /* Измените или добавьте другие свойства при наведении, если нужно */
+}
+
+@keyframes rotateElement {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.highlight {
+    position: relative; /* Это необходимо для корректного позиционирования подсказки */
+    cursor: pointer; /* Опционально, изменяет курсор на указатель, указывая на интерактивность элемента */
+    font-family: 'Special Elite', cursive;
+    
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 360px; /* Можете настроить ширину подсказки */
+    background-color: #f8f9fa; /* Цвет фона подсказки */
+    color: #3f185b; /* Цвет текста */
+    text-align: left; /* Выравнивание текста */
+    border-radius: 6px;
+    padding: 10px; /* Внутренние отступы */
+    position: absolute;
+    z-index: 1;
+    bottom: -35px; /* Расположение относительно нижней границы элемента GameCode */
+    left: 100%; /* Расположение справа от GameCode */
+    margin-left: 20px; /* Небольшой отступ слева от GameCode для создания визуального разделения */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* Тень для добавления глубины */
+    font-size: 16px; /* Размер шрифта подсказки */
+    line-height: 1.4; /* Межстрочное расстояние */
+}
+
+.highlight:hover .tooltip {
+    visibility: visible;
+}
+
+.highlight .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    /* Остальные стили подсказки */
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.highlight:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.account-options {
+    position: absolute;
+    right: 0;
+    top: 40px; /* Смещение вниз от иконки аккаунта */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none; /* Скрыто по умолчанию */
+    z-index: 100; /* Чтобы меню было над другими элементами */
+    width: 150px; /* Фиксированная ширина меню */
+}
+
+.account-options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.account-options ul li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 3px 8px; /* Уменьшенные отступы */
+    font-size: 0.9rem; /* Уменьшенный размер шрифта */
+}
+
+.account-options ul li a:hover {
+    background-color: #f9f9f9;
+}
+
+.hidden {
+    display: none;
+}
+
+.user-icon {
+    border-radius: 50%; /* Делает изображение круглым */
+    object-fit: cover; /* Обеспечивает, чтобы изображение заполнило контейнер без искажения */
+    width: 100px; /* Ширина аватара */
+    height: 100px; /* Высота аватара, должна быть равна ширине для создания идеального круга */
+}
+
+.xp-circle-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: linear-gradient(to right, #4e54c8, #8f94fb); /* Пример градиента для футера */
+}
+
+.xp-circle {
+    width: 100px;
+    height: 100px;
+}
+
+.xp-circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.xp-circle-progress {
+    fill: none;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: #4caf50; /* Цвет прогресса */
+    animation: progress 2s ease-out forwards; /* Анимация прогресса */
+}
+
+.xp-circle-text {
+    fill: #fff;
+    font-size: 0.5em;
+    text-anchor: middle;
+}
+
+@keyframes progress {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 0; /* Измените это значение для контроля прогресса */
+    }
+}
+
+/* Добавьте parallax эффект к вашему фону */
+.parallax-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url('hand-drawing-hazard-warning-attention-sign-or-exclamation-symbol-in-a-yellow-speech-bubble-icon-vector.jpg'); /* URL вашего фонового изображения */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Пример эффектов для кнопки */
+button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: #4caf50;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+ /* Стили для крутого интерактивного блока */
+ .intro-block {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    animation: pulse 2s infinite alternate;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+.lesson-details {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    animation: fade-in 1s ease-out;
+    font-family: 'Roboto', sans-serif;  /* Применяем шрифт к остальному тексту */
+}
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+ /* Стили для первой строки */
+ .intro-heading {
+    background: linear-gradient(to right, #8833ff, #2d84a3); /* Градиентный фон */
+    background-clip: text; /* Делаем текст прозрачным, соответствующим фону */
+    -webkit-text-fill-color: transparent;
+    font-family: 'Bungee', sans-serif;
+}
+
+/* Стили для второй строки */
+.intro-text {
+    color: #4b8d91; /* Цвет текста */
+    font-family: 'Special Elite', cursive; /* Применяем выбранный шрифт */
+}
+
+
+
+/* Стили для вопросов и кнопок */ 
+.quiz { 
+    text-align: center; 
+    margin-bottom: 20px; 
+    } 
+    .submit-button { 
+    margin-top: 10px; 
+    } 
+    /* Закрытие кнопок submit */ 
+    .submit-button { 
+    display: none; 
+    } 
+    /* Выравнивание кнопки и процента выполнения по центру */ 
+    footer { 
+    text-align: center; 
+    } 
+    #xp-bar-container { 
+        text-align: center;
+    margin-top: 10px; 
+    } 
+    #xp-bar { 
+    display: inline-block; 
+    width: 50%; 
+    } 
+
+    #finish-lesson {
+        display: block;
+        margin: 0 auto;}
+
+    #next-lesson {
+        display: block;
+        margin: 20px auto;}
+
+        .back-button1 {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0e3b54;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button1:hover {
+            background-color: #47778f;
+        }
+        
+        #xp-bar-container1 {
+            width: 80%;
+            margin: 20px auto;
+        }
+        
+        #xp-bar1 {
+            background-color: #f2f2f2;
+            height: 30px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        #xp-progress {
+            background-color: #4CAF50;
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+        }
+        
+        #xp-bar-label1 {
+            font-size: 16px;
+            color: #000;
+            line-height: 30px;
+            text-align: center;
+        }
+        
+        #button-container {
+            text-align: center;  /* Centers the buttons horizontally */
+            padding: 20px;       /* Adds some space around the buttons */
+        }
+        
+        .submit-button {
+            display: block;      /* Makes each button take the full line */
+            margin: 10px auto;   /* Centers the buttons horizontally and adds space between them */
+            width: 200px;        /* Optional: sets a fixed width for all buttons */
+        }
+
+/* In your CSS file */
+
+#achievements-container {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #7f4fc2; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Assuming you have a CSS rule for the white container, remove the text from there. */
+.white-container-heading {
+    display: none;
+  }
+  
+  /* Styles for the achievement cards */
+  .achievement-card {
+    /* Other existing styles */
+    width: 90%; /* Narrower cards */
+    max-width: 300px; /* Maximum width */
+    margin: 10px auto; /* Centers the cards and adds spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+    border-radius: 10px; /* Rounds the corners */
+    position: relative; /* Needed for absolute positioning of children */
+  cursor: pointer; /* Indicates it's clickable or has an interaction */
+  }
+  
+  .achieved {
+    border: 2px solid #4caf50; /* Green border for achieved */
+    background-color: #e8f5e9; /* Light green background */
+  }
+  
+  .not-achieved {
+    border: 2px solid #ff9800; /* Orange border for not achieved */
+    background-color: #fff3e0; /* Light orange background */
+  }
+  
+  /* Update colors for better visibility */
+  .achievement-description {
+    color: #333; /* Darker text for better readability */
+    font-weight: bold; /* Make it bold */
+  }
+  
+  /* Tooltip styles */
+  .achievement-tooltip {
+    /* Your existing tooltip styles */
+    background-color: #333; /* Tooltip background to darker color */
+    position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.8em;
+  visibility: hidden; /* Hide by default */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s ease;
+  bottom: 100%; /* Position above the card */
+  z-index: 100; /* Make sure it's above other elements */
+  }
+  
+  /* Adjusting the list container */
+  #achievements-list {
+    /* Other styles if needed */
+    padding: 15px;
+    background-color: #f7f7f7; /* Lighter background for the list */
+  }
+  
+  /* Add hover effect for interactive response */
+  .achievement-card:hover {
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    transition: transform 0.3s ease;
+  }
+
+  .top-users-container {
+    background-color: rgba(96, 95, 141, 0.8); /* Semi-transparent background for glassmorphism effect */
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px auto;
+    width: 50%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Blur effect behind the container */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Light border for the container */
+    position: relative;
+    overflow: hidden;
+}
+
+.top-users-container::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -50%; bottom: -50%; left: -50%;
+    background: linear-gradient(45deg, #ff69b4, #ba55d3, #7b68ee, #6495ed, #00bfff, #00fa9a, #3cb371, #2e8b57, #ffd700);
+    background-size: 800% 800%;
+    z-index: -1;
+    animation: moveGradient 15s ease infinite;
+}
+
+.top-users-container:hover::before {
+    animation-direction: reverse;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.top-users-container h2 {
+    color: #E6E6FA;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#top-users-list {
+    list-style: none;
+    padding: 0;
+}
+
+#top-users-list li {
+    background-color: #746b8a;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+#top-users-list li:hover {
+    transform: translateY(-5px);
+    background-color: #867ba9; /* Lighter shade on hover */
+}
+
+#top-users-list li:last-child {
+    margin-bottom: 0;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+.password-container input {
+    width: 100%;
+    padding-right: 40px; /* Отступ для кнопки */
+}
+.password-container button {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.password-container button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+  

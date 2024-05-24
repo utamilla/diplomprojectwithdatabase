@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <h1><span class="highlight" data-lang="java-course">Java Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up">
+                <span class="intro-heading" data-lang="lesson-number">Lesson 1:</span> 
+                <span class="intro-text" data-lang="intro-to-java">Introduction to Java</span>
+            </h2>
+            <p data-aos="fade-up" data-lang="welcome-lesson">Welcome to the first lesson on Java!</p>
+        </div>
+    </main>
+    
+        
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="what-is-java">What is Java?</h3>
+            <p data-lang="java-description">Java is a versatile and powerful programming language that follows the object-oriented paradigm and ensures platform independence through its Java Virtual Machine (JVM).</p>
+            
+            <h3 data-lang="why-java">Why Java?</h3>
+            <ul>
+                <li><strong data-lang="robust">Robust:</strong> <span data-lang="robust-desc">Well-suited for complex applications with its strong memory management and error handling capabilities.</span></li>
+                <li><strong data-lang="platform-independent">Platform Independent:</strong> <span data-lang="platform-independent-desc">Java applications can run on any system that has the JVM installed, regardless of the underlying operating system.</span></li>
+                <li><strong data-lang="multi-threaded">Multi-threaded:</strong> <span data-lang="multi-threaded-desc">Allows you to perform several tasks simultaneously within a program.</span></li>
+            </ul>
+            
+            <h3 data-lang="first-java-program">Your First Java Program</h3>
+            <p data-lang="hello-world-intro">Let's write a simple program that prints "Hello, World!" to the console:</p>
+            <pre><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+            <p data-lang="system-out-desc">The `System.out.println()` method in Java is used to output text to the console. This method is part of the standard output class of Java's `System` library.</p>
+            
+            <h3 data-lang="java-syntax-basics">Java Syntax Basics</h3>
+            <p data-lang="indentation-description">Unlike languages such as Python, Java does not use indentation to organize code; instead, Java uses braces `{}` to define the beginning and end of each function and control structure.</p>
+        </section>
+
+        <div class="quiz" data-aos="fade-up">
+            <h3 data-lang="java-question1">Question 1: What is Java primarily known for?</h3>
+            <input type="radio" name="q1" value="platform-independence" id="q1_p1"><label for="q1_p1" data-lang="java-platform-independence">Platform Independence</label><br>
+            <input type="radio" name="q1" value="syntax" id="q1_s1"><label for="q1_s1" data-lang="java-syntax">Syntax</label><br>
+            <input type="radio" name="q1" value="speed" id="q1_speed"><label for="q1_speed" data-lang="java-speed">Speed</label><br>
+            <input type="radio" name="q1" value="ease-of-use" id="q1_ease"><label for="q1_ease" data-lang="java-ease-of-use">Ease of Use</label><br>
+        
+            <h3 data-lang="java-question2">Question 2: What allows Java programs to run on different platforms?</h3>
+            <input type="radio" name="q2" value="jvm" id="q2_jvm"><label for="q2_jvm" data-lang="java-jvm">Java Virtual Machine (JVM)</label><br>
+            <input type="radio" name="q2" value="compiler" id="q2_compiler"><label for="q2_compiler" data-lang="java-compiler">Compiler</label><br>
+            <input type="radio" name="q2" value="interpreter" id="q2_interpreter"><label for="q2_interpreter" data-lang="java-interpreter">Interpreter</label><br>
+            <input type="radio" name="q2" value="api" id="q2_api"><label for="q2_api" data-lang="java-api">API Compatibility</label><br>
+        
+            <h3 data-lang="java-question3">Question 3: Which method is used to print text in Java?</h3>
+            <input type="radio" name="q3" value="println" id="q3_pl"><label for="q3_pl" data-lang="java-println">System.out.println()</label><br>
+            <input type="radio" name="q3" value="print" id="q3_p"><label for="q3_p" data-lang="java-print">System.print()</label><br>
+            <input type="radio" name="q3" value="printf" id="q3_printf"><label for="q3_printf" data-lang="java-printf">System.printf()</label><br>
+            <input type="radio" name="q3" value="write" id="q3_write"><label for="q3_write" data-lang="java-write">System.write()</label><br>
+        
+            <h3 data-lang="java-question4">Question 4: How does Java manage code organization?</h3>
+            <input type="radio" name="q4" value="braces" id="q4_b"><label for="q4_b" data-lang="java-braces">Braces</label><br>
+            <input type="radio" name="q4" value="indentation" id="q4_i"><label for="q4_i" data-lang="java-indentation">Indentation</label><br>
+            <input type="radio" name="q4" value="semicolons" id="q4_semicolons"><label for="q4_semicolons" data-lang="java-semicolons">Semicolons</label><br>
+            <input type="radio" name="q4" value="comments" id="q4_comments"><label for="q4_comments" data-lang="java-comments">Comments</label><br>
+        
+            <h3 data-lang="java-question5">Question 5: What feature of Java allows it to handle several tasks at once?</h3>
+            <input type="radio" name="q5" value="multi-threading" id="q5_mt"><label for="q5_mt" data-lang="java-multi-threading">Multi-threading</label><br>
+            <input type="radio" name="q5" value="multi-tasking" id="q5_ma"><label for="q5_ma" data-lang="java-multi-tasking">Multi-tasking</label><br>
+            <input type="radio" name="q5" value="async" id="q5_async"><label for="q5_async" data-lang="java-async">Asynchronous Programming</label><br>
+            <input type="radio" name="q5" value="concurrency" id="q5_concurrency"><label for="q5_concurrency" data-lang="java-concurrency">Concurrency</label><br>
+        </div>
+        
+    <!-- Кнопка завершения урока -->
+    <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+    <!-- Кнопка перехода к следующему уроку -->
+    <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+    
+        </main>
+        
+        <footer>
+            <div id="xp-bar-container1">
+                <div id="xp-bar1">
+                    <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>  <!-- Ensure styles for visibility -->
+                </div>
+                <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span> <!-- Multilingual support added here -->
+            </div>    
+        </footer>
+    
+        <!-- JavaScript and Library Integration -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
+        <script src="modal.js"></script>
+        <script src="python.js"></script>
+        <script src="xpBar.js"></script>
+        <script src="langswitch.js"></script>
+        <script>
+            // Translations for alert messages
+            const alertTranslations = {
+                en: {
+                    halfwayHero: "Achievement unlocked: Halfway Hero",
+                    xpConqueror: "Achievement unlocked: XP Conqueror",
+                    xpUpdated: "XP updated to ",
+                    lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                    answerCorrectly: "Please answer all questions correctly to proceed.",
+                    forUser: "for user ",
+                    xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                    startedJavaCourse: "Achievement unlocked: Java Journeyman",
+                    completedJavaFirstLesson: "Achievement unlocked: Java Juggler"
+                },
+                ru: {
+                    halfwayHero: "Достижение разблокировано: Полуторный герой",
+                    xpConqueror: "Достижение разблокировано: Покоритель опыта",
+                    xpUpdated: "Опыт обновлен до ",
+                    lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                    answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить.",
+                    forUser: "для пользователя ",
+                    xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                    startedJavaCourse: "Достижение разблокировано: Java Путешественник",
+                    completedJavaFirstLesson: "Достижение разблокировано: Java Жонглер"
+                },
+                kk: {
+                    halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                    xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                    xpUpdated: "Тәжірибе жаңартылды ",
+                    lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                    answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз.",
+                    forUser: "пайдаланушы үшін ",
+                    xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                    startedJavaCourse: "Жетістік ашылды: Java саяхатшысы",
+                    completedJavaFirstLesson: "Жетістік ашылды: Java Сиқыршы"
+                }
+            };
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                const languageSelector = document.getElementById('language-selector'); // Ensure this element exists
+        
+                function getTranslation(key) {
+                    const selectedLanguage = languageSelector.value;
+                    return alertTranslations[selectedLanguage][key];
+                }
+        
+                function getUserID() {
+                    var currentUserString = localStorage.getItem('currentUser');
+                    return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+                }
+        
+                var userID = getUserID();
+                var currentLessonKey = 'currentJavaLesson_' + userID;
+                var xpKey = 'currentXP_' + userID;
+                var achievementsKey = 'achievements_' + userID;
+                var completedLessonsKey = 'completedJavaLessons_' + userID;
+        
+                var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+                    earnedHalfXP: false,
+                    fullXP: false,
+                    startedJavaCourse: false,
+                    completedJavaFirstLesson: false,
+                };
+        
+                var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '1');
+                var completedLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+        
+                if (currentLesson > 1 && !window.location.href.includes('java' + currentLesson)) {
+                    window.location.href = 'java' + currentLesson + '.html';
+                }
+        
+                if (!userAchievements.startedJavaCourse) {
+                    updateAchievements('startedJavaCourse', getTranslation('startedJavaCourse'));
+                }
+        
+                function saveUserProgress() {
+                    localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                    localStorage.setItem(completedLessonsKey, JSON.stringify(completedLessons));
+                }
+        
+                function updateAchievements(achievementKey, unlockMessage) {
+                    if (!userAchievements[achievementKey]) {
+                        userAchievements[achievementKey] = true;
+                        alert(getTranslation(achievementKey));
+                        saveUserProgress();
+                    }
+                }
+        
+                function incrementXP(amount) {
+                    if (!completedLessons.includes(currentLesson)) {
+                        var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                        currentXP += amount;
+                        currentXP = Math.min(currentXP, 100);
+        
+                        localStorage.setItem(xpKey, currentXP.toString());
+        
+                        if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                            updateAchievements('earnedHalfXP', getTranslation('halfwayHero'));
+                        }
+                        if (currentXP >= 100 && !userAchievements.fullXP) {
+                            updateAchievements('fullXP', getTranslation('xpConqueror'));
+                        }
+        
+                        completedLessons.push(currentLesson);
+                        saveUserProgress();
+        
+                        alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+                    } else {
+                        alert(getTranslation('xpAlreadyAwarded'));
+                    }
+                }
+        
+                var correctAnswers = {
+                    q1: 'platform-independence',
+                    q2: 'jvm',
+                    q3: 'println',
+                    q4: 'braces',
+                    q5: 'multi-threading'
+                };
+        
+                function checkAnswers() {
+                    var correctCount = 0;
+                    Object.keys(correctAnswers).forEach(function(question) {
+                        var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                        if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                            correctCount++;
+                        }
+                    });
+                    return correctCount === 5; // All answers must be correct to show the finish button
+                }
+        
+                function updateProgressBar() {
+                    var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                        document.querySelector(`input[name="${question}"]:checked`) !== null
+                    ).length;
+                    var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+                    document.getElementById('xp-progress').style.width = percentComplete + '%';
+                    document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+                    if (answeredQuestions === Object.keys(correctAnswers).length) {
+                        document.getElementById('finish-lesson').style.display = 'block';
+                    }
+                }
+        
+                document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                    input.addEventListener('change', function() {
+                        updateProgressBar();
+                    });
+                });
+        
+                document.getElementById('finish-lesson').addEventListener('click', function() {
+                    if (checkAnswers()) {
+                        incrementXP(6.67); // Increment XP by 6.67 for completing the lesson
+                        if (!userAchievements.completedJavaFirstLesson) {
+                            updateAchievements('completedJavaFirstLesson', getTranslation('completedJavaFirstLesson'));
+                        }
+                        document.getElementById('next-lesson').style.display = 'block';
+                        alert(getTranslation('lessonCompleted'));
+                    } else {
+                        alert(getTranslation('answerCorrectly'));
+                        document.getElementById('next-lesson').style.display = 'none';
+                    }
+                });
+        
+                document.getElementById('next-lesson').addEventListener('click', function() {
+                    saveLessonProgress(currentLesson + 1);
+                });
+        
+                function saveLessonProgress(nextLessonNumber) {
+                    localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+                    currentLesson = nextLessonNumber;
+                    saveUserProgress();
+                    window.location.href = 'java' + nextLessonNumber + '.html';
+                }
+            });
+        </script>
+        
+        
+        
+        
+        
+        
+
+            
+            
+
+</body>
+</html>

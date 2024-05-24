@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    
+    <header>
+        <h1><span class="highlight" data-lang="cpp-course">C++ Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up">
+                <span class="intro-heading" data-lang="lesson5cpp-title">Lesson 5:</span> 
+                <span class="intro-text" data-lang="cpp-final-project">C++ Final Project</span>
+            </h2>
+            <p data-aos="fade-up" data-lang="welcome-lesson5cpp">Welcome to the final lesson on C++!</p>
+        </div>
+        
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="cpp5-advanced-techniques">Cutting-Edge C++ Techniques</h3>
+            <p data-lang="cpp5-welcome-final-lesson">This final installment of our C++ series explores the frontier of C++ programming, delving into concurrency models, advanced type manipulation, and effective use of the Boost Library alongside emerging C++20 features.</p>
+            
+            <p data-lang="cpp5-concurrency-models">
+                We start with a look at modern concurrency models in C++ that include lock-free programming and transactional memory, compared to traditional threading and synchronization mechanisms. These models are pivotal for developers aiming to maximize performance in multi-threaded applications.
+            </p>
+            
+            <p data-lang="cpp5-type-manipulation">
+                The course then covers advanced type manipulation techniques. We explore concepts such as SFINAE (Substitution Failure Is Not An Error), template metaprogramming, and the new constexpr features introduced in C++20, which enable more generic, efficient, and optimized code at compile-time.
+            </p>
+        
+            <h3 data-lang="cpp5-boost-example">Example: Utilizing Boost Libraries</h3>
+            <p data-lang="cpp5-boost-intro">Boost Libraries offer a broad spectrum of functionalities. Here's an example using the Boost Graph Library to implement complex algorithms efficiently:</p>
+            <pre><code>
+            #include <boost/graph/adjacency_list.hpp>
+            #include <boost/graph/dijkstra_shortest_paths.hpp>
+            void exampleBoost() {
+                typedef boost::adjacency_list<boost::listS, boost::vecS, boost::directedS> Graph;
+                Graph g;
+                // Initialize and use Boost Graph Library
+            }
+            </code></pre>
+        
+            <p data-lang="cpp5-cpp20-features">
+                We also introduce significant C++20 features that improve code simplicity and safety, such as concepts and coroutines, which streamline the template creation process and asynchronous programming respectively.
+            </p>
+        
+            <p data-lang="cpp5-error-handling">
+                Continuing with robust error handling, we highlight how to use the Boost Exception library to provide clearer and actionable error reports compared to standard exception handling in C++.
+            </p>
+            
+            <p data-lang="cpp5-boost-applications">
+                Practical applications of the Boost Library in professional projects showcase its versatility in network programming, GUI development, and computational geometry, which are critical for high-performance software engineering.
+            </p>
+            
+            <p data-lang="cpp5-interoperability">
+                Discussion on interoperability techniques addresses integrating C++ with other programming environments like Python and JavaScript for comprehensive system development. This is essential for projects that require cross-language functionality.
+            </p>
+        
+            <p data-lang="cpp5-performance-optimization">
+                We delve into advanced performance optimization, discussing memory pool technologies, optimizing I/O operations using asynchronous I/O patterns, and customizing STL allocators to enhance memory usage and operational speed.
+            </p>
+        
+            <p data-lang="cpp5-advanced-stl">
+                The complexities of the Standard Template Library (STL) are explored further with topics on custom allocators, specialized containers, and algorithms that provide advanced memory management capabilities:
+            </p>
+            <pre><code>
+            #include <vector>
+            #include <iostream>
+            #include <memory>
+            struct MallocAllocator {
+                typedef size_t size_type;
+                typedef ptrdiff_t difference_type;
+                static char* malloc(const size_type bytes) { return std::malloc(bytes); }
+                static void free(char* const block) { std::free(block); }
+            };
+            std::vector<int, MallocAllocator> vec;
+            </code></pre>
+            
+            <p data-lang="cpp5-conclusion">
+                By mastering these sophisticated techniques, you will be well-equipped to tackle complex C++ projects with a solid understanding of how to implement high-performance, efficient, and robust software solutions.
+            </p>
+        </section>
+        
+        
+        
+        <div class="quiz" data-aos="fade-up">
+            <h3 data-lang="cpp5-question1">Question 1: Which C++20 feature aids in generic programming and code adaptability?</h3>
+            <input type="radio" name="q1" value="concepts" id="q1_concepts"><label for="q1_concepts" data-lang="cpp5-answer1-option1">Concepts</label><br>
+            <input type="radio" name="q1" value="modules" id="q1_modules"><label for="q1_modules" data-lang="cpp5-answer1-option2">Modules</label><br>
+            <input type="radio" name="q1" value="lambdas" id="q1_lambdas"><label for="q1_lambdas" data-lang="cpp5-answer1-option3">Lambdas</label><br>
+            <input type="radio" name="q1" value="ranges" id="q1_ranges"><label for="q1_ranges" data-lang="cpp5-answer1-option4">Ranges</label><br>
+        
+            <h3 data-lang="cpp5-question2">Question 2: What does the Boost Graph Library primarily assist with?</h3>
+            <input type="radio" name="q2" value="data_storage" id="q2_data_storage"><label for="q2_data_storage" data-lang="cpp5-answer2-option1">Data Storage</label><br>
+            <input type="radio" name="q2" value="algorithm_implementation" id="q2_algorithm_implementation"><label for="q2_algorithm_implementation" data-lang="cpp5-answer2-option2">Algorithm Implementation</label><br>
+            <input type="radio" name="q2" value="system_operations" id="q2_system_operations"><label for="q2_system_operations" data-lang="cpp5-answer2-option3">System Operations</label><br>
+            <input type="radio" name="q2" value="memory_management" id="q2_memory_management"><label for="q2_memory_management" data-lang="cpp5-answer2-option4">Memory Management</label><br>
+        
+            <h3 data-lang="cpp5-question3">Question 3: What are concepts used for in C++20?</h3>
+            <input type="radio" name="q3" value="performance_optimization" id="q3_performance_optimization"><label for="q3_performance_optimization" data-lang="cpp5-answer3-option1">Performance Optimization</label><br>
+            <input type="radio" name="q3" value="type_safety" id="q3_type_safety"><label for="q3_type_safety" data-lang="cpp5-answer3-option2">Improving Type Safety</label><br>
+            <input type="radio" name="q3" value="error_handling" id="q3_error_handling"><label for="q3_error_handling" data-lang="cpp5-answer3-option3">Error Handling</label><br>
+            <input type="radio" name="q3" value="resource_management" id="q3_resource_management"><label for="q3_resource_management" data-lang="cpp5-answer3-option4">Resource Management</label><br>
+        
+            <h3 data-lang="cpp5-question4">Question 4: How do the latest C++ standards contribute to error reduction?</h3>
+            <input type="radio" name="q4" value="compile_time_checks" id="q4_compile_time_checks"><label for="q4_compile_time_checks" data-lang="cpp5-answer4-option1">Compile-time Checks</label><br>
+            <input type="radio" name="q4" value="runtime_checks" id="q4_runtime_checks"><label for="q4_runtime_checks" data-lang="cpp5-answer4-option2">Runtime Checks</label><br>
+            <input type="radio" name="q4" value="static_assertions" id="q4_static_assertions"><label for="q4_static_assertions" data-lang="cpp5-answer4-option3">Static Assertions</label><br>
+            <input type="radio" name="q4" value="exception_specifications" id="q4_exception_specifications"><label for="q4_exception_specifications" data-lang="cpp5-answer4-option4">Exception Specifications</label><br>
+        
+            <h3 data-lang="cpp5-question5">Question 5: What is the primary benefit of using the Boost Library in professional C++ projects?</h3>
+            <input type="radio" name="q5" value="speed_optimization" id="q5_speed_optimization"><label for="q5_speed_optimization" data-lang="cpp5-answer5-option1">Speed Optimization</label><br>
+            <input type="radio" name="q5" value="increased_modularity" id="q5_increased_modularity"><label for="q5_increased_modularity" data-lang="cpp5-answer5-option2">Increased Modularity</label><br>
+            <input type="radio" name="q5" value="network_capabilities" id="q5_network_capabilities"><label for="q5_network_capabilities" data-lang="cpp5-answer5-option3">Enhanced Network Capabilities</label><br>
+            <input type="radio" name="q5" value="error_handling_enhancements" id="q5_error_handling_enhancements"><label for="q5_error_handling_enhancements" data-lang="cpp5-answer5-option4">Error Handling Enhancements</label><br>
+        
+            <h3 data-lang="cpp5-question6">Question 6: What advanced feature of C++ allows for customized memory management?</h3>
+            <input type="radio" name="q6" value="custom_allocators" id="q6_custom_allocators"><label for="q6_custom_allocators" data-lang="cpp5-answer6-option1">Custom Allocators</label><br>
+            <input type="radio" name="q6" value="memory_pools" id="q6_memory_pools"><label for="q6_memory_pools" data-lang="cpp5-answer6-option2">Memory Pools</label><br>
+            <input type="radio" name="q6" value="garbage_collection" id="q6_garbage_collection"><label for="q6_garbage_collection" data-lang="cpp5-answer6-option3">Garbage Collection</label><br>
+            <input type="radio" name="q6" value="smart_pointers" id="q6_smart_pointers"><label for="q6_smart_pointers" data-lang="cpp5-answer6-option4">Smart Pointers</label><br>
+        
+            <h3 data-lang="cpp5-question7">Question 7: How does asynchronous programming enhance C++ applications?</h3>
+            <input type="radio" name="q7" value="ui_responsiveness" id="q7_ui_responsiveness"><label for="q7_ui_responsiveness" data-lang="cpp5-answer7-option1">Improves UI Responsiveness</label><br>
+            <input type="radio" name="q7" value="performance_efficiency" id="q7_performance_efficiency"><label for="q7_performance_efficiency" data-lang="cpp5-answer7-option2">Increases Performance Efficiency</label><br>
+            <input type="radio" name="q7" value="error_reduction" id="q7_error_reduction"><label for="q7_error_reduction" data-lang="cpp5-answer7-option3">Reduces Errors</label><br>
+            <input type="radio" name="q7" value="memory_management" id="q7_memory_management"><label for="q7_memory_management" data-lang="cpp5-answer7-option4">Enhances Memory Management</label><br>
+        
+            <h3 data-lang="cpp5-question8">Question 8: How does the 'constexpr' keyword enhance C++ programming?</h3>
+<input type="radio" name="q8" value="runtime_efficiency" id="q8_runtime_efficiency"><label for="q8_runtime_efficiency" data-lang="cpp5-answer8-option1">It improves runtime efficiency by optimizing resource usage</label><br>
+<input type="radio" name="q8" value="compile_time_execution" id="q8_compile_time_execution"><label for="q8_compile_time_execution" data-lang="cpp5-answer8-option2">It allows certain computations to be performed at compile time</label><br>
+<input type="radio" name="q8" value="memory_savings" id="q8_memory_savings"><label for="q8_memory_savings" data-lang="cpp5-answer8-option3">It minimizes memory usage by optimizing variable storage</label><br>
+<input type="radio" name="q8" value="code_simplification" id="q8_code_simplification"><label for="q8_code_simplification" data-lang="cpp5-answer8-option4">It simplifies code by reducing the need for explicit constants</label><br>
+
+        
+            <h3 data-lang="cpp5-question9">Question 9: Which C++ feature greatly aids in debugging and maintaining code?</h3>
+            <input type="radio" name="q9" value="static_assert" id="q9_static_assert"><label for="q9_static_assert" data-lang="cpp5-answer9-option1">Static Assert</label><br>
+            <input type="radio" name="q9" value="conditional_compilation" id="q9_conditional_compilation"><label for="q9_conditional_compilation" data-lang="cpp5-answer9-option2">Conditional Compilation</label><br>
+            <input type="radio" name="q9" value="runtime_checks" id="q9_runtime_checks"><label for="q9_runtime_checks" data-lang="cpp5-answer9-option3">Runtime Checks</label><br>
+            <input type="radio" name="q9" value="version_control" id="q9_version_control"><label for="q9_version_control" data-lang="cpp5-answer9-option4">Version Control Systems</label><br>
+        
+            <h3 data-lang="cpp5-question10">Question 10: What is one of the critical uses of the C++ Standard Library?</h3>
+            <input type="radio" name="q10" value="data_handling" id="q10_data_handling"><label for="q10_data_handling" data-lang="cpp5-answer10-option1">Data Handling</label><br>
+            <input type="radio" name="q10" value="providing_algorithms" id="q10_providing_algorithms"><label for="q10_providing_algorithms" data-lang="cpp5-answer10-option2">Providing Algorithms</label><br>
+            <input type="radio" name="q10" value="facilitating_multithreading" id="q10_facilitating_multithreading"><label for="q10_facilitating_multithreading" data-lang="cpp5-answer10-option3">Facilitating Multithreading</label><br>
+            <input type="radio" name="q10" value="memory_optimization" id="q10_memory_optimization"><label for="q10_memory_optimization" data-lang="cpp5-answer10-option4">Memory Optimization</label><br>
+        </div>
+
+<!-- Guide Section -->
+<div class="guide" data-aos="fade-up">
+    <h3 data-lang="guide-title">Guide to Finding Answers</h3>
+    <p data-lang="guide-description">Most of the answers to these questions can be found in the text above. For a more in-depth study, refer to the official Python documentation available online.</p>
+</div>
+
+        <!-- Finish Lesson Button -->
+        <button id="finish-lesson" class="submit-button" style="display:none;" data-lang="finish-lesson">Finish Lesson</button>
+
+        <!-- Get Certificate Button (hidden by default) -->
+        <button id="get-certificate" class="submit-button" data-lang="get-certificate" style="display:none;">Get Certificate</button>
+    </main>
+    <footer>
+        <div id="xp-bar-container" style="position: relative;">
+            <div id="xp-bar">
+                <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>
+            </div>
+            <span id="xp-bar-label" data-lang="percent-complete" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%);">0% Complete</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="modal.js"></script>
+    <script src="python.js"></script>
+    <script src="xpBar.js"></script>
+    <script src="langswitch.js"></script>
+    <script>
+// Translations for alert messages
+const alertTranslations = {
+    en: {
+        halfwayHero: "Achievement unlocked: Halfway Hero",
+        xpConqueror: "Achievement unlocked: XP Conqueror",
+        cppChampion: "Achievement unlocked: C++ Champion",
+        masterOfCodes: "Achievement unlocked: Master of Codes",
+        xpUpdated: "XP updated to ",
+        lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+        answerCorrectly: "Please answer all questions correctly to proceed.",
+        forUser: "for user ",
+        xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+        getCertificate: "Get Certificate",
+        certificateGenerated: "Certificate successfully generated!"
+    },
+    ru: {
+        halfwayHero: "Достижение разблокировано: Полуторный герой",
+        xpConqueror: "Достижение разблокировано: Завоеватель XP",
+        cppChampion: "Достижение разблокировано: C++ Чемпион",
+        masterOfCodes: "Достижение разблокировано: Мастер кодов",
+        xpUpdated: "Опыт обновлен до ",
+        lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+        answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить.",
+        forUser: "для пользователя ",
+        xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+        getCertificate: "Получить сертификат",
+        certificateGenerated: "Сертификат успешно сгенерирован!"
+    },
+    kk: {
+        halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+        xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+        cppChampion: "Жетістік ашылды: C++ Жеңімпаз",
+        masterOfCodes: "Жетістік ашылды: Кодтар шебері",
+        xpUpdated: "Тәжірибе жаңартылды ",
+        lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+        answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз.",
+        forUser: "пайдаланушы үшін ",
+        xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+        getCertificate: "Сертификатты алу",
+        certificateGenerated: "Сертификат сәтті өңделді!"
+    }
+};
+
+function getTranslation(key) {
+    const selectedLanguage = document.getElementById('language-selector').value;
+    return alertTranslations[selectedLanguage][key];
+}
+
+function getUserID() {
+    var currentUserString = localStorage.getItem('currentUser');
+    return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+}
+
+var userID = getUserID();
+var lessonNumber = 5;
+var currentLessonKey = 'currentC++Lesson_' + userID;
+var xpKey = 'currentXP_' + userID;
+var achievementsKey = 'achievements_' + userID;
+var completedLessonsKey = 'completedC++Lessons_' + userID;
+
+var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+    earnedHalfXP: false,
+    fullXP: false,
+    completedCppCourse: false,
+    allCoursesCompleted: false
+};
+
+var completedCppLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '5');
+
+function saveUserProgress() {
+    localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+    localStorage.setItem(completedLessonsKey, JSON.stringify(completedCppLessons));
+}
+
+function incrementXP(amount) {
+    if (!completedCppLessons.includes(currentLesson)) {
+        var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+        currentXP += amount;
+        currentXP = Math.min(currentXP, 100);
+        localStorage.setItem(xpKey, currentXP.toString());
+
+        if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+            userAchievements.earnedHalfXP = true;
+            alert(getTranslation('halfwayHero'));
+            saveUserProgress();
+        }
+        if (currentXP >= 100) {
+            if (!userAchievements.fullXP) {
+                    userAchievements.fullXP = true;
+                    alert(getTranslation('xpConqueror'));
+                    saveUserProgress();
+                }
+                if (!userAchievements.allCoursesCompleted) {
+                    userAchievements.allCoursesCompleted = true;
+                    alert(getTranslation('masterOfCodes'));
+                    saveUserProgress();
+                }
+            }
+        if (!userAchievements.completedCppCourse) {
+            userAchievements.completedCppCourse = true;
+            alert(getTranslation('cppChampion'));
+            saveUserProgress();
+        }
+        completedCppLessons.push(currentLesson); // Mark the lesson as completed
+        saveUserProgress();
+        alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+    } else {
+        alert(getTranslation('xpAlreadyAwarded'));
+    }
+}
+
+var correctAnswers = {
+        q1: 'concepts',
+        q2: 'algorithm_implementation',
+        q3: 'type_safety',
+        q4: 'compile_time_checks',
+        q5: 'speed_optimization',
+        q6: 'custom_allocators',
+        q7: 'performance_efficiency',
+        q8: 'compile_time_execution',
+        q9: 'static_assert',
+        q10: 'providing_algorithms'
+}
+
+function checkCorrectAnswers() {
+    var correctCount = 0;
+    Object.keys(correctAnswers).forEach(function(question) {
+        var selectedOption = document.querySelector('input[name="' + question + '"]:checked');
+        if (selectedOption && selectedOption.value === correctAnswers[question]) {
+            correctCount++;
+        }
+    });
+    return correctCount === Object.keys(correctAnswers).length;
+}
+
+function updateProgressBar() {
+    var totalQuestions = Object.keys(correctAnswers).length;
+    var answeredQuestions = document.querySelectorAll('.quiz input[type="radio"]:checked').length;
+    var percentComplete = (answeredQuestions / totalQuestions) * 100;
+    document.getElementById('xp-progress').style.width = percentComplete + '%';
+    document.getElementById('xp-bar-label').textContent = percentComplete.toFixed(0) + '% Complete';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateProgressBar();
+    document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+        input.addEventListener('change', function() {
+            updateProgressBar();
+            if (document.querySelectorAll('.quiz input[type="radio"]:checked').length === Object.keys(correctAnswers).length) {
+                document.getElementById('finish-lesson').style.display = 'block';
+            }
+        });
+    });
+
+    document.getElementById('finish-lesson').addEventListener('click', function() {
+        if (checkCorrectAnswers()) {
+            incrementXP(6.67);
+            alert(getTranslation('lessonCompleted'));
+            document.getElementById('get-certificate').style.display = 'block';
+        } else {
+            alert(getTranslation('answerCorrectly'));
+        }
+    });
+
+    const getCertificateBtn = document.getElementById('get-certificate');
+    if (getCertificateBtn) {
+        getCertificateBtn.addEventListener('click', function() {
+            generatePDF(); // Call to generate the certificate
+        });
+    }
+});
+
+    
+            function generatePDF() {
+    const { jsPDF } = window.jspdf; // Ensure jsPDF is correctly referenced
+    const doc = new jsPDF();
+
+    // Fetch user details and language choice
+    const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    const userName = currentUser.name || 'Unknown User';
+    const courseName = 'Advanced C++ Programming';
+    const currentLang = document.getElementById('language-selector').value;
+
+    // Define certificate text for each language in Latin script
+    const texts = {
+        en: {
+            title: "Certificate of Completion",
+            congrats: "Congratulations!",
+            body: `This is to certify that ${userName} has successfully completed the course "${courseName}".`,
+            footer: "Well done for this significant achievement!"
+        },
+        ru: {
+            title: "Sertifikat o Zavershenii",
+            congrats: "Pozdravlyaem!",
+            body: `Eto podtverzhdaet, chto ${userName} uspeshno zavershil kurs "${courseName}".`,
+            footer: "Otlichnaya rabota i vazhnoe dostizhenie!"
+        },
+        kk: {
+            title: "Ayaqtalgandygy turaly kuälik",
+            congrats: "Quttyqtaymiz!",
+            body: `Bul ${userName} "${courseName}" kursyn sätti aiaqtaganyn rastaý úshin qajet.`,
+            footer: "Osy manyzdy jetistik úshin jaraysyn!"
+        }
+    };
+
+    let selectedText = texts[currentLang] || texts.en; // Default to English if no match
+
+    // Set the background color and add decorative elements
+    doc.setFillColor(245, 245, 220); // Light beige background
+    doc.rect(0, 0, 210, 297, 'F'); // Fill the entire page
+
+    // Custom decorative corners
+    doc.setDrawColor(160, 82, 45); // Sienna color
+    doc.setLineWidth(2);
+    const offset = 20;
+    const cornerLength = 15;
+    const pageWidth = 210, pageHeight = 297;
+    // Top-left corner
+    doc.line(offset, offset, offset + cornerLength, offset);
+    doc.line(offset, offset, offset, offset + cornerLength);
+    // Top-right corner
+    doc.line(pageWidth - offset, offset, pageWidth - offset - cornerLength, offset);
+    doc.line(pageWidth - offset, offset, pageWidth - offset, offset + cornerLength);
+    // Bottom-left corner
+    doc.line(offset, pageHeight - offset, offset + cornerLength, pageHeight - offset);
+    doc.line(offset, pageHeight - offset, offset, pageHeight - offset - cornerLength);
+    // Bottom-right corner
+    doc.line(pageWidth - offset, pageHeight - offset, pageWidth - offset - cornerLength, pageHeight - offset);
+    doc.line(pageWidth - offset, pageHeight - offset, pageWidth - offset, pageHeight - offset - cornerLength);
+
+    // Add a central decorative watermark or icon (replace the circle with a subtle icon)
+    doc.setDrawColor(100, 100, 100); // Grey color for a subtle look
+    doc.setFont('ZapfDingbats'); // Using a built-in symbol font
+    doc.setFontSize(30);
+    doc.text('a', 105, 150, { align: "center" }); // This adds a decorative symbol at the center
+
+    // Setup font and print text
+    doc.setFont('Belleza', 'normal'); // Set the font to Belleza
+
+     // Title with custom color
+     doc.setTextColor(139, 0, 0); // Dark red
+    doc.setFontSize(30);
+    doc.text(selectedText.title, 105, 85, { align: "center" }); // Centered title
+
+    // Congratulations with custom color
+    doc.setTextColor(204, 0, 0); // Rich deep red
+    doc.setFontSize(24);
+    doc.text(selectedText.congrats, 105, 130, { align: "center" }); // Centered congratulations
+
+    // Reset color for body and footer
+    doc.setTextColor(60, 42, 42); // Dark brown
+    doc.setFontSize(14);
+    doc.text(selectedText.body, 105, 165, { align: "center" }); // Centered body
+    doc.text(selectedText.footer, 105, 180, { align: "center" }); // Centered footer
+
+    // Save the PDF
+    doc.save(`CertificateCpp_${currentLang}.pdf`);
+}
+
+    </script>
+    
+    
+    
+        
+        
+</body>
+</html>
+

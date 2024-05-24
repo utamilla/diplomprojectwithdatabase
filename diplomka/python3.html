@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+     <!-- Language Switcher -->
+     <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+        <header>
+            <h1><span class="highlight" data-lang="python-course">Python Course</span></h1>
+            <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+        </header>
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up"><span class="intro-heading3">Lesson 3:</span> <span class="intro-text3">Advanced Python Techniques</span></h2>
+            <p data-aos="fade-up">Welcome to the third lesson on Python!</p>
+        </div>
+        
+        <!-- Блок с остальным текстом -->
+<!-- Блок с остальным текстом -->
+<section class="lesson-details" data-aos="fade-up">
+    <h3 data-lang="advanced-python-techniques-title">Advanced Python Techniques</h3>
+    <p data-lang="advanced-python-desc1">In this lesson, we will delve deeper into Python programming, exploring advanced techniques and concepts.</p>
+    <p data-lang="advanced-python-desc2">We will cover topics such as object-oriented programming (OOP), functional programming, and exception handling. By mastering these advanced techniques, you will be able to write more efficient and maintainable Python code.</p>
+    
+    <h3 data-lang="oop-title">Object-Oriented Programming (OOP)</h3>
+    <p data-lang="oop-desc">Object-oriented programming is a programming paradigm that focuses on creating objects that contain both data and methods. We'll learn how to define classes, create objects, and use inheritance to create hierarchical relationships between classes.</p>
+    
+    <h3 data-lang="functional-programming-title">Functional Programming</h3>
+    <p data-lang="functional-programming-desc">Functional programming is another programming paradigm that treats computation as the evaluation of mathematical functions. We'll explore concepts such as higher-order functions, lambda expressions, and list comprehensions.</p>
+    
+    <h3 data-lang="exception-handling-title">Exception Handling</h3>
+    <p data-lang="exception-handling-desc">Exception handling allows us to gracefully handle errors and unexpected situations in our code. We'll learn about the try-except block, raising custom exceptions, and handling specific types of exceptions.</p>
+    <p data-lang="advanced-features-intro">This lesson also covers advanced Python features such as decorators, generators, and context managers. For an in-depth understanding of these topics:</p>
+    <ul>
+        <li><strong data-lang="decorators-title">Decorators</strong> - <span data-lang="decorators-desc">Learn how decorators can be used to modify the behavior of functions or classes. Check out the Python Decorators tutorial available at <a href="https://realpython.com/primer-on-python-decorators/">Real Python</a>.</span></li>
+        <li><strong data-lang="generators-title">Generators</strong> - <span data-lang="generators-desc">Understand how to use Python generators to manage large data sets efficiently. The Python Generators guide at <a href="https://docs.python.org/3/tutorial/classes.html#generators">Python's Official Documentation</a> is an excellent resource.</span></li>
+        <li><strong data-lang="context-managers-title">Context Managers</strong> - <span data-lang="context-managers-desc">Discover how context managers can help you manage resources neatly and effectively by visiting the Context Managers section on <a href="https://docs.python.org/3/reference/datamodel.html#context-managers">Python's Official Docs</a>.</span></li>
+    </ul>
+</section>
+
+        
+<!-- Блок с вопросами -->
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question1-oop-concept">Question 1: What is the main concept of object-oriented programming?</h3>
+    <input type="radio" name="q1" value="encapsulation" id="encapsulation"><label for="encapsulation" data-lang="encapsulation">Encapsulation</label><br>
+    <input type="radio" name="q1" value="inheritance" id="inheritance"><label for="inheritance" data-lang="inheritance">Inheritance</label><br>
+    <input type="radio" name="q1" value="polymorphism" id="polymorphism"><label for="polymorphism" data-lang="polymorphism">Polymorphism</label><br>
+    <input type="radio" name="q1" value="abstraction" id="abstraction"><label for="abstraction" data-lang="abstraction">Abstraction</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question2-programming-paradigm">Question 2: Which programming paradigm treats computation as the evaluation of mathematical functions?</h3>
+    <input type="radio" name="q2" value="procedural" id="procedural"><label for="procedural" data-lang="procedural">Procedural</label><br>
+    <input type="radio" name="q2" value="functional" id="functional"><label for="functional" data-lang="functional">Functional</label><br>
+    <input type="radio" name="q2" value="object-oriented" id="object-oriented"><label for="object-oriented" data-lang="object-oriented">Object-Oriented</label><br>
+    <input type="radio" name="q2" value="declarative" id="declarative"><label for="declarative" data-lang="declarative">Declarative</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question3-error-handling">Question 3: What is used to handle errors and unexpected situations in Python?</h3>
+    <input type="radio" name="q3" value="assertions" id="assertions"><label for="assertions" data-lang="assertions">Assertions</label><br>
+    <input type="radio" name="q3" value="exception" id="exception"><label for="exception" data-lang="exception-handling">Exception Handling</label><br>
+    <input type="radio" name="q3" value="logging" id="logging"><label for="logging" data-lang="logging">Logging</label><br>
+    <input type="radio" name="q3" value="error-codes" id="error-codes"><label for="error-codes" data-lang="error-codes">Error Codes</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question4-lambda-expression">Question 4: What is a lambda expression in Python?</h3>
+    <input type="radio" name="q4" value="anonymous" id="anonymous"><label for="anonymous" data-lang="anonymous-function">An anonymous function</label><br>
+    <input type="radio" name="q4" value="named" id="named"><label for="named" data-lang="named-function">A named function</label><br>
+    <input type="radio" name="q4" value="inline" id="inline"><label for="inline" data-lang="inline-function">An inline function</label><br>
+    <input type="radio" name="q4" value="conditional" id="conditional"><label for="conditional" data-lang="conditional-expression">A conditional expression</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question5-custom-exception">Question 5: What keyword is used to define a custom exception in Python?</h3>
+    <input type="radio" name="q5" value="error" id="error"><label for="error" data-lang="error-keyword">Error</label><br>
+    <input type="radio" name="q5" value="raise" id="raise"><label for="raise" data-lang="raise-keyword">Raise</label><br>
+    <input type="radio" name="q5" value="except" id="except"><label for="except" data-lang="except-keyword">Except</label><br>
+    <input type="radio" name="q5" value="class" id="class"><label for="class" data-lang="class-keyword">Class</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question6-resource-management">Question 6: What Python feature is best for managing resources?</h3>
+    <input type="radio" name="q6" value="decorators" id="decorators"><label for="decorators" data-lang="decorators">Decorators</label><br>
+    <input type="radio" name="q6" value="context-managers" id="context-managers"><label for="context-managers" data-lang="context-managers">Context Managers</label><br>
+    <input type="radio" name="q6" value="modules" id="modules"><label for="modules" data-lang="modules">Modules</label><br>
+    <input type="radio" name="q6" value="packages" id="packages"><label for="packages" data-lang="packages">Packages</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question7-python-iterator">Question 7: Which of the following is a Python iterator that uses the 'yield' keyword?</h3>
+    <input type="radio" name="q7" value="list-comprehension" id="list-comprehension"><label for="list-comprehension" data-lang="list-comprehension">List Comprehension</label><br>
+    <input type="radio" name="q7" value="generator" id="generator"><label for="generator" data-lang="generator">Generator</label><br>
+    <input type="radio" name="q7" value="coroutine" id="coroutine"><label for="coroutine" data-lang="coroutine">Coroutine</label><br>
+    <input type="radio" name="q7" value="iterable" id="iterable"><label for="iterable" data-lang="iterable">Iterable</label><br>
+</div>
+
+      <!-- Guide Section -->
+      <div class="guide" data-aos="fade-up">
+        <h3 data-lang="guide-title">Guide to Finding Answers</h3>
+        <p data-lang="guide-description">Most of the answers to these questions can be found in the text above. For a more in-depth study, refer to the official Python documentation available online.</p>
+    </div>
+
+        <!-- Кнопка завершения урока -->
+        <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+        <!-- Кнопка перехода к следующему уроку -->
+        <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+
+    </main>
+    
+    <footer>
+        <div id="xp-bar-container1">
+            <div id="xp-bar1">
+                <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>  <!-- Ensure styles for visibility -->
+            </div>
+            <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span> <!-- Multilingual support added here -->
+        </div>    
+    </footer>
+
+     <!-- JavaScript and Library Integration -->
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+     <script src="modal.js"></script>
+     <script src="python.js"></script>
+     <script src="xpBar.js"></script>
+     <script src="langswitch.js"></script>
+     <script>
+            // Translations for alert messages
+    const alertTranslations = {
+        en: {
+            halfwayHero: "Achievement unlocked: Halfway Hero",
+            xpConqueror: "Achievement unlocked: XP Conqueror",
+            xpUpdated: "XP updated to ",
+            forUser: "for user ",
+            xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+            lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+            answerCorrectly: "Please answer all questions correctly to proceed.",
+            pythonpaladin: "Achievement unlocked: Python Paladin"
+        },
+        ru: {
+            halfwayHero: "Достижение разблокировано: Полуторный герой",
+            xpConqueror: "Достижение разблокировано: Покоритель опыта",
+            xpUpdated: "Опыт обновлен до ",
+            forUser: "для пользователя ",
+            xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+            lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+            answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить.",
+            pythonpaladin: "Achievement unlocked: Python Паладин"
+        },
+        kk: {
+            halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+            xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+            xpUpdated: "Тәжірибе жаңартылды ",
+            forUser: "пайдаланушы үшін ",
+            xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+            lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+            answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз.",
+            pythonpaladin: "Achievement unlocked: Python Жауынгер"
+        }
+    };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelector = document.getElementById('language-selector');
+    
+            function getTranslation(key) {
+                const selectedLanguage = languageSelector.value;
+                return alertTranslations[selectedLanguage][key];
+            }
+    
+            function getUserID() {
+                var currentUserString = localStorage.getItem('currentUser');
+                return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+            }
+    
+            var userID = getUserID();
+            var currentLessonKey = 'currentPythonLesson_' + userID;
+            var xpKey = 'currentXP_' + userID;
+            var achievementsKey = 'achievements_' + userID;
+            var completedLessonsKey = 'completedPythonLessons_' + userID;
+    
+            var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+                earnedHalfXP: false,
+                fullXP: false,
+                completedPythonThreeLessons: false
+            };
+    
+            var completedPythonLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+            var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '3');
+    
+            function saveUserProgress() {
+                localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                localStorage.setItem(completedLessonsKey, JSON.stringify(completedPythonLessons));
+            }
+    
+            function updateAchievements(achievementKey, unlockMessage) {
+                if (!userAchievements[achievementKey]) {
+                    userAchievements[achievementKey] = true;
+                    alert("Achievement unlocked: " + unlockMessage);
+                    saveUserProgress();
+                }
+            }
+    
+            function incrementXP(amount) {
+                if (!completedPythonLessons.includes(currentLesson)) {
+                    var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                    currentXP += amount;
+                    currentXP = Math.min(currentXP, 100);
+                    localStorage.setItem(xpKey, currentXP.toString());
+    
+                    if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                        updateAchievements('earnedHalfXP', getTranslation('halfwayHero'));
+                    }
+                    if (currentXP >= 100 && !userAchievements.fullXP) {
+                        updateAchievements('fullXP', getTranslation('xpConqueror'));
+                    }
+    
+                    // Check and update the completion of three lessons achievement
+                    if (!userAchievements.completedPythonThreeLessons) {
+                        updateAchievements('completedPythonThreeLessons', getTranslation('pythonpaladin'));
+                    }
+    
+                    completedPythonLessons.push(currentLesson);
+                    saveUserProgress();
+    
+                    alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+                } else {
+                    alert(getTranslation('xpAlreadyAwarded'));
+                }
+            }
+    
+            var correctAnswers = {
+                q1: 'inheritance',
+                q2: 'functional',
+                q3: 'exception',
+                q4: 'anonymous',
+                q5: 'raise',
+                q6: 'context-managers',
+                q7: 'generator'
+            };
+    
+            function checkAnswers() {
+                var correctCount = 0;
+                Object.keys(correctAnswers).forEach(function(question) {
+                    var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                    if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                        correctCount++;
+                    }
+                });
+                return correctCount === 7; // All answers must be correct to show the finish button
+            }
+    
+            function updateProgressBar() {
+                var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                    document.querySelector(`input[name="${question}"]:checked`) !== null
+                ).length;
+                var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+                document.getElementById('xp-progress').style.width = percentComplete + '%';
+                document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+                if (answeredQuestions === Object.keys(correctAnswers).length) {
+                    document.getElementById('finish-lesson').style.display = 'block';
+                }
+            }
+    
+            document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                input.addEventListener('change', function() {
+                    updateProgressBar();
+                });
+            });
+    
+            document.getElementById('finish-lesson').addEventListener('click', function() {
+                if (checkAnswers()) {
+                    incrementXP(6.67);
+                    document.getElementById('next-lesson').style.display = 'block';
+                    alert(getTranslation('lessonCompleted'));
+                } else {
+                    alert(getTranslation('answerCorrectly'));
+                    document.getElementById('next-lesson').style.display = 'none';
+                }
+            });
+    
+            document.getElementById('next-lesson').addEventListener('click', function() {
+                saveLessonProgress(currentLesson + 1);
+            });
+    
+            function saveLessonProgress(nextLessonNumber) {
+                localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+                currentLesson = nextLessonNumber;
+                saveUserProgress();
+                window.location.href = 'python' + nextLessonNumber + '.html';
+            }
+        });
+    </script>
+    
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+</body>
+</html>
+    

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+     <!-- Language Switcher -->
+ <div class="language-switcher">
+    <select id="language-selector">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="kk">Қазақ</option>
+    </select>
+    <header>
+        <h1><span class="highlight" data-lang="python-course">Python Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up"><span class="intro-heading" data-lang="lesson5-title">Lesson 5:</span> <span class="intro-text" data-lang="python-project">Python Project</span></h2>
+            <p data-aos="fade-up" data-lang="welcome-lesson5">Welcome to the final lesson on Python!</p>
+        </div>
+        
+      <section class="lesson-details" data-aos="fade-up">
+    <h3 data-lang="advanced-python-concepts">Advanced Python Concepts</h3>
+    <p data-lang="welcome-final-lesson">Welcome to the final lesson of our Python course! In this lesson, we'll delve into some advanced Python concepts to further enhance your understanding of the language.</p>
+    <p data-lang="python-extends">Python's versatility extends beyond the basics we've covered so far. By exploring these advanced concepts, you'll be better equipped to tackle complex programming challenges and develop high-quality Python applications.</p>
+    
+    <h3 data-lang="concurrency-parallelism">Concurrency and Parallelism</h3>
+    <p data-lang="python-concurrency">Python offers several ways to achieve concurrency and parallelism, allowing you to execute multiple tasks simultaneously. We'll explore threading, multiprocessing, and asynchronous programming to make your Python programs more efficient.</p>
+    <p data-lang="importance-concurrency">Understanding concurrency and parallelism is crucial for building scalable and responsive applications. Whether you're developing web servers, data processing pipelines, or multimedia applications, these techniques will help you leverage the full power of modern computing hardware.</p>
+    
+    <h3 data-lang="decorators-generators">Decorators and Generators</h3>
+    <p data-lang="decorators-intro">Decorators and generators are powerful features in Python that can simplify code and improve performance. We'll learn how to use decorators to modify the behavior of functions and how generators can efficiently produce data on the fly.</p>
+    <p data-lang="decorators-detail">Decorators enable you to add functionality to existing functions without modifying their source code. Generators provide a memory-efficient way to iterate over large datasets or generate infinite sequences of values. Mastering these concepts will make your Python code more elegant and maintainable.</p>
+    
+    <h3 data-lang="metaprogramming">Metaprogramming</h3>
+    <p data-lang="metaprogramming-intro">Metaprogramming is the ability of a program to manipulate its own structure. We'll dive into metaclasses, introspection, and code generation techniques to explore the fascinating world of Python metaprogramming.</p>
+    <p data-lang="metaprogramming-advantages">Metaprogramming empowers developers to create flexible and extensible frameworks, libraries, and domain-specific languages. By understanding how Python introspection and metaclasses work, you'll gain insights into the inner workings of the language and unlock new possibilities for code reuse and abstraction.</p>
+    
+    <h3 data-lang="error-handling-debugging">Error Handling and Debugging</h3>
+    <p data-lang="error-handling-intro">Even the best programmers encounter errors in their code. We'll cover advanced error handling techniques and debugging tools in Python to help you identify and fix bugs more effectively.</p>
+    <p data-lang="debugging-tools">From logging and exception chaining to debugging with pdb and third-party tools like PyCharm, we'll explore a variety of strategies for troubleshooting Python programs. By mastering these techniques, you'll become a more confident and proficient Python developer.</p>
+    
+    <h3 data-lang="pythonic-coding">Pythonic Coding</h3>
+    <p data-lang="pythonic-coding-intro">Pythonic coding refers to writing code that follows the idiomatic conventions and best practices of the Python language. Let's consider an example:</p>
+    <pre><code>
+        def find_max(numbers):
+            """
+            Find the maximum value in a list of numbers.
+            """
+            max_number = numbers[0]
+            for number in numbers:
+                if number > max_number:
+                    max_number = number
+            return max_number
+        </code></pre>
+        
+                            
+    <h3 data-lang="real-world-examples">Real-World Examples</h3>
+    <p data-lang="real-world-intro">Throughout this lesson, we'll illustrate these advanced concepts with real-world examples and practical exercises. By the end, you'll have a deeper understanding of Python and be ready to tackle complex projects with confidence.</p>
+    <p data-lang="python-applications">Whether you're building web applications, scientific simulations, or machine learning models, the knowledge gained from this lesson will empower you to push the boundaries of what's possible with Python.</p>
+    
+    <p data-lang="python-environmental-applications">For instance, Python's robust data handling capabilities can be applied in environmental science to model climate change scenarios, in finance to analyze stock market trends, or in biology to map genome sequences. These diverse applications highlight Python's versatility and capability to handle complex data structures efficiently.</p>
+    <p data-lang="python-ai-applications">Another powerful application is in the development of artificial intelligence (AI) for real-time systems like autonomous vehicles or in healthcare for patient diagnosis and treatment recommendations. Python's frameworks and libraries, such as TensorFlow and Keras, make it a preferred choice for these cutting-edge technologies.</p>
+    <p data-lang="python-security-applications">Python is also extensively used in cybersecurity, where it helps in automating attack simulations, managing security protocols, and analyzing threat data in real time. The simplicity of Python allows security professionals to quickly create and deploy solutions.</p>
+    <p data-lang="python-educational-tools">Lastly, Python's application in developing educational tools, such as interactive textbooks and online learning platforms, demonstrates its role in modern educational advancements. It helps in creating more engaging and interactive learning experiences for students.</p>
+</section>
+
+         
+         
+      <!-- Блок с вопросами -->
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question1-function-use">Question 1: What does the function `find_max()` do?</h3>
+    <input type="radio" name="q1" value="min" id="q1_min">
+    <label for="q1_min" data-lang="returns-min">Returns the minimum value in the list</label><br>
+    <input type="radio" name="q1" value="sum" id="q1_sum">
+    <label for="q1_sum" data-lang="returns-sum">Returns the sum of all numbers in the list</label><br>
+    <input type="radio" name="q1" value="max" id="q1_max">
+    <label for="q1_max" data-lang="returns-max">Returns the maximum value in the list</label><br>
+    <input type="radio" name="q1" value="avg" id="q1_avg">
+    <label for="q1_avg" data-lang="returns-avg">Returns the average of all numbers in the list</label><br>
+
+    <h3 data-lang="question2-efficient-data">Question 2: Which Python feature is used for efficiently producing data on the fly?</h3>
+    <input type="radio" name="q2" value="decorators" id="q2_decorators">
+    <label for="q2_decorators" data-lang="decorators">Decorators</label><br>
+    <input type="radio" name="q2" value="metaprogramming" id="q2_metaprogramming">
+    <label for="q2_metaprogramming" data-lang="metaprogramming">Metaprogramming</label><br>
+    <input type="radio" name="q2" value="concurrency" id="q2_concurrency">
+    <label for="q2_concurrency" data-lang="concurrency">Concurrency</label><br>
+    <input type="radio" name="q2" value="generators" id="q2_generators">
+    <label for="q2_generators" data-lang="generators">Generators</label><br>
+
+    <h3 data-lang="question3-decorators-use">Question 3: What are decorators used for in Python?</h3>
+    <input type="radio" name="q3" value="modify_classes" id="q3_modify_classes">
+    <label for="q3_modify_classes" data-lang="modify-classes">Modifying the behavior of classes</label><br>
+    <input type="radio" name="q3" value="handle_errors" id="q3_handle_errors">
+    <label for="q3_handle_errors" data-lang="handle-errors">Handling exceptions and errors</label><br>
+    <input type="radio" name="q3" value="define_types" id="q3_define_types">
+    <label for="q3_define_types" data-lang="define-types">Defining new data types</label><br>
+    <input type="radio" name="q3" value="modify_functions" id="q3_modify_functions">
+    <label for="q3_modify_functions" data-lang="modify-functions">Modifying the behavior of functions</label><br>
+
+    <h3 data-lang="question4-manipulate-structure">Question 4: Which technique in Python allows a program to manipulate its own structure?</h3>
+    <input type="radio" name="q4" value="concurrency" id="q4_concurrency">
+    <label for="q4_concurrency" data-lang="concurrency">Concurrency</label><br>
+    <input type="radio" name="q4" value="decorators" id="q4_decorators">
+    <label for="q4_decorators" data-lang="decorators">Decorators</label><br>
+    <input type="radio" name="q4" value="metaprogramming" id="q4_metaprogramming">
+    <label for="q4_metaprogramming" data-lang="metaprogramming">Metaprogramming</label><br>
+    <input type="radio" name="q4" value="generators" id="q4_generators">
+    <label for="q4_generators" data-lang="generators">Generators</label><br>
+
+    <h3 data-lang="question5-error-strategy">Question 5: Which of the following is NOT a strategy for error handling and debugging in Python?</h3>
+    <input type="radio" name="q5" value="logging" id="q5_logging">
+    <label for="q5_logging" data-lang="logging">Logging</label><br>
+    <input type="radio" name="q5" value="debugging_tools" id="q5_debugging_tools">
+    <label for="q5_debugging_tools" data-lang="debugging-tools">Using third-party debugging tools</label><br>
+    <input type="radio" name="q5" value="ignore" id="q5_ignore">
+    <label for="q5_ignore" data-lang="ignore-errors">Ignoring errors and hoping for the best</label><br>
+    <input type="radio" name="q5" value="exception_chaining" id="q5_exception_chaining">
+    <label for="q5_exception_chaining" data-lang="exception-chaining">Exception chaining</label><br>
+
+    <h3 data-lang="question6-async-use">Question 6: What does the `async` keyword in Python facilitate?</h3>
+    <input type="radio" name="q6" value="multithreading" id="q6_multithreading">
+    <label for="q6_multithreading" data-lang="multithreading">Multithreading</label><br>
+    <input type="radio" name="q6" value="multiprocessing" id="q6_multiprocessing">
+    <label for="q6_multiprocessing" data-lang="multiprocessing">Multiprocessing</label><br>
+    <input type="radio" name="q6" value="asynchronous" id="q6_asynchronous">
+    <label for="q6_asynchronous" data-lang="asynchronous">Asynchronous Programming</label><br>
+    <input type="radio" name="q6" value="synchronous" id="q6_synchronous">
+    <label for="q6_synchronous" data-lang="synchronous">Synchronous Programming</label><br>
+
+    <h3 data-lang="question7-debugging-tool">Question 7: Which of these is a commonly used tool for debugging Python code?</h3>
+    <input type="radio" name="q7" value="pdb" id="q7_pdb">
+    <label for="q7_pdb" data-lang="pdb">pdb (Python Debugger)</label><br>
+    <input type="radio" name="q7" value="jupyter" id="q7_jupyter">
+    <label for="q7_jupyter" data-lang="jupyter">Jupyter Notebook</label><br>
+    <input type="radio" name="q7" value="pycharm" id="q7_pycharm">
+    <label for="q7_pycharm" data-lang="pycharm">PyCharm</label><br>
+    <input type="radio" name="q7" value="vscode" id="q7_vscode">
+    <label for="q7_vscode" data-lang="vscode">Visual Studio Code</label><br>
+
+    <h3 data-lang="question8-decorators-use">Question 8: What is the main use of decorators in Python?</h3>
+    <input type="radio" name="q8" value="data_validation" id="q8_data_validation">
+    <label for="q8_data_validation" data-lang="data-validation">Data Validation</label><br>
+    <input type="radio" name="q8" value="execute_before" id="q8_execute_before">
+    <label for="q8_execute_before" data-lang="execute-before">Execute Code Before Another Function</label><br>
+    <input type="radio" name="q8" value="modify_behavior" id="q8_modify_behavior">
+    <label for="q8_modify_behavior" data-lang="modify-behavior">Modify the Behavior of Another Function</label><br>
+    <input type="radio" name="q8" value="add_functionality" id="q8_add_functionality">
+    <label for="q8_add_functionality" data-lang="add-functionality">Add Functionality to an Existing Function</label><br>
+
+    <h3 data-lang="question9-memory-management">Question 9: What feature does Python offer for managing memory automatically?</h3>
+    <input type="radio" name="q9" value="garbage_collection" id="q9_garbage_collection">
+    <label for="q9_garbage_collection" data-lang="garbage-collection">Garbage Collection</label><br>
+    <input type="radio" name="q9" value="manual_allocation" id="q9_manual_allocation">
+    <label for="q9_manual_allocation" data-lang="manual-allocation">Manual Memory Allocation</label><br>
+    <input type="radio" name="q9" value="reference_counting" id="q9_reference_counting">
+    <label for="q9_reference_counting" data-lang="reference-counting">Reference Counting</label><br>
+    <input type="radio" name="q9" value="memory_pools" id="q9_memory_pools">
+    <label for="q9_memory_pools" data-lang="memory-pools">Use of Memory Pools</label><br>
+
+    <h3 data-lang="question10-online-learning">Question 10: Which online learning platform utilizes Python for backend development?</h3>
+    <input type="radio" name="q10" value="coursera" id="q10_coursera">
+    <label for="q10_coursera" data-lang="coursera">Coursera</label><br>
+    <input type="radio" name="q10" value="udemy" id="q10_udemy">
+    <label for="q10_udemy" data-lang="udemy">Udemy</label><br>
+    <input type="radio" name="q10" value="edx" id="q10_edx">
+    <label for="q10_edx" data-lang="edx">EdX</label><br>
+    <input type="radio" name="q10" value="khan_academy" id="q10_khan_academy">
+    <label for="q10_khan_academy" data-lang="khan-academy">Khan Academy</label><br>
+</div>
+
+  <!-- Guide Section -->
+  <div class="guide" data-aos="fade-up">
+    <h3 data-lang="guide-title">Guide to Finding Answers</h3>
+    <p data-lang="guide-description">Most of the answers to these questions can be found in the text above. For a more in-depth study, refer to the official Python documentation available online.</p>
+</div>
+
+        <!-- Finish Lesson Button -->
+        <button id="finish-lesson" class="submit-button" style="display:none;" data-lang="finish-lesson">Finish Lesson</button>
+
+        <!-- Get Certificate Button (hidden by default) -->
+        <button id="get-certificate" class="submit-button" data-lang="get-certificate" style="display:none;">Get Certificate</button>
+    </main>
+    <footer>
+        <div id="xp-bar-container" style="position: relative;">
+            <div id="xp-bar">
+                <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>
+            </div>
+            <span id="xp-bar-label" data-lang="percent-complete" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%);">0% Complete</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="modal.js"></script>
+    <script src="python.js"></script>
+    <script src="xpBar.js"></script>
+    <script src="langswitch.js"></script>
+    <script src="achievements.js"></script>
+    <script>
+        // Translations for alert messages
+    const alertTranslations = {
+        en: {
+            halfwayHero: "Achievement unlocked: Halfway Hero",
+            xpConqueror: "Achievement unlocked: XP Conqueror",
+            xpUpdated: "XP updated to ",
+            forUser: "for user ",
+            xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+            lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+            answerCorrectly: "Please answer all questions correctly to proceed.",
+            completedPythonCourse: "Achievement unlocked: Python Prodigy",
+            masterOfCodes: "Achievement unlocked: Master of Codes",
+        },
+        ru: {
+            halfwayHero: "Достижение разблокировано: Полуторный герой",
+            xpConqueror: "Достижение разблокировано: Завоеватель XP",
+            xpUpdated: "Опыт обновлен до ",
+            forUser: "для пользователя ",
+            xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+            lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+            answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить.",
+            completedPythonCourse: "Достижение разблокировано: Python Вундеркинд",
+            masterOfCodes: "Достижение разблокировано: Мастер кодов",
+        },
+        kk: {
+             halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+            xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+            xpUpdated: "Тәжірибе жаңартылды ",
+            forUser: "пайдаланушы үшін ",
+            xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+            lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+            answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз.",
+            completedPythonCourse: "Жетістік ашылды: Python Данышпан",
+            masterOfCodes: "Жетістік ашылды: Кодтар шебері",
+        }
+    };
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    const languageSelector = document.getElementById('language-selector');
+
+    function getTranslation(key) {
+        const selectedLanguage = languageSelector.value;
+        return alertTranslations[selectedLanguage][key];
+    }
+
+    function getUserID() {
+        var currentUserString = localStorage.getItem('currentUser');
+        if (currentUserString) {
+            return JSON.parse(currentUserString).email;
+        }
+        return 'defaultUser';
+    }
+
+    var userID = getUserID();
+    var lessonNumber = 5; // Set the lesson number
+    var currentLessonKey = 'currentPythonLesson_' + userID;
+    var xpKey = 'currentXP_' + userID;
+    var achievementsKey = 'achievements_' + userID;
+    var completedLessonsKey = 'completedPythonLessons_' + userID;
+
+    var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+        earnedHalfXP: false,
+        fullXP: false,
+        completedPythonCourse: false,
+        allCoursesCompleted: false
+    };
+
+    var completedPythonLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+    var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || lessonNumber);
+
+    // Redirect to the appropriate lesson page if not on the current one
+    if (currentLesson > lessonNumber && !window.location.href.includes('python' + currentLesson)) {
+        window.location.href = 'python' + currentLesson + '.html';
+    }
+
+    function saveUserProgress() {
+        localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+        localStorage.setItem(completedLessonsKey, JSON.stringify(completedPythonLessons)); // Ensure this is saved back to localStorage
+    }
+
+    function incrementXP(amount) {
+        var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+        if (currentXP < 100 && !completedPythonLessons.includes(5)) { // Check if lesson 5 is already completed
+            currentXP += amount;
+            currentXP = Math.min(currentXP, 100);
+            localStorage.setItem(xpKey, currentXP.toString());
+
+            if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                userAchievements.earnedHalfXP = true;
+                alert(getTranslation('halfwayHero'));
+                saveUserProgress();
+            }
+            if (currentXP >= 100) {
+                if (!userAchievements.fullXP) {
+                    userAchievements.fullXP = true;
+                    alert(getTranslation('xpConqueror'));
+                    saveUserProgress();
+                }
+                if (!userAchievements.allCoursesCompleted) {
+                    userAchievements.allCoursesCompleted = true;
+                    alert(getTranslation('masterOfCodes'));
+                    saveUserProgress();
+                }
+            }
+
+            if (!completedPythonLessons.includes(5)) {
+                completedPythonLessons.push(5); // Mark lesson 5 as completed
+                if (!userAchievements.completedPythonCourse) {
+                    userAchievements.completedPythonCourse = true;
+                    alert(getTranslation('completedCppCourse'));
+                    saveUserProgress();
+                }
+            }
+
+            alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+        } else if (completedPythonLessons.includes(5)) {
+            alert(getTranslation('xpAlreadyAwarded'));
+        }
+    }
+
+    var correctAnswers = {
+        q1: 'max', q2: 'generators', q3: 'modify_functions',
+        q4: 'metaprogramming', q5: 'ignore', q6: 'asynchronous',
+        q7: 'pdb', q8: 'modify_behavior', q9: 'reference_counting', q10: 'edx'
+    };
+
+    function checkCorrectAnswers() {
+        var correctCount = 0;
+        Object.keys(correctAnswers).forEach(function(question) {
+            var selectedOption = document.querySelector('input[name="' + question + '"]:checked');
+            if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                correctCount++;
+            }
+        });
+        return correctCount === Object.keys(correctAnswers).length;
+    }
+
+    function updateProgressBar() {
+        var totalQuestions = Object.keys(correctAnswers).length;
+        var answeredQuestions = document.querySelectorAll('.quiz input[type="radio"]:checked').length;
+        var percentComplete = (answeredQuestions / totalQuestions) * 100;
+        document.getElementById('xp-progress').style.width = percentComplete + '%';
+        document.getElementById('xp-bar-label').textContent = percentComplete.toFixed(0) + '% Complete';
+    }
+
+
+    document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+        input.addEventListener('change', function() {
+            updateProgressBar();
+            if (document.querySelectorAll('.quiz input[type="radio"]:checked').length === Object.keys(correctAnswers).length) {
+                    document.getElementById('finish-lesson').style.display = 'block';
+                }
+            });
+        });
+    
+
+    document.getElementById('finish-lesson').addEventListener('click', function() {
+        if (checkCorrectAnswers()) {
+            incrementXP(6.67); // Increment XP
+            alert(getTranslation('lessonCompleted'));
+            document.getElementById('get-certificate').style.display = 'block'; // Show the "Get Certificate" button
+        } else {
+            alert(getTranslation('answerCorrectly'));
+        }
+    });
+
+    const getCertificateBtn = document.getElementById('get-certificate');
+    if (getCertificateBtn) {
+        getCertificateBtn.addEventListener('click', function() {
+            generatePDF(); // Call to generate the certificate
+        });
+    }
+});
+
+function generatePDF() {
+    const { jsPDF } = window.jspdf; // Ensure jsPDF is correctly referenced
+    const doc = new jsPDF();
+
+    // Fetch user details and language choice
+    const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    const userName = currentUser.name || 'Unknown User';
+    const courseName = 'Intro to Python';
+    const currentLang = document.getElementById('language-selector').value;
+
+    // Define certificate text for each language in Latin script
+    const texts = {
+        en: {
+            title: "Certificate of Completion",
+            congrats: "Congratulations!",
+            body: `This is to certify that ${userName} has successfully completed the course "${courseName}".`,
+            footer: "Well done for this significant achievement!"
+        },
+        ru: {
+            title: "Sertifikat o Zavershenii",
+            congrats: "Pozdravlyaem!",
+            body: `Eto podtverzhdaet, chto ${userName} uspeshno zavershil kurs "${courseName}".`,
+            footer: "Otlichnaya rabota i vazhnoe dostizhenie!"
+        },
+        kk: {
+            title: "Ayaqtalgandygy turaly kuälik",
+            congrats: "Quttyqtaymiz!",
+            body: `Bul ${userName} "${courseName}" kursyn sätti aiaqtaganyn rastaý úshin qajet.`,
+            footer: "Osy manyzdy jetistik úshin jaraysyn!"
+        }
+    };
+
+    let selectedText = texts[currentLang] || texts.en; // Default to English if no match
+
+    // Set the background color and add decorative elements
+    doc.setFillColor(245, 245, 220); // Light beige background
+    doc.rect(0, 0, 210, 297, 'F'); // Fill the entire page
+
+    // Custom decorative corners
+    doc.setDrawColor(160, 82, 45); // Sienna color
+    doc.setLineWidth(2);
+    const offset = 20;
+    const cornerLength = 15;
+    const pageWidth = 210, pageHeight = 297;
+    // Top-left corner
+    doc.line(offset, offset, offset + cornerLength, offset);
+    doc.line(offset, offset, offset, offset + cornerLength);
+    // Top-right corner
+    doc.line(pageWidth - offset, offset, pageWidth - offset - cornerLength, offset);
+    doc.line(pageWidth - offset, offset, pageWidth - offset, offset + cornerLength);
+    // Bottom-left corner
+    doc.line(offset, pageHeight - offset, offset + cornerLength, pageHeight - offset);
+    doc.line(offset, pageHeight - offset, offset, pageHeight - offset - cornerLength);
+    // Bottom-right corner
+    doc.line(pageWidth - offset, pageHeight - offset, pageWidth - offset - cornerLength, pageHeight - offset);
+    doc.line(pageWidth - offset, pageHeight - offset, pageWidth - offset, pageHeight - offset - cornerLength);
+
+    // Add a central decorative watermark or icon (replace the circle with a subtle icon)
+    doc.setDrawColor(100, 100, 100); // Grey color for a subtle look
+    doc.setFont('ZapfDingbats'); // Using a built-in symbol font
+    doc.setFontSize(30);
+    doc.text('a', 105, 150, { align: "center" }); // This adds a decorative symbol at the center
+
+    // Setup font and print text
+    doc.setFont('Belleza', 'normal'); // Set the font to Belleza
+
+    // Title with custom color
+    doc.setTextColor(139, 0, 0); // Dark red
+    doc.setFontSize(30);
+    doc.text(selectedText.title, 105, 85, { align: "center" }); // Centered title
+
+    // Congratulations with custom color
+    doc.setTextColor(204, 0, 0); // Rich deep red
+    doc.setFontSize(24);
+    doc.text(selectedText.congrats, 105, 130, { align: "center" }); // Centered congratulations
+
+    // Reset color for body and footer
+    doc.setTextColor(60, 42, 42); // Dark brown
+    doc.setFontSize(16);
+    doc.text(selectedText.body, 105, 165, { align: "center" }); // Centered body
+    doc.text(selectedText.footer, 105, 180, { align: "center" }); // Centered footer
+
+    // Save the PDF
+    doc.save(`CertificatePython_${currentLang}.pdf`);
+}
+    </script>
+    
+    
+    
+    
+</body>
+</html>

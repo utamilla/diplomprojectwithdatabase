@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Account - GameCode</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <div class="header-content">
+            <h1 data-lang="headermyaccTitle">My <span class="highlight">Account<span class="tooltip" data-lang="headermyaccTooltip">Your humble home.</span></span></h1>
+  
+ 
+        <div class="user-account">
+            <a href="login.html" class="account-link">
+                <img src="icons8-account-100.png" alt="Account" class="user-icon"/>
+                <!-- Предполагаем, что user-icon.png - это ваша иконка пользователя -->
+            </a>
+            <div class="account-options hidden">
+                <ul>
+                    <li><a href="my-account.html" data-lang="myAccount">Мy account</a></li>
+                    <li><a href="#" id="logout" data-lang="logout">Log out</a></li>
+                    <!-- Можно добавить еще опции здесь -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a href="index.html" class="back-button">
+        <img src="icons8-back-48.png" alt="Назад" />
+    </a>
+</header>
+    <main>
+
+        
+        <h1 data-lang="welcomemyacc" style="display: inline;">Welcome, </h1><span id="user-name" style="font-weight: bold; color: #4e2784; font-size: 35px; font-family: 'Rock Salt', cursive;">[User]</span><h1 style="font-size: 35px; display: inline; color: #672b88;">!</h1>
+
+        <div class="top-users-container">
+            <h2 id="leaderboard-title">Top Users by XP</h2>
+            <ul id="top-users-list">
+                <!-- List items will be dynamically filled -->
+            </ul>
+        </div>               
+
+        <div id="profile-info"></div>
+           <!-- Achievements Section -->
+    <div id="achievements-container">
+        <h2 data-lang="achievementsTitle">Your Achievements</h2>
+        <div id="achievements-list" class="achievements-container">
+            <!-- Achievements will be dynamically inserted here by JavaScript -->
+        </div>
+    </div>
+    <form id="iconForm">
+        <label for="icon" data-lang="changeProfileIcon">Change Profile Icon:</label>
+        <input type="text" id="icon" placeholder="URL of new icon" data-lang="newIconPlaceholder" required>
+        <button type="submit" data-lang="changeIconButton">Change Icon</button>
+    </form>
+    
+    <button id="remove-avatar" data-lang="removeAvatar">Remove Avatar</button>
+    
+    
+
+      </main>
+      
+      <footer>
+        <div class="xp-circle-container">
+            <svg class="xp-circle" viewbox="0 0 36 36">
+                <path class="xp-circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                <!-- Initialize with no progress: stroke-dasharray="0, 100" -->
+                <path class="xp-circle-progress" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                <text class="xp-circle-text" x="18" y="20.35" text-anchor="middle">0%</text>
+            </svg>
+        </div>
+        <div id="xpLevel">Level: Beginner</div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const backButton = document.querySelector('.back-button');
+            backButton.onmouseover = () => {
+                backButton.style.transform = 'rotate(-60deg)';
+            };
+            backButton.onmouseout = () => {
+                backButton.style.transform = 'rotate(0deg)';
+            };
+            backButton.onclick = () => {
+                window.history.back();
+            };
+        });
+        
+            </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="achievements.js"></script>
+        <script src="myaccount.js"></script>
+        <script src="xpBar.js"></script>
+        <script src="modal.js"></script>
+        <script src="langswitch.js"></script>
+        <script src="leaderboard.js"></script>
+        
+
+</body>
+</html>
+

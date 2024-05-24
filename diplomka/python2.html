@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+     <!-- Language Switcher -->
+     <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+        <header>
+            <h1><span class="highlight" data-lang="python-course">Python Course</span></h1>
+            <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+        </header>
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up">
+                <span class="intro-heading" data-lang="lesson2-title">Lesson 2:</span>
+                <span class="intro-text" data-lang="lesson2-welcome">Welcome to the second lesson</span>
+            </h2>
+            <p data-aos="fade-up" data-lang="lesson2-desc">In this lesson, we will dive deeper into Python programming.</p>
+        </div>
+        
+     <!-- Блок с остальным текстом -->
+<section class="lesson-details" data-aos="fade-up">
+    <h3 data-lang="functions-title">Functions in Python</h3>
+    <p data-lang="functions-desc1">Functions are a key aspect of Python programming. They allow you to encapsulate code for reuse and maintainability.</p>
+    <p data-lang="functions-desc2">New functions can be defined using the `def` keyword followed by the function name and parameters.</p>
+    
+    <h3 data-lang="oop-title">Object-Oriented Programming</h3>
+    <p data-lang="oop-desc1">Python supports object-oriented programming (OOP) concepts such as classes, objects, inheritance, and polymorphism.</p>
+    <p data-lang="oop-desc2">In OOP, classes are used to create objects, and objects can have attributes (variables) and methods (functions).</p>
+
+    <h3 data-lang="error-handling-title">Error Handling</h3>
+    <p data-lang="error-desc1">Proper error handling is crucial in any programming language. Python provides try-except blocks to handle exceptions gracefully.</p>
+    <p data-lang="error-desc2">With try-except blocks, you can catch and handle errors that occur during the execution of your code.</p>
+
+    <h3 data-lang="file-handling-title">File Handling</h3>
+    <p data-lang="file-desc1">Python offers powerful file handling capabilities, allowing you to read from and write to files easily.</p>
+    <p data-lang="file-desc2">You can open files using the `open()` function and specify the mode (read, write, append, etc.).</p>
+    
+    <h3 data-lang="modules-title">Modules and Packages</h3>
+    <p data-lang="modules-desc1">Python modules are files containing Python code, while packages are directories containing multiple modules. They help organize and reuse code effectively.</p>
+    <p data-lang="modules-desc2">You can import modules and packages using the `import` keyword and access their functions and variables.</p>
+</section>
+
+        
+       <!-- Блок с вопросами -->
+<!-- Блок с вопросами -->
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question1-purpose">Question 1: What is the purpose of functions in Python?</h3>
+    <input type="radio" name="q1" value="reuse" id="reuse"><label for="reuse" data-lang="reuse-code">Encapsulate code for reuse</label><br>
+    <input type="radio" name="q1" value="debugging" id="debugging"><label for="debugging" data-lang="aid-debugging">Aid in debugging</label><br>
+    <input type="radio" name="q1" value="simplify" id="simplify"><label for="simplify" data-lang="simplify-code">Simplify complex operations</label><br>
+    <input type="radio" name="q1" value="performance" id="performance"><label for="performance" data-lang="enhance-performance">Enhance performance</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question2-oop">Question 2: What are the main concepts of object-oriented programming in Python?</h3>
+    <input type="radio" name="q2" value="functions" id="functions"><label for="functions" data-lang="functions-vars">Functions and variables</label><br>
+    <input type="radio" name="q2" value="classes" id="classes"><label for="classes" data-lang="oop-concepts">Classes, objects, inheritance, and polymorphism</label><br>
+    <input type="radio" name="q2" value="encapsulation" id="encapsulation"><label for="encapsulation" data-lang="encapsulation">Encapsulation and abstraction</label><br>
+    <input type="radio" name="q2" value="modularity" id="modularity"><label for="modularity" data-lang="modularity">Modularity and reusability</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question3-exceptions">Question 3: How can you handle exceptions in Python?</h3>
+    <input type="radio" name="q3" value="try-catch" id="try-catch"><label for="try-catch" data-lang="try-except">Using try-except blocks</label><br>
+    <input type="radio" name="q3" value="if-else" id="if-else"><label for="if-else" data-lang="if-else">Using if-else statements</label><br>
+    <input type="radio" name="q3" value="logging" id="logging"><label for="logging" data-lang="logging">Logging errors for later review</label><br>
+    <input type="radio" name="q3" value="custom" id="custom"><label for="custom" data-lang="custom-handler">Creating custom exception handlers</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question4-file-handling">Question 4: What does file handling allow you to do in Python?</h3>
+    <input type="radio" name="q4" value="read" id="read"><label for="read" data-lang="read-write">Read from and write to files</label><br>
+    <input type="radio" name="q4" value="database" id="database"><label for="database" data-lang="connect-database">Connect to a database</label><br>
+    <input type="radio" name="q4" value="execute" id="execute"><label for="execute" data-lang="execute-scripts">Execute external scripts</label><br>
+    <input type="radio" name="q4" value="data" id="data"><label for="data" data-lang="data-processing">Process data streams</label><br>
+</div>
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question5-modules">Question 5: What is the purpose of modules and packages in Python?</h3>
+    <input type="radio" name="q5" value="reuse" id="reuse2"><label for="reuse2" data-lang="encapsulate-reuse">Encapsulate code for reuse</label><br>
+    <input type="radio" name="q5" value="organize" id="organize"><label for="organize" data-lang="organize-code">Organize and reuse code effectively</label><br>
+    <input type="radio" name="q5" value="maintain" id="maintain"><label for="maintain" data-lang="maintenance">Ease maintenance and updates</label><br>
+    <input type="radio" name="q5" value="deploy" id="deploy"><label for="deploy" data-lang="deployment">Simplify deployment and distribution</label><br>
+</div>
+<!-- Added Sixth Question -->
+<div class="quiz" data-aos="fade-up">
+    <h3 data-lang="question6-keyword">Question 6: What keyword is used to define a new function in Python?</h3>
+    <input type="radio" name="q6" value="func" id="func"><label for="func" data-lang="keyword-func">func</label><br>
+    <input type="radio" name="q6" value="def" id="def"><label for="def" data-lang="keyword-def">def</label><br>
+    <input type="radio" name="q6" value="new" id="new"><label for="new" data-lang="keyword-new">new</label><br>
+    <input type="radio" name="q6" value="create" id="create"><label for="create" data-lang="keyword-create">create</label><br>
+</div>
+
+
+      <!-- Guide Section -->
+<div class="guide" data-aos="fade-up">
+    <h3 data-lang="guide-title">Guide to Finding Answers</h3>
+    <p data-lang="guide-description">Most of the answers to these questions can be found in the text above. For a more in-depth study, refer to the official Python documentation available online.</p>
+</div>
+
+
+        <!-- Кнопка завершения урока -->
+<button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+<!-- Кнопка перехода к следующему уроку -->
+<button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+
+    </main>
+    
+    <footer>
+        <div id="xp-bar-container1">
+            <div id="xp-bar1">
+                <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>  <!-- Ensure styles for visibility -->
+            </div>
+            <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span> <!-- Multilingual support added here -->
+        </div>    
+    </footer>
+
+     <!-- JavaScript and Library Integration -->
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+     <script src="modal.js"></script>
+     <script src="python.js"></script>
+     <script src="xpBar.js"></script>
+     <script src="langswitch.js"></script>
+     <script>
+        // Translations for alert messages
+        const alertTranslations = {
+            en: {
+                halfwayHero: "Achievement unlocked: Halfway Hero",
+                xpConqueror: "Achievement unlocked: XP Conqueror",
+                xpUpdated: "XP updated to ",
+                forUser: "for user ",
+                xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                answerCorrectly: "Please answer all questions correctly to proceed."
+            },
+            ru: {
+                halfwayHero: "Достижение разблокировано: Полуторный герой",
+                xpConqueror: "Достижение разблокировано: Покоритель опыта",
+                xpUpdated: "Опыт обновлен до ",
+                forUser: "для пользователя ",
+                xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить."
+            },
+            kk: {
+                halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                xpUpdated: "Тәжірибе жаңартылды ",
+                forUser: "пайдаланушы үшін ",
+                xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз."
+            }
+        };
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelector = document.getElementById('language-selector');
+    
+            function getTranslation(key) {
+                const selectedLanguage = languageSelector.value;
+                return alertTranslations[selectedLanguage][key];
+            }
+    
+            function getUserID() {
+                var currentUserString = localStorage.getItem('currentUser');
+                return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+            }
+    
+            var userID = getUserID();
+            var currentLessonKey = 'currentPythonLesson_' + userID;
+            var xpKey = 'currentXP_' + userID;
+            var achievementsKey = 'achievements_' + userID;
+            var completedLessonsKey = 'completedPythonLessons_' + userID;
+    
+            var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+                earnedHalfXP: false,
+                fullXP: false
+            };
+    
+            var completedPythonLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+            var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '2');
+    
+            if (currentLesson > 2 && !window.location.href.includes('python' + currentLesson)) {
+                window.location.href = 'python' + currentLesson + '.html';
+            }
+    
+            function saveUserProgress() {
+                localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                localStorage.setItem(completedLessonsKey, JSON.stringify(completedPythonLessons));
+            }
+    
+            function incrementXP(amount) {
+                if (!completedPythonLessons.includes(currentLesson)) {
+                    var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                    currentXP += amount;
+                    currentXP = Math.min(currentXP, 100);
+                    localStorage.setItem(xpKey, currentXP.toString());
+    
+                    if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                        userAchievements.earnedHalfXP = true;
+                        alert(getTranslation('halfwayHero'));
+                    }
+                    if (currentXP >= 100 && !userAchievements.fullXP) {
+                        userAchievements.fullXP = true;
+                        alert(getTranslation('xpConqueror'));
+                    }
+    
+                    completedPythonLessons.push(currentLesson);
+                    saveUserProgress();
+    
+                    alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+                } else {
+                    alert(getTranslation('xpAlreadyAwarded'));
+                }
+            }
+    
+            var correctAnswers = {
+                q1: 'reuse',
+                q2: 'classes',
+                q3: 'try-catch',
+                q4: 'read',
+                q5: 'organize',
+                q6: 'def'
+            };
+    
+            function checkAnswers() {
+                var correctCount = 0;
+                Object.keys(correctAnswers).forEach(function(question) {
+                    var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                    if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                        correctCount++;
+                    }
+                });
+                return correctCount === 6;
+            }
+    
+            function updateProgressBar() {
+                var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                    document.querySelector(`input[name="${question}"]:checked`) !== null
+                ).length;
+                var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+                document.getElementById('xp-progress').style.width = percentComplete + '%';
+                document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+                if (answeredQuestions === Object.keys(correctAnswers).length) {
+                    document.getElementById('finish-lesson').style.display = 'block';
+                }
+            }
+    
+            document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                input.addEventListener('change', function() {
+                    updateProgressBar();
+                });
+            });
+    
+            document.getElementById('finish-lesson').addEventListener('click', function() {
+                if (checkAnswers()) {
+                    incrementXP(6.67);
+                    document.getElementById('next-lesson').style.display = 'block';
+                    alert(getTranslation('lessonCompleted'));
+                } else {
+                    alert(getTranslation('answerCorrectly'));
+                    document.getElementById('next-lesson').style.display = 'none';
+                }
+            });
+    
+            document.getElementById('next-lesson').addEventListener('click', function() {
+                saveLessonProgress(currentLesson + 1);
+            });
+    
+            function saveLessonProgress(nextLessonNumber) {
+                localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+                currentLesson = nextLessonNumber;
+                saveUserProgress();
+                window.location.href = 'python' + nextLessonNumber + '.html';
+            }
+        });
+    </script>
+    
+
+        
+</body>
+</html>

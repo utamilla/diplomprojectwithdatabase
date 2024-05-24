@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced C++ Features</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <h1><span class="highlight" data-lang="cpp-course">C++ Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up">
+                <span class="intro-heading" data-lang="lesson4-title">Lesson 4:</span> 
+                <span class="intro-text" data-lang="advanced-cpp4-concepts">Advanced C++ Programming Techniques</span>
+            </h2>
+            <p data-aos="fade-up" data-lang="welcome-lesson4">Delve into advanced C++ programming techniques including templates, memory management, and the extensive capabilities of the Standard Library in this detailed fourth lesson.</p>
+        </div>
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="cpp4templates">C++ Templates and Metaprogramming</h3>
+            <p data-lang="templates-intro-cpp4">
+                Templates are a cornerstone of advanced C++ programming, allowing for the definition of generic, type-safe functions and classes. Metaprogramming with templates enables writing code that generates code, optimizing software at compile time and adapting it to various data types.
+            </p>
+            <pre><code>
+            template<typename T>
+            T max(T a, T b) {
+                return (a > b) ? a : b;
+            }
+            </code></pre>
+            
+            <h3 data-lang="cpp4stl">The Power of the Standard Template Library (STL)</h3>
+            <p data-lang="stl-intro-cpp4">
+                The STL is a powerful library that provides data structures and algorithms that can be used with any built-in or user-defined type. It supports operations required by those structures/algorithms to promote greater code reuse and more elegant abstractions.
+            </p>
+            <pre><code>
+            #include &lt;vector&gt;
+            #include &lt;algorithm&gt;
+            #include &lt;iostream&gt;
+            // Demonstrating the use of STL algorithms with vectors
+            void print_vector(const std::vector&lt;int&gt;& v) {
+                std::for_each(v.begin(), v.end(), [](int n) { std::cout &lt;&lt; n &lt;&lt; ' '; });
+                std::cout &lt;&lt; std::endl;
+            }
+            </code></pre>
+            
+            <h3 data-lang="cpp4memorymanagement">Advanced Memory Management Techniques</h3>
+            <p data-lang="memory-management-intro-cpp4">
+                Understanding and implementing advanced memory management is crucial for developing high-performance C++ applications. This segment covers smart pointers like std::unique_ptr and std::shared_ptr which automate resource management and prevent common errors such as memory leaks.
+            </p>
+            <pre><code>
+            #include &lt;memory&gt;
+            void process_large_image() {
+                auto image = std::make_unique&lt;LargeImage&gt;();
+                image-&gt;process();
+                // memory is automatically freed when the unique_ptr goes out of scope
+            }
+            </code></pre>
+        
+            <h3 data-lang="cpp4concurrency">Concurrency in Modern C++</h3>
+            <p data-lang="concurrency-intro-cpp4">
+                Modern C++ provides various tools for effective concurrency management including threads, async, and futures. These tools help developers optimize application throughput and responsiveness by effectively managing multiple execution threads.
+            </p>
+            <pre><code>
+            #include &lt;thread&gt;
+            void do_work() {
+                std::cout &lt;&lt; "Processing concurrent tasks." &lt;&lt; std::endl;
+            }
+            std::thread worker(do_work);
+            worker.join();  // Wait for the thread to finish
+            </code></pre>
+        
+            <h3 data-lang="cpp4exceptionhandling">Exception Handling and Debugging</h3>
+            <p data-lang="exception-handling-intro-cpp4">
+                Proper exception handling is essential for building robust software. C++ offers structured error handling mechanisms through try, catch, and throw blocks, enabling developers to manage errors gracefully and maintain application stability.
+            </p>
+            <pre><code>
+            try {
+                if(someError) {
+                    throw "Error occurred";
+                }
+                // Code that might throw an exception
+            } catch (const char* msg) {
+                cerr << "Error message: " << msg << endl;
+            }
+            </code></pre>
+        
+            <p data-lang="cpp4debuggingtechniques">
+                Debugging is critical for diagnosing and fixing errors. Techniques such as using the C++ Standard Library's diagnostic tools, debugging with integrated development environment (IDE) features, and employing conditional breakpoints are discussed to aid in effective problem-solving.
+            </p>
+            
+            <p data-lang="cpp4finalthoughts">
+                Mastering these advanced features of C++ not only enhances the efficiency and stability of applications but also enables developers to tackle more complex programming challenges. By the end of this lesson, participants will have a thorough understanding of how to apply these techniques in real-world software development.
+            </p>
+        </section>
+        
+            
+
+        <!-- Quiz Section -->
+        <div class="quiz" data-aos="fade-up">
+            <!-- Question 1: Existing question about templates in C++ -->
+            <h3 data-lang="cpp4-question1">Question 1: What is the purpose of templates in C++?</h3>
+            <input type="radio" name="q1" value="generic_programming" id="q1_generic_programming"><label for="q1_generic_programming" data-lang="cpp4-generic-programming">For Generic Programming</label><br>
+            <input type="radio" name="q1" value="performance_optimization" id="q1_performance_optimization"><label for="q1_performance_optimization" data-lang="cpp4-performance-optimization">For Performance Optimization</label><br>
+            <input type="radio" name="q1" value="memory_management" id="q1_memory_management"><label for="q1_memory_management" data-lang="cpp4-memory-management">For Memory Management</label><br>
+            <input type="radio" name="q1" value="error_handling" id="q1_error_handling"><label for="q1_error_handling" data-lang="cpp4-error-handling">For Error Handling</label><br>
+        
+            <h3 data-lang="cpp4-question2">Question 2: What feature of C++ allows for handling multiple tasks at once?</h3>
+            <input type="radio" name="q2" value="multi_threading" id="q2_multi_threading"><label for="q2_multi_threading" data-lang="cpp4-multi-threading">Multi-threading</label><br>
+            <input type="radio" name="q2" value="lambda_expressions" id="q2_lambda_expressions"><label for="q2_lambda_expressions" data-lang="cpp4-lambda-expressions">Lambda Expressions</label><br>
+            <input type="radio" name="q2" value="templates" id="q2_templates"><label for="q2_templates" data-lang="cpp4-templates">Templates</label><br>
+            <input type="radio" name="q2" value="exception_handling" id="q2_exception_handling"><label for="q2_exception_handling" data-lang="cpp4-exception-handling">Exception Handling</label><br>
+        
+            <h3 data-lang="cpp4-question3">Question 3: Which of the following is not a type of smart pointer provided by C++?</h3>
+            <input type="radio" name="q3" value="unique_ptr" id="q3_unique_ptr"><label for="q3_unique_ptr" data-lang="cpp4-unique-ptr">unique_ptr</label><br>
+            <input type="radio" name="q3" value="shared_ptr" id="q3_shared_ptr"><label for="q3_shared_ptr" data-lang="cpp4-shared-ptr">shared_ptr</label><br>
+            <input type="radio" name="q3" value="weak_ptr" id="q3_weak_ptr"><label for="q3_weak_ptr" data-lang="cpp4-weak-ptr">weak_ptr</label><br>
+            <input type="radio" name="q3" value="auto_ptr" id="q3_auto_ptr"><label for="q3_auto_ptr" data-lang="cpp4-auto-ptr">auto_ptr (deprecated)</label><br>
+        
+            <h3 data-lang="cpp4-question4">Question 4: What does the C++ Standard Template Library (STL) primarily consist of?</h3>
+            <input type="radio" name="q4" value="classes" id="q4_classes"><label for="q4_classes" data-lang="cpp4-classes">Classes</label><br>
+            <input type="radio" name="q4" value="functions" id="q4_functions"><label for="q4_functions" data-lang="cpp4-functions">Functions</label><br>
+            <input type="radio" name="q4" value="templates" id="q4_templates"><label for="q4_templates" data-lang="cpp4-templates">Templates</label><br>
+            <input type="radio" name="q4" value="all_of_the_above" id="q4_all_of_the_above"><label for="q4_all_of_the_above" data-lang="cpp4-all-of-the-above">All of the Above</label><br>
+        
+            <h3 data-lang="cpp4-question5">Question 5: How do exceptions in C++ differ from those in other programming languages like Java?</h3>
+            <input type="radio" name="q5" value="syntax" id="q5_syntax"><label for="q5_syntax" data-lang="cpp4-syntax">Syntax</label><br>
+            <input type="radio" name="q5" value="handling_mechanism" id="q5_handling_mechanism"><label for="q5_handling_mechanism" data-lang="cpp4-handling-mechanism">Handling Mechanism</label><br>
+            <input type="radio" name="q5" value="type_of_exceptions" id="q5_type_of_exceptions"><label for="q5_type_of_exceptions" data-lang="cpp4-type-of-exceptions">Type of Exceptions</label><br>
+            <input type="radio" name="q5" value="none_of_the_above" id="q5_none_of_the_above"><label for="q5_none_of_the_above" data-lang="cpp4-none-of-the-above">None of the Above</label><br>
+        
+            <h3 data-lang="cpp4-question6">Question 6: What is the main advantage of using multi-threading?</h3>
+            <input type="radio" name="q6" value="increased_performance" id="q6_increased_performance"><label for="q6_increased_performance" data-lang="cpp4-increased-performance">Increased Performance</label><br>
+            <input type="radio" name="q6" value="reduced_memory_use" id="q6_reduced_memory_use"><label for="q6_reduced_memory_use" data-lang="cpp4-reduced-memory-use">Reduced Memory Use</label><br>
+            <input type="radio" name="q6" value="enhanced_security" id="q6_enhanced_security"><label for="q6_enhanced_security" data-lang="cpp4-enhanced-security">Enhanced Security</label><br>
+            <input type="radio" name="q6" value="simpler_code" id="q6_simpler_code"><label for="q6_simpler_code" data-lang="cpp4-simpler-code">Simpler Code</label><br>
+        
+            <h3 data-lang="cpp4-question7">Question 7: What is a unique feature of C++ not commonly found in other high-level programming languages?</h3>
+            <input type="radio" name="q7" value="direct_memory_access" id="q7_direct_memory_access"><label for="q7_direct_memory_access" data-lang="cpp4-direct-memory-access">Direct Memory Access</label><br>
+            <input type="radio" name="q7" value="low-level_operations" id="q7_low-level_operations"><label for="q7_low-level_operations" data-lang="cpp4-low-level-operations">Low-Level Operations</label><br>
+            <input type="radio" name="q7" value="manual_garbage_collection" id="q7_manual_garbage_collection"><label for="q7_manual_garbage_collection" data-lang="cpp4-manual-garbage-collection">Manual Garbage Collection</label><br>
+            <input type="radio" name="q7" value="automatic_object_destruction" id="q7_automatic_object_destruction"><label for="q7_automatic_object_destruction" data-lang="cpp4-automatic-object-destruction">Automatic Object Destruction</label><br>
+        
+            <h3 data-lang="cpp4-question8">Question 8: Which C++ feature allows for conditional resource management?</h3>
+            <input type="radio" name="q8" value="raii" id="q8_raii"><label for="q8_raii" data-lang="cpp4-raii">Resource Acquisition Is Initialization (RAII)</label><br>
+            <input type="radio" name="q8" value="sdl" id="q8_sdl"><label for="q8_sdl" data-lang="cpp4-sdl">Simple DirectMedia Layer (SDL)</label><br>
+            <input type="radio" name="q8" value="auto_variables" id="q8_auto_variables"><label for="q8_auto_variables" data-lang="cpp4-auto-variables">Auto Variables</label><br>
+            <input type="radio" name="q8" value="manual_tracking" id="q8_manual_tracking"><label for="q8_manual_tracking" data-lang="cpp4-manual-tracking">Manual Tracking</label><br>
+        
+            <h3 data-lang="cpp4-question9">Question 9: How do smart pointers enhance software development practices?</h3>
+            <input type="radio" name="q9" value="memory_efficiency" id="q9_memory_efficiency"><label for="q9_memory_efficiency" data-lang="cpp4-memory-efficiency">Improving Memory Efficiency</label><br>
+            <input type="radio" name="q9" value="error_reduction" id="q9_error_reduction"><label for="q9_error_reduction" data-lang="cpp4-error-reduction">Reducing Errors</label><br>
+            <input type="radio" name="q9" value="resource_management" id="q9_resource_management"><label for="q9_resource_management" data-lang="cpp4-resource-management">Better Resource Management</label><br>
+            <input type="radio" name="q9" value="code_simplification" id="q9_code_simplification"><label for="q9_code_simplification" data-lang="cpp4-code-simplification">Code Simplification</label><br>
+        </div>
+        
+             <!-- Кнопка завершения урока -->
+ <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+ <!-- Кнопка перехода к следующему уроку -->
+ <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+ 
+ </main>
+ 
+ <footer>
+     <div id="xp-bar-container1">
+         <div id="xp-bar1">
+             <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>
+         </div>
+         <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span>
+     </div>
+     <p data-lang="footer">Copyright © 2024 All rights Reserved.</p>
+ </footer>
+ 
+ <!-- JavaScript and Library Integration -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ <script src="modal.js"></script>
+ <script src="cpp.js"></script>
+ <script src="xpBar.js"></script>
+ <script src="langswitch.js"></script>
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const languageSelector = document.getElementById('language-selector'); // Ensure this element exists
+    
+        // Translations for alert messages
+        const alertTranslations = {
+            en: {
+                halfwayHero: "Achievement unlocked: Halfway Hero",
+                xpConqueror: "Achievement unlocked: XP Conqueror",
+                xpUpdated: "XP updated to ",
+                lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                answerCorrectly: "Please answer all questions correctly to proceed.",
+                forUser: "for user ",
+                xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+            },
+            ru: {
+                halfwayHero: "Достижение разблокировано: Полуторный герой",
+                xpConqueror: "Достижение разблокировано: Завоеватель XP",
+                xpUpdated: "Опыт обновлен до ",
+                lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить.",
+                forUser: "для пользователя ",
+                xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+            },
+            kk: {
+                halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                xpUpdated: "Тәжірибе жаңартылды ",
+                lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз.",
+                forUser: "пайдаланушы үшін ",
+                xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+            }
+        };
+    
+        function getTranslation(key) {
+            const selectedLanguage = languageSelector.value;
+            return alertTranslations[selectedLanguage][key];
+        }
+    
+        function getUserID() {
+            var currentUserString = localStorage.getItem('currentUser');
+            return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+        }
+    
+        var userID = getUserID();
+        var lessonNumber = 4;
+        var currentLessonKey = 'currentC++Lesson_' + userID;
+        var xpKey = 'currentXP_' + userID;
+        var achievementsKey = 'achievements_' + userID;
+        var completedLessonsKey = 'completedC++Lessons_' + userID;
+    
+        var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+            earnedHalfXP: false,
+            fullXP: false
+        };
+    
+        var completedCppLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+        var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '4');
+    
+        if (currentLesson > lessonNumber && !window.location.href.includes('c++' + currentLesson)) {
+            window.location.href = 'c++' + currentLesson + '.html';
+        }
+    
+        function saveUserProgress() {
+            localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+            localStorage.setItem(completedLessonsKey, JSON.stringify(completedCppLessons));
+        }
+    
+        function incrementXP(amount) {
+            if (!completedCppLessons.includes(currentLesson)) {
+                var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                currentXP += amount;
+                currentXP = Math.min(currentXP, 100);
+                localStorage.setItem(xpKey, currentXP.toString());
+    
+                if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                    userAchievements.earnedHalfXP = true;
+                    alert(getTranslation('halfwayHero'));
+                }
+                if (currentXP >= 100 && !userAchievements.fullXP) {
+                    userAchievements.fullXP = true;
+                    alert(getTranslation('xpConqueror'));
+                }
+    
+                completedCppLessons.push(currentLesson);
+                saveUserProgress();
+                alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+            } else {
+                alert(getTranslation('xpAlreadyAwarded'));
+            }
+        }
+    
+        var correctAnswers = {
+            q1: 'generic_programming',
+            q2: 'multi_threading',
+            q3: 'auto_ptr',
+            q4: 'all_of_the_above',
+            q5: 'handling_mechanism',
+            q6: 'increased_performance',
+            q7: 'direct_memory_access',
+            q8: 'raii',
+            q9: 'resource_management'
+        };
+    
+        function checkAnswers() {
+            var correctCount = 0;
+            Object.keys(correctAnswers).forEach(function(question) {
+                var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                    correctCount++;
+                }
+            });
+            return correctCount === 9;
+        }
+    
+        function updateProgressBar() {
+            var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                document.querySelector(`input[name="${question}"]:checked`) !== null
+            ).length;
+            var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+            document.getElementById('xp-progress').style.width = percentComplete + '%';
+            document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+            if (answeredQuestions === Object.keys(correctAnswers).length) {
+                document.getElementById('finish-lesson').style.display = 'block';
+            }
+        }
+    
+        document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+            input.addEventListener('change', function() {
+                updateProgressBar();
+            });
+        });
+    
+        document.getElementById('finish-lesson').addEventListener('click', function() {
+            if (checkAnswers()) {
+                incrementXP(6.67);
+                document.getElementById('next-lesson').style.display = 'block';
+                alert(getTranslation('lessonCompleted'));
+            } else {
+                alert(getTranslation('answerCorrectly'));
+                document.getElementById('next-lesson').style.display = 'none';
+            }
+        });
+    
+        document.getElementById('next-lesson').addEventListener('click', function() {
+            saveLessonProgress(currentLesson + 1);
+        });
+    
+        function saveLessonProgress(nextLessonNumber) {
+            localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+            currentLesson = nextLessonNumber;
+            saveUserProgress();
+            window.location.href = 'c++' + nextLessonNumber + '.html';
+        }
+    });
+    </script>
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Course: Lesson 4</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақ</option>
+        </select>
+    </div>
+    <header>
+        <h1><span class="highlight" data-lang="java-course">Java Course</span></h1>
+        <a href="courses.html" class="back-button1" data-lang="back-to-courses">Back to Courses</a>
+    </header>
+    
+    <main>
+        <div class="intro-block" data-aos="fade-up">
+            <h2 data-aos="fade-up">
+                <span class="intro-heading" data-lang="lesson4-title">Lesson 4:</span> 
+                <span class="intro-text" data-lang="java-oop-intro">Object-Oriented Programming in Java</span>
+            </h2>
+            <p data-aos="fade-up" data-lang="welcome-to-java-oop">Dive deep into Java's Object-Oriented Programming concepts.</p>
+        </div>
+        
+        <section class="lesson-details" data-aos="fade-up">
+            <h3 data-lang="java3-oop-concepts">Deep Dive into Java OOP</h3>
+            <p data-lang="java3-oop-description">
+                Object-Oriented Programming (OOP) in Java is a fundamental programming paradigm that models real-world entities using "classes" and "objects". It includes essential OOP concepts such as inheritance, polymorphism, encapsulation, and abstraction. These are designed to enhance the reusability, scalability, and efficiency of code, helping organize complex software systems into clearer and more manageable structures with reusable components.
+            </p>
+            
+            <h4 data-lang="java3-classes">Classes in Java</h4>
+            <p data-lang="java3-class-description">
+                In Java, a "class" is essentially a blueprint for creating objects. It defines the state and behavior that the objects of the class share. Each class can include fields (attributes) and methods (actions). Java classes also support constructors, which are special methods invoked to initialize new objects.
+            </p>
+            
+            <h4 data-lang="java3-inheritance">Understanding Inheritance</h4>
+            <p data-lang="java3-inheritance-description">
+                Inheritance is a key OOP concept that allows new classes to inherit features from existing ones, termed as "superclasses." In Java, this is facilitated by the 'extends' keyword, which helps integrate existing functionalities into new classes without redundancy.
+            </p>
+            
+            <h4 data-lang="java3-polymorphism">Polymorphism Explained</h4>
+            <p data-lang="java3-polymorphism-description">
+                Polymorphism enables Java methods to execute different functionalities based on the object type they are applied to, using a single interface. This capability is crucial for reducing complexity and increasing flexibility in code by allowing one interface to be used for a general class of actions.
+            </p>
+            
+            <h4 data-lang="java3-encapsulation">Encapsulation in Detail</h4>
+            <p data-lang="java3-encapsulation-description">
+                Encapsulation is about protecting an object's state by enclosing the data (attributes) and methods (actions) within one protective layer. This prevents external access to the internal workings of objects, secured by Java’s access modifiers to control visibility within and outside of classes.
+            </p>
+        
+            <h4 data-lang="java3-abstraction">Abstraction in Java</h4>
+            <p data-lang="java3-abstraction-description">
+                Abstraction helps to simplify complex systems by focusing only on relevant attributes and minimizing unnecessary implementation details. It allows developers to reduce software complexity and improve maintainability by concentrating on what an object does instead of how it does it.
+            </p>
+        
+            <h4 data-lang="java3-interfaces">Interfaces</h4>
+            <p data-lang="java3-interface-description">
+                An "interface" in Java is a form that is used to outline methods that classes must implement, defining a set of abstract methods that various implementing classes will have. This structure supports the polymorphism and abstraction principles in OOP, ensuring a flexible and scalable application structure.
+            </p>
+        </section>
+        
+        
+        
+        
+        <div class="quiz" data-aos="fade-up">
+            <h3 data-lang="java4-question1">Question 1: What does OOP in Java stand for?</h3>
+            <input type="radio" name="q1" value="Object-Oriented Programming" id="q1_oop"><label for="q1_oop" data-lang="java3-oop">Object-Oriented Programming</label><br>
+            <input type="radio" name="q1" value="Object-Operated Programming" id="q1_oop2"><label for="q1_oop2" data-lang="java3-oop2">Object-Operated Programming</label><br>
+            <input type="radio" name="q1" value="Oriented-Object Programming" id="q1_oop3"><label for="q1_oop3" data-lang="java3-oop3">Oriented-Object Programming</label><br>
+            <input type="radio" name="q1" value="None of the above" id="q1_none"><label for="q1_none" data-lang="java3-none">None of the above</label><br>
+        
+            <h3 data-lang="java4-question2">Question 2: Which keyword is used to inherit a class in Java?</h3>
+            <input type="radio" name="q2" value="extends" id="q2_extends"><label for="q2_extends" data-lang="java3-extends">extends</label><br>
+            <input type="radio" name="q2" value="inherits" id="q2_inherits"><label for="q2_inherits" data-lang="java3-inherits">inherits</label><br>
+            <input type="radio" name="q2" value="super" id="q2_super"><label for="q2_super" data-lang="java3-super">super</label><br>
+            <input type="radio" name="q2" value="this" id="q2_this"><label for="q2_this" data-lang="java3-this">this</label><br>
+        
+            <h3 data-lang="java4-question3">Question 3: What concept in OOP hides the internal state of the class and shows only the necessary parts of the object to the outer world?</h3>
+            <input type="radio" name="q3" value="Encapsulation" id="q3_encapsulation"><label for="q3_encapsulation" data-lang="java3-encapsulation">Encapsulation</label><br>
+            <input type="radio" name="q3" value="Inheritance" id="q3_inheritance"><label for="q3_inheritance" data-lang="java3-inheritance">Inheritance</label><br>
+            <input type="radio" name="q3" value="Polymorphism" id="q3_polymorphism"><label for="q3_polymorphism" data-lang="java3-polymorphism">Polymorphism</label><br>
+            <input type="radio" name="q3" value="Abstraction" id="q3_abstraction"><label for="q3_abstraction" data-lang="java3-abstraction">Abstraction</label><br>
+        
+            <h3 data-lang="java4-question4">Question 4: Which of the following is true about polymorphism in Java?</h3>
+            <input type="radio" name="q4" value="It allows changing the method's content." id="q4_change"><label for="q4_change" data-lang="java3-change">It allows changing the method's content.</label><br>
+            <input type="radio" name="q4" value="It allows using one interface for multiple derived classes." id="q4_interface"><label for="q4_interface" data-lang="java3-interface">It allows using one interface for multiple derived classes.</label><br>
+            <input type="radio" name="q4" value="It restricts the usability of methods in parent classes." id="q4_restrict"><label for="q4_restrict" data-lang="java3-restrict">It restricts the usability of methods in parent classes.</label><br>
+            <input type="radio" name="q4" value="None of the above" id="q4_none"><label for="q4_none" data-lang="java3-none-above">None of the above</label><br>
+        
+            <h3 data-lang="java4-question5">Question 5: What does encapsulation help in OOP?</h3>
+            <input type="radio" name="q5" value="Protecting against data corruption" id="q5_protect"><label for="q5_protect" data-lang="java3-protect">Protecting against data corruption</label><br>
+            <input type="radio" name="q5" value="Making the code reusable" id="q5_reuse"><label for="q5_reuse" data-lang="java3-reuse">Making the code reusable</label><br>
+            <input type="radio" name="q5" value="Making the code dependent" id="q5_depend"><label for="q5_depend" data-lang="java3-depend">Making the code dependent</label><br>
+            <input type="radio" name="q5" value="None of the above" id="q5_none"><label for="q5_none" data-lang="java3-none">None of the above</label><br>
+        
+            <h3 data-lang="java4-question6">Question 6: Which OOP concept is characterized by the use of `superclass` and `subclass` relationships?</h3>
+            <input type="radio" name="q6" value="Encapsulation" id="q6_encap"><label for="q6_encap" data-lang="java3-encap">Encapsulation</label><br>
+            <input type="radio" name="q6" value="Abstraction" id="q6_abstract"><label for="q6_abstract" data-lang="java3-abstract">Abstraction</label><br>
+            <input type="radio" name="q6" value="Inheritance" id="q6_inherit"><label for="q6_inherit" data-lang="java3-inherit">Inheritance</label><br>
+            <input type="radio" name="q6" value="Polymorphism" id="q6_poly"><label for="q6_poly" data-lang="java3-poly">Polymorphism</label><br>
+        
+            <h3 data-lang="java4-question7">Question 7: Which OOP principle in Java helps in reducing complexity and increasing reusability?</h3>
+            <input type="radio" name="q7" value="Abstraction" id="q7_abstract"><label for="q7_abstract" data-lang="java3-abstract-reduce">Abstraction</label><br>
+            <input type="radio" name="q7" value="Encapsulation" id="q7_encap"><label for="q7_encap" data-lang="java3-encap-reuse">Encapsulation</label><br>
+            <input type="radio" name="q7" value="Inheritance" id="q7_inherit"><label for="q7_inherit" data-lang="java3-inherit-reuse">Inheritance</label><br>
+            <input type="radio" name="q7" value="Polymorphism" id="q7_poly"><label for="q7_poly" data-lang="java3-poly-reuse">Polymorphism</label><br>
+        
+            <h3 data-lang="java4-question8">Question 8: What is the outcome of using polymorphism in programming?</h3>
+            <input type="radio" name="q8" value="Increased security of data" id="q8_security"><label for="q8_security" data-lang="java3-security">Increased security of data</label><br>
+            <input type="radio" name="q8" value="Reduced processing speed" id="q8_speed"><label for="q8_speed" data-lang="java3-speed">Reduced processing speed</label><br>
+            <input type="radio" name="q8" value="Multiple uses for a method" id="q8_uses"><label for="q8_uses" data-lang="java3-uses">Multiple uses for a method</label><br>
+            <input type="radio" name="q8" value="None of the above" id="q8_none"><label for="q8_none" data-lang="java3-none">None of the above</label><br>
+        </div>
+        
+
+         <!-- Кнопка завершения урока -->
+    <button id="finish-lesson" class="submit-button" style="display: none;" data-lang="finish-lesson">Finish Lesson</button>
+    <!-- Кнопка перехода к следующему уроку -->
+    <button id="next-lesson" class="submit-button" style="display: none;" data-lang="next-lesson">Next Lesson</button>
+    
+        </main>
+        
+        <footer>
+            <div id="xp-bar-container1">
+                <div id="xp-bar1">
+                    <div id="xp-progress" style="width: 0%; background-color: blue; height: 20px;"></div>  <!-- Ensure styles for visibility -->
+                </div>
+                <span id="xp-bar-label1" data-lang="percent-complete">0% Complete</span> <!-- Multilingual support added here -->
+            </div>    
+        </footer>
+    
+        <!-- JavaScript and Library Integration -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="modal.js"></script>
+        <script src="python.js"></script>
+        <script src="xpBar.js"></script>
+        <script src="langswitch.js"></script>
+      
+
+        <script>
+            // Translations for alert messages
+            const alertTranslations = {
+                en: {
+                    halfwayHero: "Achievement unlocked: Halfway Hero",
+                    xpConqueror: "Achievement unlocked: XP Conqueror",
+                    xpUpdated: "XP updated to ",
+                    forUser: "for user ",
+                    xpAlreadyAwarded: "XP for this lesson has already been awarded.",
+                    lessonCompleted: "Congratulations! You have completed this lesson and earned XP.",
+                    answerCorrectly: "Please answer all questions correctly to proceed."
+                },
+                ru: {
+                    halfwayHero: "Достижение разблокировано: Полуторный герой",
+                    xpConqueror: "Достижение разблокировано: Завоеватель XP",
+                    xpUpdated: "Опыт обновлен до ",
+                    forUser: "для пользователя ",
+                    xpAlreadyAwarded: "Опыт за этот урок уже начислен.",
+                    lessonCompleted: "Поздравляем! Вы завершили этот урок и заработали опыт.",
+                    answerCorrectly: "Пожалуйста, ответьте правильно на все вопросы, чтобы продолжить."
+                },
+                kk: {
+                    halfwayHero: "Жетістік ашылды: Бір жарым батыр",
+                    xpConqueror: "Жетістік ашылды: XP жаулап алушы",
+                    xpUpdated: "Тәжірибе жаңартылды  ",
+                    forUser: "пайдаланушы үшін ",
+                    xpAlreadyAwarded: "Бұл сабақ үшін тәжірибе қазірдің өзінде берілген.",
+                    lessonCompleted: "Құттықтаймыз! Сіз бұл сабақты аяқтадыңыз және тәжірибе жинадыңыз.",
+                    answerCorrectly: "Жалғастыру үшін барлық сұрақтарға дұрыс жауап беріңіз."
+                }
+            };
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                const languageSelector = document.getElementById('language-selector');
+        
+                function getTranslation(key) {
+                    const selectedLanguage = languageSelector.value;
+                    return alertTranslations[selectedLanguage][key];
+                }
+        
+                function getUserID() {
+                    var currentUserString = localStorage.getItem('currentUser');
+                    return currentUserString ? JSON.parse(currentUserString).email : 'defaultUser';
+                }
+        
+                var userID = getUserID();
+                var currentLessonKey = 'currentJavaLesson_' + userID;
+                var xpKey = 'currentXP_' + userID;
+                var achievementsKey = 'achievements_' + userID;
+                var completedLessonsKey = 'completedJavaLessons_' + userID;
+        
+                var userAchievements = JSON.parse(localStorage.getItem(achievementsKey)) || {
+                    earnedHalfXP: false,
+                    fullXP: false
+                };
+        
+                var completedJavaLessons = JSON.parse(localStorage.getItem(completedLessonsKey)) || [];
+                var currentLesson = parseInt(localStorage.getItem(currentLessonKey) || '4');
+        
+                function saveUserProgress() {
+                    localStorage.setItem(achievementsKey, JSON.stringify(userAchievements));
+                    localStorage.setItem(completedLessonsKey, JSON.stringify(completedJavaLessons));
+                }
+        
+                function updateAchievements(achievementKey, achievementName) {
+                    if (!userAchievements[achievementKey]) {
+                        userAchievements[achievementKey] = true;
+                        alert(getTranslation(achievementName));
+                        saveUserProgress();
+                    }
+                }
+        
+                function incrementXP(amount) {
+                    if (!completedJavaLessons.includes(currentLesson)) {
+                        var currentXP = parseFloat(localStorage.getItem(xpKey) || '0');
+                        currentXP += amount;
+                        currentXP = Math.min(currentXP, 100);
+        
+                        localStorage.setItem(xpKey, currentXP.toString());
+        
+                        if (currentXP >= 50 && !userAchievements.earnedHalfXP) {
+                            updateAchievements('earnedHalfXP', 'halfwayHero');
+                        }
+                        if (currentXP >= 100 && !userAchievements.fullXP) {
+                            updateAchievements('fullXP', 'xpConqueror');
+                        }
+        
+                        completedJavaLessons.push(currentLesson);
+                        saveUserProgress();
+        
+                        alert(getTranslation('xpUpdated') + currentXP.toFixed(2) + '% ' + getTranslation('forUser') + userID);
+                    } else {
+                        alert(getTranslation('xpAlreadyAwarded'));
+                    }
+                }
+        
+                var correctAnswers = {
+                    q1: 'Object-Oriented Programming',
+                    q2: 'extends',
+                    q3: 'Encapsulation',
+                    q4: 'It allows using one interface for multiple derived classes.',
+                    q5: 'Protecting against data corruption',
+                    q6: 'Inheritance',
+                    q7: 'Abstraction',
+                    q8: 'Multiple uses for a method'
+                };
+        
+                function checkAnswers() {
+                    var correctCount = 0;
+                    Object.keys(correctAnswers).forEach(function(question) {
+                        var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                        if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                            correctCount++;
+                        }
+                    });
+                    return correctCount === 8; // All answers must be correct to show the finish button
+                }
+        
+                function updateProgressBar() {
+                    var answeredQuestions = Object.keys(correctAnswers).filter(question =>
+                        document.querySelector(`input[name="${question}"]:checked`) !== null
+                    ).length;
+                    var percentComplete = (answeredQuestions / Object.keys(correctAnswers).length) * 100;
+                    document.getElementById('xp-progress').style.width = percentComplete + '%';
+                    document.getElementById('xp-bar-label1').textContent = percentComplete.toFixed(0) + '% Complete';
+                    if (answeredQuestions === Object.keys(correctAnswers).length) {
+                        document.getElementById('finish-lesson').style.display = 'block';
+                    }
+                }
+        
+                document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                    input.addEventListener('change', function() {
+                        updateProgressBar();
+                    });
+                });
+        
+                document.getElementById('finish-lesson').addEventListener('click', function() {
+                    if (checkAnswers()) {
+                        incrementXP(6.67);
+                        document.getElementById('next-lesson').style.display = 'block';
+                        alert(getTranslation('lessonCompleted'));
+                    } else {
+                        alert(getTranslation('answerCorrectly'));
+                        document.getElementById('next-lesson').style.display = 'none';
+                    }
+                });
+        
+                document.getElementById('next-lesson').addEventListener('click', function() {
+                    saveLessonProgress(currentLesson + 1);
+                });
+        
+                function saveLessonProgress(nextLessonNumber) {
+                    localStorage.setItem(currentLessonKey, String(nextLessonNumber));
+                    currentLesson = nextLessonNumber; // Update current lesson
+                    saveUserProgress();
+                    window.location.href = 'java' + nextLessonNumber + '.html';
+                }
+            });
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+</body>
+</html>
